@@ -127,13 +127,51 @@ window.onload = wrap_img;
         
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr />
-<p>title: "Jupyter Blog Post"
-description: This is my first Jupyter Notebooks Blog Post
-toc: true
-comments: true
-categories: [fastpages, jupyter]</p>
-<h2 id="author:-Taiyo-Iwazaki">author: Taiyo Iwazaki<a class="anchor-link" href="#author:-Taiyo-Iwazaki"> </a></h2>
+<p>{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# \"Taiyos Jupyter Notebook\"\n",
+    "&gt; \"Jupyter notebook for CS!!!\"\n",
+    "\n",
+    "- toc: true\n",
+    "- branch: master\n",
+    "- badges: true\n",
+    "- comments: true\n",
+    "- author: Taiyo Iwazaki\n",
+    "- categories: [fastpages, jupyter]\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Welcome to my notebook\n",
+    "Coding."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "print(\"Hello\")"
+   ]
+  }
+ ],
+ "metadata": {
+  "language_info": {
+   "name": "python"
+  },
+  "orig_nbformat": 4
+ },
+ "nbformat": 4,
+ "nbformat_minor": 2
+}</p>
+
 </div>
 </div>
 </div>
@@ -147,7 +185,7 @@ categories: [fastpages, jupyter]</p>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Printing-Hello!!!-:Satisfied:">Printing Hello!!! :Satisfied:<a class="anchor-link" href="#Printing-Hello!!!-:Satisfied:"> </a></h2>
+<h2 id="Printing-Hello!!!">Printing Hello!!!<a class="anchor-link" href="#Printing-Hello!!!"> </a></h2>
 </div>
 </div>
 </div>
@@ -158,7 +196,7 @@ categories: [fastpages, jupyter]</p>
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;hello&quot;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;hello&quot;</span><span class="p">)</span>
 <span class="n">variable</span> <span class="o">=</span> <span class="s2">&quot;Coding is fun&quot;</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;var&quot;</span><span class="p">)</span>
 </pre></div>
@@ -167,12 +205,27 @@ categories: [fastpages, jupyter]</p>
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>hello
+var
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
     
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Calculating-area-of-a-triangle-using-Python!!!-:Satisfied:">Calculating area of a triangle using Python!!! :Satisfied:<a class="anchor-link" href="#Calculating-area-of-a-triangle-using-Python!!!-:Satisfied:"> </a></h2>
+<h2 id="Calculating-area-of-a-triangle-using-Python!!!">Calculating area of a triangle using Python!!!<a class="anchor-link" href="#Calculating-area-of-a-triangle-using-Python!!!"> </a></h2>
 </div>
 </div>
 </div>
@@ -183,11 +236,11 @@ categories: [fastpages, jupyter]</p>
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">5</span>
-<span class="n">b</span> <span class="o">=</span> <span class="mi">6</span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">6</span>
 <span class="n">c</span> <span class="o">=</span> <span class="mi">7</span>
 
-<span class="c1">#Uncomment below to take inputs from the user </span>
+<span class="c1"># Uncomment below to take inputs from the user</span>
 <span class="c1"># a = float(input(&#39;Enter first side: &#39;))</span>
 <span class="c1"># b = float(input(&#39;Enter second side: &#39;))</span>
 <span class="c1"># c = float(input(&#39;Enter third side: &#39;))</span>
@@ -195,12 +248,26 @@ categories: [fastpages, jupyter]</p>
 <span class="c1"># calculate the semi-perimeter</span>
 <span class="n">s</span> <span class="o">=</span> <span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span> <span class="o">+</span> <span class="n">c</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
 
-<span class="c1">#calculate the area</span>
-<span class="n">area</span> <span class="o">=</span> <span class="p">(</span><span class="n">s</span><span class="o">*</span><span class="p">(</span><span class="n">s</span><span class="o">-</span><span class="n">a</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">s</span><span class="o">-</span><span class="n">b</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">s</span><span class="o">-</span><span class="n">c</span><span class="p">))</span><span class="o">**</span> <span class="mf">0.5</span>
-<span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;The area of the triangle is 50.2f&#39;</span> <span class="o">%</span><span class="n">area</span><span class="p">)</span>
+<span class="c1"># calculate the area</span>
+<span class="n">area</span> <span class="o">=</span> <span class="p">(</span><span class="n">s</span><span class="o">*</span><span class="p">(</span><span class="n">s</span><span class="o">-</span><span class="n">a</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">s</span><span class="o">-</span><span class="n">b</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">s</span><span class="o">-</span><span class="n">c</span><span class="p">))</span> <span class="o">**</span> <span class="mf">0.5</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The area of the triangle is </span><span class="si">%0.2f</span><span class="s1">&#39;</span> <span class="o">%</span><span class="k">area</span>)
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>The area of the triangle is 14.70
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 

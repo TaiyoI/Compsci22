@@ -28,7 +28,20 @@ Ok, now that you have seen my favorite foods, lets explore coding!
 | :---:       |    :----:   |        :---:  |
 | 1           | 2           |   3           |
 | 2           | 4           | 6             |
-| 3           | 6           | 18            |
-| 4           | 8           | 24            |
-| 5           | 10          | 30            |
+| 3           | 6           | 9             |
+| 4           | 8           | 12            |
+| 5           | 10          | 15            |
+
+## Exploring Coding
+    ~~~
+    print("hello world")
+    var = "coding is fun"
+    print("var")
+    ~~~
+
+## My Youtube Channel
+Subscribe to my YouTube Channel!
+<https://www.youtube.com/channel/UC4AOSpmXdOeJXestKv5Fxjw>
+
+## Thanks For Reading!!
 

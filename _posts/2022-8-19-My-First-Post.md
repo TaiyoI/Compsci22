@@ -24,7 +24,6 @@ This is my first blog post!!
 Ok, now that you have seen my favorite foods, lets explore coding!
 
 ## Adding a table!! 
-
 | Times       | Table       | Easy          |
 | :---:       |    :----:   |        :---:  |
 | 1           | 2           |   3           |

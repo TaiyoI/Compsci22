@@ -15,21 +15,20 @@ This is my first blog post!!
  Hello, My name is Taiyo Iwazaki and this is my first blog post on my fast pages website for computer science.
 
 ## My Favorite foods
-- Pizza
-- Pasta
-- Oatmeal
-- Steak
-- Ramen
-
+1.Pizza
+2.Pasta
+3.Oatmeal
+4.Steak
+5.Ramen
 Ok, now that you have seen my favorite foods, lets explore coding!
 
 ## Adding a table!! 
+Lets add a mini table
+| Syntax | Description |
+| ----------- | ----------- |
+| Header | Title | 
+| Paragraph | Text |
 
-| Times       | Table       | Easy          |
-| :---:       |    :----:   |        :---:  |
-| 1           | 2           |   3           |
-| 2           | 4           | 6             |
-| 3           | 6           | 18            |
-| 4           | 8           | 24            |
-| 5           | 10          | 30            |
+
+
 

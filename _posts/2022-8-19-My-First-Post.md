@@ -34,13 +34,14 @@ Ok, now that you have seen my favorite foods, lets explore coding!
 | 5           | 10          | 15            |
 
 ## Exploring Coding
-    ~~~html
+
+'''HTML 
 {
     print("hello world")
     var = "coding is fun"
     print("var")
 }
-    ~~~
+'''
 
 ## My Youtube Channel
 Subscribe to my YouTube Channel! :joy:

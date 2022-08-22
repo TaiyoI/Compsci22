@@ -35,7 +35,7 @@ Ok, now that you have seen my favorite foods, lets explore coding!
 
 ## Exploring Coding
 
-'''HTML 
+'''
 {
     print("hello world")
     var = "coding is fun"
@@ -46,6 +46,10 @@ Ok, now that you have seen my favorite foods, lets explore coding!
 ## My Youtube Channel
 Subscribe to my YouTube Channel! :joy:
 <https://www.youtube.com/channel/UC4AOSpmXdOeJXestKv5Fxjw>
+
+## Photo
+Here is a photo!
+![Taiyo Iwazaki-1.png]({{site.baseurl}}/images/Taiyo Iwazaki-1.png)
 
 ## Thanks For Reading!!
 

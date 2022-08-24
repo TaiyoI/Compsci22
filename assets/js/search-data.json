@@ -69,9 +69,55 @@
 
   
   
+      ,"page0": {
+          "title": "Math",
+          "content": "This website is powered by fastpages [^1]. .",
+          "url": "https://taiyoi.github.io/Compsci22/Math/",
+          "relUrl": "/Math/",
+          "date": ""
+      }
+      
+  
 
   
       ,"page1": {
+          "title": "History",
+          "content": "This website is powered by fastpages [^1]. .",
+          "url": "https://taiyoi.github.io/Compsci22/History/",
+          "relUrl": "/History/",
+          "date": ""
+      }
+      
+  
+
+  
+      ,"page2": {
+          "title": "English",
+          "content": "This website is powered by fastpages [^1]. .",
+          "url": "https://taiyoi.github.io/Compsci22/English/",
+          "relUrl": "/English/",
+          "date": ""
+      }
+      
+  
+
+  
+      ,"page3": {
+          "title": "CompSci",
+          "content": "This website is powered by fastpages [^1]. .",
+          "url": "https://taiyoi.github.io/Compsci22/CompSci/",
+          "relUrl": "/CompSci/",
+          "date": ""
+      }
+      
+  
+
+  
+
+  
+
+  
+      ,"page6": {
           "title": "About Me",
           "content": "This website is powered by fastpages 1. . a blogging platform that natively supports Jupyter notebooks in addition to other formats. &#8617; . |",
           "url": "https://taiyoi.github.io/Compsci22/about/",
@@ -84,13 +130,8 @@
   
 
   
-  
 
   
-
-  
-  
-
   
 
   
@@ -103,7 +144,10 @@
   
 
   
-      ,"page10": {
+  
+
+  
+      ,"page14": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://taiyoi.github.io/Compsci22/robots.txt",

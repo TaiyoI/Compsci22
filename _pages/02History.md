@@ -4,4 +4,6 @@ title: History
 permalink: /History/
 ---
 
-This website is powered by **[fastpages](https://github.com/fastai/fastpages)** [^1].
+>History assignments here
+
+# This is where my History Notes go.

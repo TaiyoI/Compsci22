@@ -6,4 +6,4 @@ permalink: /CompSci/
 
 >CompSci Notes Here
 
-# This is where my CompSci Notes go.
+## This is where my CompSci Notes go.

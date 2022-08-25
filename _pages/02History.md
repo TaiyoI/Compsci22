@@ -6,4 +6,4 @@ permalink: /History/
 
 >History assignments here
 
-# This is where my History Notes go.
+## This is where my History Notes go.

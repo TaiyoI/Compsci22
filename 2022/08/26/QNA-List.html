@@ -125,6 +125,82 @@ window.onload = wrap_img;
 
 <div class="container" id="notebook-container">
         
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">QandA</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;1. Question?&quot;</span><span class="p">,</span> <span class="s2">&quot;Answer&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;2. Question?&quot;</span><span class="p">,</span> <span class="s2">&quot;Answer&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;3. Question?&quot;</span><span class="p">,</span> <span class="s2">&quot;Answer&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;4. Question?&quot;</span><span class="p">,</span> <span class="s2">&quot;Answer&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;5. Question?&quot;</span><span class="p">,</span> <span class="s2">&quot;Answer&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;6. Question?&quot;</span><span class="p">,</span> <span class="s2">&quot;Answer&quot;</span><span class="p">,</span>   
+    <span class="s2">&quot;7. Question?&quot;</span><span class="p">,</span> <span class="s2">&quot;Answer&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;8. Question?&quot;</span><span class="p">,</span> <span class="s2">&quot;Answer&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;9. Question?&quot;</span><span class="p">,</span> <span class="s2">&quot;Answer&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;10. Question?&quot;</span><span class="p">,</span> <span class="s2">&quot;Answer&quot;</span><span class="p">,</span>
+    <span class="p">]</span>
+
+<span class="c1">#total points and using new quiz var</span>
+<span class="n">points</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">current</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">quiz</span> <span class="o">=</span> <span class="mi">1</span>
+
+<span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Welcome to my quiz!&quot;</span><span class="p">)</span>
+
+<span class="c1">#Using while lets me loop function</span>
+<span class="k">while</span> <span class="n">quiz</span> <span class="o">&lt;</span> <span class="mi">11</span><span class="p">:</span>
+    <span class="n">question</span> <span class="o">=</span> <span class="nb">input</span> <span class="p">(</span><span class="n">QandA</span><span class="p">[</span><span class="n">current</span><span class="p">])</span>
+    <span class="k">if</span> <span class="n">question</span> <span class="o">==</span> <span class="n">QandA</span><span class="p">[</span><span class="n">current</span><span class="o">+</span><span class="mi">1</span><span class="p">]:</span>
+        <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;That&#39;s correct!&quot;</span><span class="p">)</span>
+        <span class="n">points</span> <span class="o">=</span> <span class="n">points</span> <span class="o">+</span><span class="mi">1</span>
+        <span class="n">current</span> <span class="o">=</span> <span class="n">current</span> <span class="o">+</span><span class="mi">2</span>
+    <span class="k">else</span><span class="p">:</span> 
+        <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Sorry, that is incorrect!&quot;</span><span class="p">)</span>
+        <span class="n">points</span> <span class="o">=</span> <span class="n">points</span> <span class="o">-</span><span class="mi">1</span>
+        <span class="n">current</span> <span class="o">=</span> <span class="n">current</span> <span class="o">-</span><span class="mi">2</span>
+        <span class="n">quiz</span> <span class="o">=</span> <span class="n">quiz</span> <span class="o">+</span><span class="mi">1</span>
+
+<span class="c1">#Final Message</span>
+<span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;You got &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">current</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;/&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">QandA</span><span class="p">))</span> <span class="o">+</span> <span class="s2">&quot; correct&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Welcome to my quiz!
+Sorry, that is incorrect!
+Sorry, that is incorrect!
+Sorry, that is incorrect!
+Sorry, that is incorrect!
+Sorry, that is incorrect!
+Sorry, that is incorrect!
+Sorry, that is incorrect!
+Sorry, that is incorrect!
+Sorry, that is incorrect!
+Sorry, that is incorrect!
+You got -20/20 correct
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
 </div>
 
 

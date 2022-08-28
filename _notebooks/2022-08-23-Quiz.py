@@ -1,36 +1,13 @@
-import getpass, sys
+score = 0
 
-def question_with_response(prompt):
-    print("Question: " + prompt)
-    msg = input()
-    return msg
-
-questions = 3
-correct = 0
-
-print('Hello, ' + getpass.getuser() + " running " + sys.executable)
-print("You will be asked " + str(questions) + " questions.")
-question_and_answer("Are you ready to take a test?")
-
-rsp = question_with_response("What command is used to include other functions that were previously developed?")
-if rsp == "import":
-    print(rsp + " is correct!")
-    correct += 1
-else:
-    print(rsp + " is incorrect!")
-
-rsp = question_with_response("What command is used to evaluate correct or incorrect response in this example?")
-if rsp == "if":
-    print(rsp + " is correct!")
-    correct += 1
-else:
-    print(rsp + " is incorrect!")
-
-rsp = question_with_response("Each 'if' command contains an '_________' to determine a true or false condition?")
-if rsp == "expression":
-    print(rsp + " is correct!")
-    correct += 1
-else:
-    print(rsp + " is incorrect!")
-
-print(getpass.getuser() + " you scored " + str(correct) +"/" + str(questions))
+# Question 1
+answer1 = input("What is our class number? \na. a101 \nb. d101 \nc. a103 \nd. e201 \nAnswer: ")
+if answer1 == "a" or answer1 == "a101": 
+    score += 1
+    print ("correct!")
+    print ("score: ", score)
+    print ("\n")
+else: 
+    print("Incorrect! The answer is a101.")
+    print("score: ", score)
+    print("\n")

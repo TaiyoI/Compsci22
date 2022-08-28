@@ -32,25 +32,8 @@ while quiz < 10:
         current = current +2
     quiz = quiz +1
 
-print ("\n|Congratulations!")
-print ("|Here's your result.")
-print ("|Total score: " + str(points) + "/10")
-division = float(points)/float(20)
-multiply = float(division*100)
-result = round(multiply)
-print ("|Total percentage is", int(result), "%")
+    #Final Message
+    print ("You got " + str(score) + "/" + str(len(QandA)) + " correct")
 
-if result >= 95:
-print ("|Grade: a+ \n|Well done!")
+run_test(QandA)
 
-elif result >= 80:
-print ("|Grade: b \n|Good job!")
-
-elif result >= 65:
-print ("|Grade: c \n|You did okay.")
-
-elif result >=50:
-print ("|Grade: d \n|Keep trying, that wasn't very good.")
-
-elif result >= 0:
-print ("|Grade: Fail\n|You need to study.")  

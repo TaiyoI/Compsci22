@@ -135,6 +135,15 @@
   
 
   
+      ,"page4": {
+          "title": "Vocab",
+          "content": "Vocabulary for this tri here . Key Vocabulary . Sequence: . two or more lines of code | . Variable . A value that changes based off of conditions | .",
+          "url": "https://taiyoi.github.io/Compsci22/Vocab/",
+          "relUrl": "/Vocab/",
+          "date": ""
+      }
+      
+  
 
   
 
@@ -154,7 +163,6 @@
   
 
   
-  
 
   
   
@@ -169,7 +177,10 @@
   
 
   
-      ,"page14": {
+  
+
+  
+      ,"page15": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://taiyoi.github.io/Compsci22/robots.txt",

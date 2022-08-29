@@ -136,25 +136,24 @@ window.onload = wrap_img;
     <span class="s2">&quot;1. True or False, def is a key word in Python that defines a function&quot;</span><span class="p">,</span> <span class="s2">&quot;True&quot;</span><span class="p">,</span>
     <span class="s2">&quot;2. True or False, In Python anatomy of you will NOT be importing libraries and functions?&quot;</span><span class="p">,</span> <span class="s2">&quot;False&quot;</span><span class="p">,</span>
     <span class="s2">&quot;3. True or False, Hello world is a string literal?&quot;</span><span class="p">,</span> <span class="s2">&quot;True&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;4. True or False,?&quot;</span><span class="p">,</span> <span class="s2">&quot;Answer&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;5. True or False,Input and Output in Jupyter Notebook Input is NOT in line with Output?&quot;</span><span class="p">,</span> <span class="s2">&quot;True&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;6. True or False,an if expression is not evaluated for true or false&quot;</span><span class="p">,</span> <span class="s2">&quot;False&quot;</span><span class="p">,</span>   
-    <span class="s2">&quot;7. True or False,?&quot;</span><span class="p">,</span> <span class="s2">&quot;Answer&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;8. True or False,?&quot;</span><span class="p">,</span> <span class="s2">&quot;Answer&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;9. True or False,?&quot;</span><span class="p">,</span> <span class="s2">&quot;Answer&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;10. True or False,?&quot;</span><span class="p">,</span> <span class="s2">&quot;Answer&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;4. True or False, Output in Jupyter Notebook is below the code cell&quot;</span><span class="p">,</span> <span class="s2">&quot;True&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;5. True or False, Input and Output in Jupyter Notebook Input is NOT in line with Output?&quot;</span><span class="p">,</span> <span class="s2">&quot;True&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;6. True or False, an if expression is not evaluated for true or false&quot;</span><span class="p">,</span> <span class="s2">&quot;False&quot;</span><span class="p">,</span>   
+    <span class="s2">&quot;7. True or False, return command in function does not return msg input by user&quot;</span><span class="p">,</span>  <span class="s2">&quot;False&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;8. True or False, false takes branch of code directly under else command&quot;</span><span class="p">,</span> <span class="s2">&quot;True&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;9. True or False, correct += 1 is NOT the way to add one to the score&quot;</span><span class="p">,</span> <span class="s2">&quot;False&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;10. True or False, is msg a parameter to the print function?&quot;</span><span class="p">,</span> <span class="s2">&quot;True&quot;</span><span class="p">,</span>
     <span class="p">]</span>
 
 <span class="c1">#total points and using new quiz var</span>
 <span class="n">points</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="n">current</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="n">quiz</span> <span class="o">=</span> <span class="mi">1</span>
-
 <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Welcome to my true or false quiz!&quot;</span><span class="p">)</span>
 
 <span class="c1">#Using while lets me loop function</span>
 <span class="k">while</span> <span class="n">quiz</span> <span class="o">&lt;</span> <span class="mi">11</span><span class="p">:</span>
-    <span class="n">question</span> <span class="o">=</span> <span class="nb">input</span> <span class="p">(</span><span class="n">QandA</span><span class="p">[</span><span class="n">current</span><span class="p">])</span>
+    <span class="n">question</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="n">QandA</span><span class="p">[</span><span class="n">current</span><span class="p">])</span>
     <span class="k">if</span> <span class="n">question</span> <span class="o">==</span> <span class="n">QandA</span><span class="p">[</span><span class="n">current</span><span class="o">+</span><span class="mi">1</span><span class="p">]:</span>
         <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;That&#39;s correct!&quot;</span><span class="p">)</span>
         <span class="n">points</span> <span class="o">=</span> <span class="n">points</span> <span class="o">+</span><span class="mi">1</span>
@@ -162,11 +161,11 @@ window.onload = wrap_img;
     <span class="k">else</span><span class="p">:</span> 
         <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Sorry, that is incorrect!&quot;</span><span class="p">)</span>
         <span class="n">points</span> <span class="o">=</span> <span class="n">points</span> <span class="o">-</span><span class="mi">1</span>
-        <span class="n">current</span> <span class="o">=</span> <span class="n">current</span> <span class="o">-</span><span class="mi">2</span>
-        <span class="n">quiz</span> <span class="o">=</span> <span class="n">quiz</span> <span class="o">+</span><span class="mi">1</span>
+        <span class="n">current</span> <span class="o">=</span> <span class="n">current</span> <span class="o">+</span><span class="mi">2</span>
+    <span class="n">quiz</span> <span class="o">=</span> <span class="n">quiz</span> <span class="o">+</span><span class="mi">1</span>
 
 <span class="c1">#Final Message</span>
-<span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;You got &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">current</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;/&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">QandA</span><span class="p">))</span> <span class="o">+</span> <span class="s2">&quot; correct&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Good Job, You scored&quot;</span><span class="p">,</span> <span class="n">points</span><span class="p">,</span> <span class="s2">&quot;points out of ten&quot;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -179,18 +178,18 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Welcome to my quiz!
+<pre>Welcome to my true or false quiz!
+That&#39;s correct!
+That&#39;s correct!
+That&#39;s correct!
+That&#39;s correct!
+That&#39;s correct!
+That&#39;s correct!
+That&#39;s correct!
+That&#39;s correct!
+That&#39;s correct!
 Sorry, that is incorrect!
-Sorry, that is incorrect!
-Sorry, that is incorrect!
-Sorry, that is incorrect!
-Sorry, that is incorrect!
-Sorry, that is incorrect!
-Sorry, that is incorrect!
-Sorry, that is incorrect!
-Sorry, that is incorrect!
-Sorry, that is incorrect!
-You got -20/20 correct
+Good Job, You scored 8 points out of ten
 </pre>
 </div>
 </div>

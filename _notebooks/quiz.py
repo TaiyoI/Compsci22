@@ -23,7 +23,7 @@ print ("Welcome to my quiz!")
 while quiz < 10:
     question = input (QandA[current])
     if question == QandA[current+1]:
-        print ("That's correct!")
+        print("That's correct!")
         points = points +1
         current = current +2
     else: 

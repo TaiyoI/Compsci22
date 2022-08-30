@@ -81,7 +81,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      6 min read
+      5 min read
     
 </span></p>
 
@@ -163,6 +163,40 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">langs</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"Python"</span><span class="p">,</span> <span class="s2">"JavaScript"</span><span class="p">,</span> <span class="s2">"Java"</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"langs"</span><span class="p">,</span> <span class="n">langs</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">langs</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"- langs[0]"</span><span class="p">,</span> <span class="n">langs</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="nb">type</span><span class="p">(</span><span class="n">langs</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>langs ['Python', 'JavaScript', 'Java'] &lt;class 'list'&gt;
+- langs[0] Java &lt;class 'str'&gt;
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># variable of type string</span>
 <span class="n">name</span> <span class="o">=</span> <span class="s2">"John Doe"</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">"name"</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">name</span><span class="p">))</span>
@@ -178,7 +212,7 @@ window.onload = wrap_img;
 <span class="nb">print</span><span class="p">()</span>
 
 <span class="c1"># variable of type list (many values in one variable)</span>
-<span class="n">langs</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"Python"</span><span class="p">,</span> <span class="s2">"JavaScript"</span><span class="p">,</span> <span class="s2">"Java"</span><span class="p">,</span> <span class="s2">"Bash"</span><span class="p">,</span> <span class="s2">"Html"</span><span class="p">,</span> <span class="s2">"C"</span><span class="p">,</span> <span class="s2">"R"</span><span class="p">]</span>
+<span class="n">langs</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"Python"</span><span class="p">,</span> <span class="s2">"JavaScript"</span><span class="p">,</span> <span class="s2">"Java"</span><span class="p">]</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">"langs"</span><span class="p">,</span> <span class="n">langs</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">langs</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">"- langs[0]"</span><span class="p">,</span> <span class="n">langs</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="nb">type</span><span class="p">(</span><span class="n">langs</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
 
@@ -186,10 +220,10 @@ window.onload = wrap_img;
 
 <span class="c1"># variable of type dictionary (a group of keys and values)</span>
 <span class="n">person</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"John"</span><span class="p">,</span>
-    <span class="s2">"age"</span><span class="p">:</span> <span class="s2">"18"</span><span class="p">,</span>
-    <span class="s2">"score"</span><span class="p">:</span> <span class="s2">"90.0"</span><span class="p">,</span>
-    <span class="s2">"langs"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"Python"</span><span class="p">,</span> <span class="s2">"JavaScript"</span><span class="p">,</span> <span class="s2">"Java"</span><span class="p">,</span> <span class="s2">"Bash"</span><span class="p">,</span> <span class="s2">"Html"</span><span class="p">,</span> <span class="s2">"C"</span><span class="p">,</span> <span class="s2">"R"</span><span class="p">]</span>
+    <span class="s2">"name"</span><span class="p">:</span> <span class="n">name</span><span class="p">,</span>
+    <span class="s2">"age"</span><span class="p">:</span> <span class="n">age</span><span class="p">,</span>
+    <span class="s2">"score"</span><span class="p">:</span> <span class="n">score</span><span class="p">,</span>
+    <span class="s2">"langs"</span><span class="p">:</span> <span class="n">langs</span>
 <span class="p">}</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">"person"</span><span class="p">,</span> <span class="n">person</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">person</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">'- person["name"]'</span><span class="p">,</span> <span class="n">person</span><span class="p">[</span><span class="s2">"name"</span><span class="p">],</span> <span class="nb">type</span><span class="p">(</span><span class="n">person</span><span class="p">[</span><span class="s2">"name"</span><span class="p">]))</span>
@@ -209,11 +243,11 @@ window.onload = wrap_img;
 age 18 &lt;class 'int'&gt;
 score 90.0 &lt;class 'float'&gt;
 
-langs ['Python', 'JavaScript', 'Java', 'Bash', 'Html', 'C', 'R'] &lt;class 'list'&gt;
+langs ['Python', 'JavaScript', 'Java'] &lt;class 'list'&gt;
 - langs[0] Python &lt;class 'str'&gt;
 
-person {'name': 'John', 'age': '18', 'score': '90.0', 'langs': ['Python', 'JavaScript', 'Java', 'Bash', 'Html', 'C', 'R']} &lt;class 'dict'&gt;
-- person["name"] John &lt;class 'str'&gt;
+person {'name': 'John Doe', 'age': 18, 'score': 90.0, 'langs': ['Python', 'JavaScript', 'Java']} &lt;class 'dict'&gt;
+- person["name"] John Doe &lt;class 'str'&gt;
 </pre>
 </div>
 </div>
@@ -281,44 +315,6 @@ person {'name': 'John', 'age': '18', 'score': '90.0', 'langs': ['Python', 'JavaS
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>bash: InfoDb: command not found
-bash: syntax error near unexpected token `{'
-bash: FirstName:: command not found
-bash: LastName:: command not found
-bash: DOB:: command not found
-bash: Residence:: command not found
-bash: Email:: command not found
-bash: Owns_Cars:: command not found
-bash: syntax error near unexpected token `}'
-bash: syntax error near unexpected token `{'
-bash: FirstName:: command not found
-bash: LastName:: command not found
-bash: DOB:: command not found
-bash: Residence:: command not found
-bash: Email:: command not found
-bash: Owns_Cars:: command not found
-bash: syntax error near unexpected token `}'
-bash: syntax error near unexpected token `InfoDb'
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_text output_error">
-<pre></pre>
-</div>
-</div>
-
 </div>
 </div>
 

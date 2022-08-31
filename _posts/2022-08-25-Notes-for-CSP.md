@@ -8,8 +8,12 @@ categories: [markdown]
 author: Taiyo Iwazaki
 ---
 
-##Productive Blogging
+## Productive Blogging
 
 -blogging for other classes
 -being productive
 
+## Procedural Abstraction
+- little pieces of code so that you can put them in other larger parts of code
+
+## Data Abstraction

@@ -1,6 +1,6 @@
 ---
-title: "Extra Credit"
-description: Extra credit blog 
+title: "Alumni Seminar"
+description: Alumni Seminar
 toc: true
 comments: true
 layout: post
@@ -56,4 +56,5 @@ author: Taiyo Iwazaki
 - Code Ninjas
 - LG Intern (APIS Web Development)
 - 
-# talkers
+# Insights
+- Using this information that I have learned from the seminar, I now understand what I can do with my computer science knowledge in class and implement it to my daily life.

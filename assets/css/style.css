@@ -427,7 +427,7 @@ pre code { font-size: 15px !important; }
 
 /*-----------------------------------*/
 /*----- ADD YOUR STYLES BELOW -------*/
-html, body, input, textarea, select, button { color: rgba(255, 255, 255, 0.87) !important; background-color: #ae00ff !important; }
+html, body, input, textarea, select, button { color: rgba(255, 255, 255, 0.87) !important; background-color: #1d91df !important; }
 
 a { color: #4bbaff !important; }
 
@@ -435,11 +435,11 @@ a:hover { color: rgba(255, 255, 255, 0.87) !important; }
 
 .site-title, .site-title:visited, .site-nav, .page-link { color: rgba(255, 255, 255, 0.87) !important; }
 
-.site-nav { background-color: #ae00ff; border-color: #b924ff; }
+.site-nav { background-color: #1d91df; border-color: #3da0e3; }
 
-* { scrollbar-color: #ae00ff #b924ff; }
+* { scrollbar-color: #1d91df #3da0e3; }
 
-pre, code { border-color: #b924ff; background-color: #b20dff; }
+pre, code { border-color: #3da0e3; background-color: #2897e1; }
 
 .page-description { color: rgba(255, 255, 255, 0.69); }
 
@@ -447,19 +447,19 @@ pre, code { border-color: #b924ff; background-color: #b20dff; }
 
 .post-content p, .post-content li { color: rgba(255, 255, 255, 0.69); }
 
-.btn { background-color: #b20dff !important; color: rgba(255, 255, 255, 0.87) !important; border-color: #b924ff !important; }
+.btn { background-color: #2897e1 !important; color: rgba(255, 255, 255, 0.87) !important; border-color: #3da0e3 !important; }
 
-.btn:hover { background-color: #ae00ff !important; }
+.btn:hover { background-color: #1d91df !important; }
 
-table th { background-color: #b20dff; border-color: #b924ff; color: rgba(255, 255, 255, 0.87); }
+table th { background-color: #2897e1; border-color: #3da0e3; color: rgba(255, 255, 255, 0.87); }
 
-table td { background-color: #ae00ff; border-color: #b924ff; color: rgba(255, 255, 255, 0.69); }
+table td { background-color: #1d91df; border-color: #3da0e3; color: rgba(255, 255, 255, 0.69); }
 
-.flash { color: #ae00ff !important; filter: brightness(80%); }
+.flash { color: #1d91df !important; filter: brightness(80%); }
 
 canvas { filter: invert(100%); }
 
-.post-list > li > div { box-shadow: none !important; background-color: #b20dff; border: none !important; }
+.post-list > li > div { box-shadow: none !important; background-color: #2897e1; border: none !important; }
 
 li .post-meta-description { color: rgba(255, 255, 255, 0.69) !important; }
 

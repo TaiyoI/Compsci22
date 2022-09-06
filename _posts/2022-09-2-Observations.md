@@ -4,12 +4,12 @@ description: Observations and pictures of dark mode
 toc: true
 comments: true
 layout: post
-categories: [markdown, Class activities]
+categories: [ Class activities, Week 3]
 author: Taiyo Iwazaki
 ---
 
 ## Theme Changed
-> Here is a screenshot of me changing the theme of my fastpages
+> Here is a screenshot of me changing the theme of my fastpages to the hacker theme
 
 ![]({{site.baseurl}}/images/Screen%20Shot%202022-09-02%20at%201.42.01%20PM.png)
 

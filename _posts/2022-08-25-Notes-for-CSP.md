@@ -4,8 +4,8 @@ description: This is my first blog post
 toc: true
 comments: true
 layout: post
-categories: [markdown]
-author: Taiyo Iwazaki
+categories: [markdown, Class activities, Week 2]
+author: Taiyo Iwazaki 
 ---
 
 ## Productive Blogging

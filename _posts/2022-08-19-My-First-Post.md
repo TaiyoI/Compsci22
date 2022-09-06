@@ -4,7 +4,7 @@ description: This is my first blog post
 toc: true
 comments: true
 layout: post
-categories: [markdown]
+categories: [markdown, Week 1]
 author: Taiyo Iwazaki
 ---
  

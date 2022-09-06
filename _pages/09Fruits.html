@@ -1,0 +1,14 @@
+<h>Source of the key/value: "fruits" in "_config.yml"</h>
+<table>
+    <tr>
+        <th>Number</th>
+        <th>fruits</th>
+    </tr>
+    {% assign fruits_number = 6  %}
+    {% for i in (0..fruits_number) %}
+    <tr>
+        <td> {{ i }}</td>
+        <td> {{ site.fruits[i] }}</td>
+    </tr>
+    {% endfor %}
+</table> (

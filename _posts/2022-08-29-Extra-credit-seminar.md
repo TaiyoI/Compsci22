@@ -4,7 +4,7 @@ description: Alumni Seminar
 toc: true
 comments: true
 layout: post
-categories: [markdown, extra credit, Week 2]
+categories: [ extra credit, Week 2]
 author: Taiyo Iwazaki
 tags: Week 2
 ---

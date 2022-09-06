@@ -194,6 +194,17 @@
   
 
   
+      ,"page9": {
+          "title": "Fruits",
+          "content": "Source of the key/value: &quot;fruits&quot; in &quot;_config.yml&quot; . Number fruits . 0 | | . 1 | | . 2 | | . 3 | | . 4 | | . 5 | | . 6 | | . ( .",
+          "url": "https://taiyoi.github.io/Compsci22/categories/",
+          "relUrl": "/categories/",
+          "date": ""
+      }
+      
+  
+
+  
 
   
 
@@ -213,7 +224,7 @@
   
 
   
-      ,"page16": {
+      ,"page17": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://taiyoi.github.io/Compsci22/robots.txt",

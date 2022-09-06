@@ -10,11 +10,11 @@ title: Fruits
         <th>Number</th>
         <th>Fruits</th>
     </tr>
-    {% assign Fruits = 6  %}
-    {% for i in (0..Fruits) %}
+    {% assign fruit_number = 6  %}
+    {% for i in (0..fruit_number) %}
     <tr>
         <td> {{ i }}</td>
-        <td> {{ site.fruits[i] }}</td>
+        <td> {{ site.fruit_number[i] }}</td>
     </tr>
     {% endfor %}
 </table> 

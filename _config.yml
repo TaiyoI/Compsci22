@@ -125,4 +125,4 @@ feed:
 exclude:
   - settings.ini
 
-Fruits: ["Bananna", "Cherry", "Apple", "Dragon fruit", "Watermelon", "Orange"]
+fruit_number: ["Banana", "Cherry", "Apple", "Dragon fruit", "Watermelon", "Orange"]

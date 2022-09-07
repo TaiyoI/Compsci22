@@ -29,7 +29,7 @@ table, th, td {
   <tr>
     <td>1</td>
     <td>2022-08-29</td>
-    <td>(Week 1)[https://github.com/TaiyoI/Compsci22/issues/3]td>
+    <td>(Week 1)[https://github.com/TaiyoI/Compsci22/issues/3] </td>
   </tr>
    <tr>
     <td>2</td>

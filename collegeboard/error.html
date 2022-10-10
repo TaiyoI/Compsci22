@@ -81,7 +81,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      4 min read
+      5 min read
     
 </span></p>
 
@@ -150,20 +150,6 @@ window.onload = wrap_img;
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>[&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;, &#39;f&#39;, &#39;g&#39;, &#39;h&#39;, &#39;i&#39;, &#39;j&#39;, &#39;k&#39;, &#39;l&#39;, &#39;m&#39;, &#39;n&#39;, &#39;o&#39;, &#39;p&#39;, &#39;q&#39;, &#39;r&#39;, &#39;s&#39;, &#39;t&#39;, &#39;u&#39;, &#39;v&#39;, &#39;w&#39;, &#39;x&#39;, &#39;y&#39;, &#39;z&#39;]
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
 </div>
     
 
@@ -196,20 +182,6 @@ window.onload = wrap_img;
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>The letter b is the 1 letter in the alphabet
-</pre>
-</div>
-</div>
-
 </div>
 </div>
 
@@ -448,24 +420,197 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">menu</span> <span class="o">=</span>  <span class="p">{</span><span class="s2">&quot;burger&quot;</span><span class="p">:</span> <span class="mf">3.99</span><span class="p">,</span>
-         <span class="s2">&quot;fries&quot;</span><span class="p">:</span> <span class="mf">1.99</span><span class="p">,</span>
-         <span class="s2">&quot;drink&quot;</span><span class="p">:</span> <span class="mf">0.99</span><span class="p">}</span>
-<span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Welcome to Taiyo&#39;s Burger Shop.&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Check out the menu below&quot;</span><span class="p">)</span>
+<span class="c1"># import module</span>
+<span class="kn">from</span> <span class="nn">tabulate</span> <span class="kn">import</span> <span class="n">tabulate</span>
+ 
+<span class="c1"># assign data</span>
+<span class="n">mydata</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">[</span><span class="s2">&quot;burger&quot;</span><span class="p">,</span> <span class="s2">&quot;3.99&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;fries&quot;</span><span class="p">,</span> <span class="s2">&quot;1.99&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;drink&quot;</span><span class="p">,</span> <span class="s2">&quot;0.99&quot;</span><span class="p">],</span> 
+<span class="p">]</span>
+ 
+<span class="c1"># create header</span>
+<span class="n">head</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Item&quot;</span><span class="p">,</span> <span class="s2">&quot;Price&quot;</span><span class="p">]</span>
+ 
+<span class="c1"># display table</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">tabulate</span><span class="p">(</span><span class="n">mydata</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">head</span><span class="p">,</span> <span class="n">tablefmt</span><span class="o">=</span><span class="s2">&quot;grid&quot;</span><span class="p">))</span>
 
-<span class="c1">#shows the user the menu and prompts them to select an item</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="n">total</span> <span class="o">=</span> <span class="mi">0</span> 
+<span class="n">menu</span> <span class="o">=</span>  <span class="p">{</span><span class="s2">&quot;burger&quot;</span><span class="p">:</span> <span class="mf">3.99</span><span class="p">,</span> 
+        <span class="s2">&quot;fries&quot;</span><span class="p">:</span> <span class="mf">1.99</span><span class="p">,</span> 
+        <span class="s2">&quot;drink&quot;</span><span class="p">:</span> <span class="mf">0.99</span><span class="p">}</span>
+
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Menu&quot;</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="ow">in</span> <span class="n">menu</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">k</span> <span class="o">+</span> <span class="s2">&quot;  $&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">v</span><span class="p">))</span> <span class="c1">#why does v have &quot;str&quot; in front of it?</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">k</span> <span class="o">+</span> <span class="s2">&quot;  $&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">v</span><span class="p">))</span> 
 
-<span class="c1">#ideally the code should prompt the user multiple times</span>
-<span class="n">item</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Please select an item from the menu&quot;</span><span class="p">)</span>
+<span class="n">order</span> <span class="o">=</span> <span class="kc">True</span>
 
-<span class="c1">#code should add the price of the menu items selected by the user </span>
-<span class="nb">print</span><span class="p">(</span><span class="n">total</span><span class="p">)</span>
+<span class="k">while</span> <span class="n">order</span><span class="p">:</span>
+    <span class="n">food</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Please select an item from the menu. Press enter when you are done ordering.&quot;</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">food</span> <span class="ow">in</span> <span class="n">menu</span><span class="p">:</span>
+        <span class="n">total</span> <span class="o">+=</span> <span class="n">menu</span><span class="p">[</span><span class="n">food</span><span class="p">]</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Your total: &quot;&quot;$&quot;</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="si">{:.2f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">total</span><span class="p">))</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Your order will be ready soon!&quot;</span><span class="p">)</span>
+        <span class="n">order</span> <span class="o">=</span> <span class="kc">False</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Welcome to Taiyo&#39;s Burger Shop.
+Check out the menu below
++--------+---------+
+| Item   |   Price |
++========+=========+
+| burger |    3.99 |
++--------+---------+
+| fries  |    1.99 |
++--------+---------+
+| drink  |    0.99 |
++--------+---------+
+Menu
+burger  $3.99
+fries  $1.99
+drink  $0.99
+Your total: $3.99
+Your total: $5.98
+Your total: $6.97
+Your total: $7.96
+Your total: $9.95
+Your total: $13.94
+Your order will be ready soon!
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">Order</span><span class="p">(</span><span class="n">quantity</span><span class="p">,</span> <span class="n">item_list</span><span class="p">):</span>
+    <span class="k">global</span> <span class="n">total</span>
+    <span class="k">if</span> <span class="n">quantity</span> <span class="o">&gt;</span> <span class="n">item_list</span><span class="p">[</span><span class="mi">2</span><span class="p">]:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;There is not enough stock!&quot;</span><span class="p">)</span>
+        <span class="k">pass</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">total</span> <span class="o">+=</span> <span class="n">item_list</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="n">quantity</span>
+        <span class="n">item_list</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">-=</span> <span class="n">quantity</span>
+
+<span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">A</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Burger&quot;</span><span class="p">,</span> <span class="p">(</span><span class="mf">3.99</span><span class="p">),</span> <span class="mi">50</span><span class="p">],</span> 
+<span class="p">[</span><span class="s2">&quot;Double Double&quot;</span><span class="p">,</span> <span class="p">(</span><span class="mf">4.99</span><span class="p">),</span> <span class="mi">60</span><span class="p">],</span> 
+<span class="p">[</span><span class="s2">&quot;Large Fries&quot;</span><span class="p">,</span> <span class="p">(</span><span class="mf">1.99</span><span class="p">),</span> <span class="mi">200</span><span class="p">],</span> 
+<span class="p">[</span><span class="s2">&quot;Drink&quot;</span><span class="p">,</span> <span class="p">(</span><span class="mf">0.99</span><span class="p">),</span> <span class="mi">200</span><span class="p">],</span> 
+<span class="p">[</span><span class="s2">&quot;Burger Meal&quot;</span><span class="p">,</span> <span class="p">(</span><span class="mf">5.99</span><span class="p">),</span> <span class="mi">0</span><span class="p">],</span>
+<span class="p">[</span><span class="s2">&quot;Frosty&quot;</span><span class="p">,</span> <span class="p">(</span><span class="mf">1.99</span><span class="p">),</span> <span class="mi">20</span><span class="p">],</span>
+
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Welcome to Taiyo&#39;s Burger Shop.&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Check out the menu below&quot;</span><span class="p">)</span>
+<span class="c1"># import module</span>
+<span class="kn">from</span> <span class="nn">tabulate</span> <span class="kn">import</span> <span class="n">tabulate</span>
+ 
+<span class="c1"># assign data</span>
+<span class="n">mydata</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">[</span><span class="s2">&quot;Burger&quot;</span><span class="p">,</span> <span class="s2">&quot;2.99&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Double Double&quot;</span><span class="p">,</span> <span class="s2">&quot;3.99&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Large Fries&quot;</span><span class="p">,</span> <span class="s2">&quot;1.99&quot;</span><span class="p">],</span> 
+    <span class="p">[</span><span class="s2">&quot;Drink&quot;</span><span class="p">,</span> <span class="s2">&quot;0.99&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Burger Meal&quot;</span><span class="p">,</span> <span class="s2">&quot;5.99&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Frosty&quot;</span><span class="p">,</span> <span class="s2">&quot;1.99&quot;</span><span class="p">],</span>
+<span class="p">]</span>
+ 
+<span class="c1"># create header</span>
+<span class="n">head</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Item&quot;</span><span class="p">,</span> <span class="s2">&quot;Price&quot;</span><span class="p">]</span>
+ 
+<span class="c1"># display table</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">tabulate</span><span class="p">(</span><span class="n">mydata</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">head</span><span class="p">,</span> <span class="n">tablefmt</span><span class="o">=</span><span class="s2">&quot;grid&quot;</span><span class="p">))</span>
+
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="n">choice</span> <span class="o">=</span> <span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">What would you like?</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">))</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span> 
+    <span class="n">quantity</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">How many would you like?</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">))</span>
+
+    <span class="k">if</span> <span class="n">choice</span> <span class="o">==</span> <span class="s2">&quot;Burger&quot;</span><span class="p">:</span>
+        <span class="n">Order</span><span class="p">(</span><span class="n">quantity</span><span class="p">,</span> <span class="n">A</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="k">elif</span> <span class="n">choice</span> <span class="o">==</span> <span class="s2">&quot;Double Double&quot;</span><span class="p">:</span>
+        <span class="n">Order</span><span class="p">(</span><span class="n">quantity</span><span class="p">,</span> <span class="n">A</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+    <span class="k">elif</span> <span class="n">choice</span> <span class="o">==</span> <span class="s2">&quot;Large Fries&quot;</span><span class="p">:</span>
+        <span class="n">Order</span><span class="p">(</span><span class="n">quantity</span><span class="p">,</span> <span class="n">A</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+    <span class="k">elif</span> <span class="n">choice</span> <span class="o">==</span> <span class="s2">&quot;Drink&quot;</span><span class="p">:</span>
+        <span class="n">Order</span><span class="p">(</span><span class="n">quantity</span><span class="p">,</span> <span class="n">A</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span>
+    <span class="k">elif</span> <span class="n">choice</span> <span class="o">==</span> <span class="s2">&quot;Burger Meal&quot;</span><span class="p">:</span>
+        <span class="n">Order</span><span class="p">(</span><span class="n">quantity</span><span class="p">,</span> <span class="n">A</span><span class="p">[</span><span class="mi">4</span><span class="p">])</span>
+    <span class="k">elif</span> <span class="n">choice</span> <span class="o">==</span> <span class="s2">&quot;Frosty&quot;</span><span class="p">:</span>
+        <span class="n">Order</span><span class="p">(</span><span class="n">quantity</span><span class="p">,</span> <span class="n">A</span><span class="p">[</span><span class="mi">5</span><span class="p">])</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Invalid Item&quot;</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">:</span> <span class="n">total</span>
+    
+    <span class="n">more_items</span> <span class="o">=</span> <span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Do you want to order more items? If no, press enter&quot;</span><span class="p">))</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">more_items</span> <span class="o">==</span> <span class="s2">&quot;yes&quot;</span><span class="p">:</span>
+        <span class="k">pass</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">break</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Thank You For Ordering From Taiyo&#39;s Burgers!&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Welcome to Taiyo&#39;s Burger Shop.
+Check out the menu below
++---------------+---------+
+| Item          |   Price |
++===============+=========+
+| Burger        |    2.99 |
++---------------+---------+
+| Double Double |    3.99 |
++---------------+---------+
+| Large Fries   |    1.99 |
++---------------+---------+
+| Drink         |    0.99 |
++---------------+---------+
+| Burger Meal   |    5.99 |
++---------------+---------+
+| Frosty        |    1.99 |
++---------------+---------+
+Invalid Item
+Invalid Item
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 

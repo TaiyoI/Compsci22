@@ -1,6 +1,6 @@
 ---
-title: "My First Blog Post"
-description: This is my first blog post
+title: "APCSP FINAL"
+description: This is my APCSP final
 toc: true
 comments: true
 layout: post

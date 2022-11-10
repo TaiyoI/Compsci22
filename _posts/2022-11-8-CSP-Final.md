@@ -43,16 +43,36 @@ Going into the Final, I was scared and nervous as the MCQ had 50 questions about
 
 <!--- This is the third question--->
 
-<img src = "https://user-images.githubusercontent.com/111478625/200662869-6c529e2b-01cc-42c1-809f-3f2097848409.png" alt = "first question" width = 500>
+<img src = "https://user-images.githubusercontent.com/111478625/201188058-e6fd9e65-768c-4574-8455-2c2fe4d7618f.png"> alt = "first question" width = 500>
 
-3. Which of the following is a primary reason for the use of open protocols on the Internet?
-- The right answer to this is: Open protocols provide a way to standardize data transmission between different devices.
-- This is the right answer because 
+3. Consider the following numeric values.
+
+Binary 1011
+Binary 1101
+Decimal 5
+Decimal 12
+Which of the following lists the values in order from least to greatest?
+- The right answer to this is: Decimal 5, binary 1011, decimal 12, binary 1101
+- This is the right answer because Binary 1011 is equivalent to decimal 11 and should be placed before decimal 12.
 
 <!--- This is the fourth question--->
 
-<img src = "https://user-images.githubusercontent.com/111478625/200662869-6c529e2b-01cc-42c1-809f-3f2097848409.png" alt = "first question" width = 500>
+<img src = "https://user-images.githubusercontent.com/111478625/201188408-f04db78d-03f9-417c-b100-d0dde67f7064.png" alt = "first question" width = 500>
 
-4. Which of the following is a primary reason for the use of open protocols on the Internet?
-- The right answer to this is: Open protocols provide a way to standardize data transmission between different devices.
-- This is the right answer because 
+4. Consider the following code segment.
+
+x ← 25
+
+y ← 50
+
+z ← 75
+
+x ← y
+
+y ← z
+
+z ← x
+
+Which of the variables have the value 50 after executing the code segment?
+- The right answer to this is: x and z only
+- This is the right answer because the value of y is initially 50, but its value is changed to 75 in the fifth statement. The fourth statement assigns the value 50 to x. The sixth statement assigns the value 50 to z.

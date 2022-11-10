@@ -27,7 +27,7 @@ Going into the Final, I was scared and nervous as the MCQ had 50 questions about
 
 <!--- This is the first question--->
 
-<img src = "https://user-images.githubusercontent.com/111478625/200662869-6c529e2b-01cc-42c1-809f-3f2097848409.png" alt = "first question" width = 500>
+<img src = "https://user-images.githubusercontent.com/111478625/200662869-6c529e2b-01cc-42c1-809f-3f2097848409.png" alt = "first question" width = 1000>
 
 1. Which of the following is a primary reason for the use of open protocols on the Internet?
 - The right answer to this is: Open protocols provide a way to standardize data transmission between different devices.
@@ -35,7 +35,7 @@ Going into the Final, I was scared and nervous as the MCQ had 50 questions about
 
 <!--- This is the second question--->
 
-<img src = "https://user-images.githubusercontent.com/111478625/200665666-34c83292-4c10-44b2-8c3f-c29208b5bd2d.png" alt = "second question" width = 500>
+<img src = "https://user-images.githubusercontent.com/111478625/200665666-34c83292-4c10-44b2-8c3f-c29208b5bd2d.png" alt = "second question" width = 1000>
 
 2. A video game character can face toward one of four directions: north, south, east, and west. Each direction is stored in memory as a sequence of four bits. A new version of the game is created in which the character can face toward one of eight directions, adding northwest, northeast, southwest, and southeast to the original four possibilities. Which of the following statements is true about how the eight directions must be stored in memory?
 - The right answer to this is: Four bits are enough to store the eight directions.
@@ -43,7 +43,7 @@ Going into the Final, I was scared and nervous as the MCQ had 50 questions about
 
 <!--- This is the third question--->
 
-<img src = "https://user-images.githubusercontent.com/111478625/201188058-e6fd9e65-768c-4574-8455-2c2fe4d7618f.png"> alt = "first question" width = 500>
+<img src = "https://user-images.githubusercontent.com/111478625/201188058-e6fd9e65-768c-4574-8455-2c2fe4d7618f.png" alt = "first question" width = 1000>
 
 3. Consider the following numeric values.
 
@@ -57,7 +57,7 @@ Which of the following lists the values in order from least to greatest?
 
 <!--- This is the fourth question--->
 
-<img src = "https://user-images.githubusercontent.com/111478625/201188408-f04db78d-03f9-417c-b100-d0dde67f7064.png" alt = "first question" width = 500>
+<img src = "https://user-images.githubusercontent.com/111478625/201188408-f04db78d-03f9-417c-b100-d0dde67f7064.png" alt = "first question" width = 1000>
 
 4. Consider the following code segment.
 

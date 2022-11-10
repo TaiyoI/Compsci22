@@ -5,6 +5,7 @@ toc: true
 comments: true
 layout: post
 categories: [ extra credit, Week 2]
+tags: [Extra Credit]
 author: Taiyo Iwazaki
 tags: Week 2
 ---

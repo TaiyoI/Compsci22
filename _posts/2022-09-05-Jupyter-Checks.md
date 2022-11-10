@@ -8,6 +8,7 @@ permalink: /techtalk/bash_checks
 categories: [Week 2]
 nb_path: _notebooks/2022-8-25-Jupyter-Checks.ipynb
 layout: notebook
+tags: [python]
 ---
 
 <!--

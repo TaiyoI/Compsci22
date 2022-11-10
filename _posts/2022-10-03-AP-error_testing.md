@@ -11,6 +11,7 @@ type: ap
 week: 7
 nb_path: _notebooks/2022-10-03-AP-error_testing.ipynb
 layout: notebook
+tags: [python]
 ---
 
 <!--

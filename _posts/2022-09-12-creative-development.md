@@ -6,6 +6,7 @@ comments: true
 layout: post
 categories: [ Class activities, Week 3]
 author: Taiyo Iwazaki
+tags: [markdown]
 ---
 
 ## Link

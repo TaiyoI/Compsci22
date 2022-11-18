@@ -31,7 +31,7 @@ type: pbl
                 <th>Hexadecimal</th>
                 <th>Decimal</th>
                 <th>Minus</th>
-                <th>Amount of Bits</th>
+                <th>Amount of Bits</th> <!-- Made a new row and added the "ammount of bits" area-->
             </tr>
             <tr>
                 <td><button type="button" id="add1" onclick="add(1)">+1</button></td>
@@ -40,7 +40,7 @@ type: pbl
                 <td id="hexadecimal">0</td>
                 <td id="decimal">0</td>
                 <td><button type="button" id="sub1" onclick="add(-1)">-1</button></td>
-                <td id="bits">{{BITS}}</td>
+                <td id="bits">{{BITS}}</td> <!--Here I used the id "bits" to call the -->
             </tr>
             </table>
         </div>

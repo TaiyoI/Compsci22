@@ -10,7 +10,7 @@ tags: [Teaching, Markdown]
 
 # College board teaching
 This is the college board Mark Down file I am using to take notes on the different student teachers.
----------
+------
 
 ## Unit 3 Section 1-2 Notes
 

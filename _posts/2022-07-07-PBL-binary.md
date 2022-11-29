@@ -15,7 +15,7 @@ type: pbl
 <!-- Hack 3: do your own thing -->
 
 
-{% assign BITS = 8 %}
+{% assign BITS = 10 %}
 
 <div class="container bg-primary">
     <header class="pb-3 mb-4 border-bottom border-primary text-dark">
@@ -40,10 +40,11 @@ type: pbl
                 <td id="hexadecimal">0</td>
                 <td id="decimal">0</td>
                 <td><button type="button" id="sub1" onclick="add(-1)">-1</button></td>
-                <td id="bits">{{BITS}}</td> <!--Here I used the id "bits" to call the -->
+                <td id="bits">{{BITS}}</td> <!--Here I used the id "bits" to call the bits amount-->
             </tr>
             </table>
         </div>
+         <div id="colorBox"></div>
         <div class="col-12">
             {% comment %}Liquid for loop includes last number, thus the Minus{% endcomment %}
             {% assign bits = BITS | minus: 1 %} 

@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Title | Taiyo I</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Title" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Taiyo Iwazakis Fast Pages" />
+<meta property="og:description" content="Taiyo Iwazakis Fast Pages" />
+<link rel="canonical" href="https://taiyoi.github.io/Compsci22/2022/12/12/Lesson12-13-hacks.html" />
+<meta property="og:url" content="https://taiyoi.github.io/Compsci22/2022/12/12/Lesson12-13-hacks.html" />
+<meta property="og:site_name" content="Taiyo I" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-12-12T00:00:00-06:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Title" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-12-12T00:00:00-06:00","datePublished":"2022-12-12T00:00:00-06:00","description":"Taiyo Iwazakis Fast Pages","headline":"Title","mainEntityOfPage":{"@type":"WebPage","@id":"https://taiyoi.github.io/Compsci22/2022/12/12/Lesson12-13-hacks.html"},"url":"https://taiyoi.github.io/Compsci22/2022/12/12/Lesson12-13-hacks.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/Compsci22/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://taiyoi.github.io/Compsci22/feed.xml" title="Taiyo I" /><link rel="shortcut icon" type="image/x-icon" href="/Compsci22/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/Compsci22/">Taiyo I</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/Compsci22/Vocab/">Vocab</a><a class="page-link" href="/Compsci22/categories/">Tags 🏷</a><a class="page-link" href="/Compsci22/techtalk/javascript">SubMenu</a><a class="page-link" href="/Compsci22/game/">Game</a><a class="page-link" href="/Compsci22/search/">Search</a><a class="page-link" href="/Compsci22/calculator/">Calculator</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Title</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-12-12T00:00:00-06:00" itemprop="datePublished">
+        Dec 12, 2022
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      7 min read
+    
+</span></p>
+
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-justify-center">
+          <div class="px-2">
+
+    <a href="https://github.com/TaiyoI/Compsci22/tree/master/_notebooks/2022-12-12-Lesson12-13-hacks.ipynb" role="button" target="_blank">
+<img class="notebook-badge-image" src="/Compsci22/assets/badges/github.svg" alt="View On GitHub">
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://mybinder.org/v2/gh/TaiyoI/Compsci22/master?filepath=_notebooks%2F2022-12-12-Lesson12-13-hacks.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/Compsci22/assets/badges/binder.svg" alt="Open In Binder"/>
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/TaiyoI/Compsci22/blob/master/_notebooks/2022-12-12-Lesson12-13-hacks.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/Compsci22/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+          <div class="px-2">
+  <a href="https://deepnote.com/launch?url=https%3A%2F%2Fgithub.com%2FTaiyoI%2FCompsci22%2Fblob%2Fmaster%2F_notebooks%2F2022-12-12-Lesson12-13-hacks.ipynb" target="_blank">
+      <img class="notebook-badge-image" src="/Compsci22/assets/badges/deepnote.svg" alt="Launch in Deepnote"/>
+  </a>
+</div>
+
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2022-12-12-Lesson12-13-hacks.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Units-3.12-and-3.13-Notes">Units 3.12 and 3.13 Notes<a class="anchor-link" href="#Units-3.12-and-3.13-Notes"> </a></h2><hr />
+<p>Essential Knowledge:</p>
+<ul>
+<li>A <font color="#ffffc2" style="font-weight: bold">procedure</font> is a named set of instructions that can take in parameters and return values.<ul>
+<li>May be called "method" or "function" in different programming languages.</li>
+</ul>
+</li>
+<li><font color="#ffffc2" style="font-weight: bold">Parameters</font> are independent variables used in the procedure to produce a result. It allows a procedure to execute without initially knowing specific input values.</li>
+<li>Procedures can be classified as sequencing, selection, and iteration. How?</li>
+</ul>
+<p>Example:</p>
+<ul>
+<li>What is the procedure's name?</li>
+<li>What are the parameters?</li>
+<li>What did the procedure return?</li>
+</ul>
+<hr />
+<ul>
+<li><p>To determine the result of a procedure or any code, you must follow the code line by line and see what each one does</p>
+</li>
+<li><p>Using syntax, you can determine the result by</p>
+<ul>
+<li>function parameters</li>
+<li>return value and statements</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>A return statement exits a function and instructs python to continue executing the program and to return a certain value</p>
+</li>
+<li><p>Value can be string, a tuple, or any other type that is being sent back to the main program</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li><strong>Modularity</strong> - the practice of breaking a complex program into smaller, independent parts or modules that can be used and reused in different parts of the program</li>
+<li><strong>Abstraction</strong> - the practice of hiding the details of how a particular code or system works and exposing only the essential features or functions that are necessary for other parts of the program to use</li>
+<li><strong>Duplication</strong> - having multiple duplicate code blocks, often decreasing readability and efficiency</li>
+<li><strong>Logic</strong> - the sequence of steps and operations that a computer follows to execute a program, including the specific instructions and decision-making processes built into the code.</li>
+</ul>
+<hr />
+<ul>
+<li><font color="#ffffc2" style="font-weight: bold">Procedure</font> - a module of code that is created to complete a certain task, this is basically a function</li>
+<li><font color="#ffffc2" style="font-weight: bold">Procedure Name</font> - the name that is given to a function/procedure</li>
+<li><font color="#ffffc2" style="font-weight: bold">Parameters</font> - a variable that is used in a function to allow for data to be imported into a function</li>
+<li><p><font color="#ffffc2" style="font-weight: bold">Arguments</font> - a way to provide information to a function, usually defined outside a function and then imported into a function with parameters</p>
+</li>
+<li><p>parameters being used to manage complexity</p>
+<ul>
+<li>parameters storing variables</li>
+<li>parameters storing arguments</li>
+</ul>
+</li>
+<li>calling functions with procedure names<ul>
+<li>choosing procedure names</li>
+<li>calling procedures in python and javascript</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">function</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span> <span class="c1"># function is defined</span>
+  <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">)</span> <span class="c1"># prints output of variables</span>
+
+<span class="n">function</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span> <span class="c1"># one instance that it can be used</span>
+<span class="n">function</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span> <span class="c1"># another instance</span>
+</pre></div>
+<p>```
+3</p>
+<h2 id="5">5<a class="anchor-link" href="#5"> </a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Hacks-3.12-3.13">Hacks 3.12 3.13<a class="anchor-link" href="#Hacks-3.12-3.13"> </a></h2><ol>
+<li>Define <strong>procedure</strong> and <strong>parameter</strong> in your own words
+Procedures or methods are basically the instructions of a function but are assigned to a variable. Unlike assigning a singular item to a class, you assign a set of instructions. Parameters are the part of a function that include data which allow the function to work.</li>
+</ol>
+<p>Here is an example of both being put into use</p>
+<div class="highlight"><pre><span></span><span class="n">num1</span><span class="o">=</span><span class="mi">2</span>
+<span class="n">num2</span><span class="o">=</span><span class="mi">3</span>
+
+<span class="k">def</span> <span class="nf">addition</span><span class="p">(</span><span class="n">num1</span><span class="p">,</span> <span class="n">num2</span><span class="p">):</span> <span class="c1">#the procedure is addition, the parameters are num1 and num2</span>
+    <span class="nb">sum</span> <span class="o">=</span> <span class="n">num1</span> <span class="o">+</span> <span class="n">num2</span>
+    <span class="k">return</span> <span class="nb">sum</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">addition</span><span class="p">(</span><span class="n">num1</span><span class="p">,</span> <span class="n">num2</span><span class="p">))</span> <span class="c1">#here we are calling the function addition and printing it</span>
+</pre></div>
+
+<pre><code>5 #this is the output</code></pre>
+<ol>
+<li>Paste a <strong>screenshot</strong> of completion of the quiz</li>
+</ol>
+<p><img src="https://user-images.githubusercontent.com/111478625/206569143-9cd8228f-841c-4725-a1fd-162e3ea64390.png" alt="" /></p>
+<ol>
+<li>Define <strong>Return Values</strong> and <strong>Output Parameters</strong> in your own words
+Return values are the output of the procedure... It basically "returns" what the procedure does. 
+Output Parameters are essentially the same as regular parameters </li>
+</ol>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">addition</span><span class="p">(</span><span class="n">num1</span><span class="p">,</span> <span class="n">num2</span><span class="p">):</span> <span class="c1">#the procedure is addition, the parameters are num1 and num2</span>
+    <span class="nb">sum</span> <span class="o">=</span> <span class="n">num1</span> <span class="o">+</span> <span class="n">num2</span>
+    <span class="k">return</span> <span class="nb">sum</span> <span class="c1">#this is the return function</span>
+</pre></div>
+<div class="highlight"><pre><span></span><span class="mi">5</span> <span class="c1">#this is the return output</span>
+</pre></div>
+<ol>
+<li>Code a <strong>procedure</strong> that finds the square root of any given number. (make sure to call and return the function)</li>
+</ol>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="mi">9</span> <span class="c1">#parameter</span>
+
+<span class="k">def</span> <span class="nf">sqrt</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">sqrt</span><span class="p">(</span><span class="n">x</span><span class="p">))</span> <span class="c1">#calling the function and printing</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Topic-3.13-(3.B):">Topic 3.13 (3.B):<a class="anchor-link" href="#Topic-3.13-(3.B):"> </a></h3><ol>
+<li>Explain, in your own words, why abstracting away your program logic into separate, modular functions is effective</li>
+</ol>
+<p>Abstracting away your program logic into separate, modular functions is effective because it helps to reduce code duplication and it is easier to manage in general.</p>
+<ol>
+<li>Create a procedure that uses other sub-procedures (other functions) within it and explain why the abstraction was needed (conciseness, shared behavior, etc.)</li>
+</ol>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="c1">#find the solution to a simple arithmetic equation: 5(x+y)</span>
+
+<span class="k">def</span> <span class="nf">mathematics</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+    <span class="nb">sum</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
+    <span class="k">return</span> <span class="nb">sum</span><span class="o">/</span><span class="mi">5</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">mathematics</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Abstraction was necessary because it helped to reduce the clutter of the function. If I were to take sum and make another function dividing sum by 5, I would need make a block of code and I wouldn't be able to call it again when I needed to.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ol>
+<li>Add another layer of abstraction to the word counter program (HINT: create a function that can count the number of words starting with ANY character in a given string -- how can we leverage parameters for this?)</li>
+</ol>
+<h3 id="Topic-3.13-(3.C):">Topic 3.13 (3.C):<a class="anchor-link" href="#Topic-3.13-(3.C):"> </a></h3><ol>
+<li>Define <font color="#ffffc2" style="font-weight: bold">procedure names</font> and <font color="#ffffc2" style="font-weight: bold">arguments</font> in your own words.</li>
+<li>Code some <font color="#ffffc2" style="font-weight: bold">procedures</font> that use <font color="#ffffc2" style="font-weight: bold">arguments</font> and <font color="#ffffc2" style="font-weight: bold">parameters</font> with Javascript and HTML (make sure they are interactive on your hacks page, allowing the user to input numbers and click a button to produce an output)<ul>
+<li>Add two numbers</li>
+<li>Subtract two numbers</li>
+<li>Multiply two numbers</li>
+<li>Divide two numbers
+-idk</li>
+</ul>
+</li>
+</ol>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="c1"># is a separate element in the list</span>
+<span class="k">def</span> <span class="nf">split_string</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="c1"># use the split() method to split the string into a list of words</span>
+    <span class="n">words</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
+
+	<span class="c1"># initialize a new list to hold all non-empty strings</span>
+    <span class="n">new_words</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">words</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">word</span> <span class="o">!=</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
+            <span class="c1"># add all non-empty substrings of `words` to `new_words`</span>
+            <span class="n">new_words</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">word</span><span class="p">)</span>
+    
+    <span class="k">return</span> <span class="n">words</span>
+
+<span class="c1"># this function takes a list of words as input and returns the number of words</span>
+<span class="c1"># that start with the given letter (case-insensitive)</span>
+<span class="k">def</span> <span class="nf">count_words_starting_with_letter</span><span class="p">(</span><span class="n">words</span><span class="p">,</span> <span class="n">letter</span><span class="p">):</span>
+    <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+    
+    <span class="c1"># loop through the list of words and check if each word starts with the given letter</span>
+    <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">words</span><span class="p">:</span>
+        <span class="c1"># use the lower() method to make the comparison case-insensitive</span>
+        <span class="k">if</span> <span class="n">word</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="n">letter</span><span class="p">):</span>
+            <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
+    
+    <span class="k">return</span> <span class="n">count</span>
+
+<span class="c1"># this function takes a string as input and returns the number of words that start with &#39;a&#39;</span>
+<span class="k">def</span> <span class="nf">count_words_starting_with_a_in_string</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="c1"># use the split_string() function to split the input string into a list of words</span>
+    <span class="n">words</span> <span class="o">=</span> <span class="n">split_string</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+    
+    <span class="c1"># use the count_words_starting_with_letter() function to count the number of words</span>
+    <span class="c1"># that start with &#39;a&#39; in the list of words</span>
+    <span class="n">count</span> <span class="o">=</span> <span class="n">count_words_starting_with_letter</span><span class="p">(</span><span class="n">words</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">)</span>
+    
+    <span class="k">return</span> <span class="n">count</span>
+
+<span class="c1"># see above</span>
+<span class="k">def</span> <span class="nf">count_words_starting_with_d_in_string</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="n">words</span> <span class="o">=</span> <span class="n">split_string</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+    <span class="n">count</span> <span class="o">=</span> <span class="n">count_words_starting_with_letter</span><span class="p">(</span><span class="n">words</span><span class="p">,</span> <span class="s2">&quot;d&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">count</span>
+
+<span class="c1"># example usage:</span>
+<span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;   This is  a  test  string! Don&#39;t you think this is cool? &quot;</span>
+<span class="n">a_count</span> <span class="o">=</span> <span class="n">count_words_starting_with_a_in_string</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<span class="n">d_count</span> <span class="o">=</span> <span class="n">count_words_starting_with_d_in_string</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Words starting with a:&quot;</span><span class="p">,</span> <span class="n">a_count</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Words starting with d:&quot;</span><span class="p">,</span> <span class="n">d_count</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ol>
+<li>Define <font color="#ffffc2" style="font-weight: bold">procedure names</font> and <font color="#ffffc2" style="font-weight: bold">arguments</font> in your own words.</li>
+</ol>
+<p>Procedure names are the names given to a method to produce an output for example:</p>
+<p>Arguments are basically the data that is inputted into the function for example:</p>
+<div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">1</span> <span class="c1"># x and y are parameters that will be inputted into the procedure.</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">2</span>
+
+<span class="k">def</span> <span class="nf">matematicas</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span> <span class="c1">#matematicas would be the procedure name.</span>
+    <span class="n">addition</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
+    <span class="k">return</span> <span class="n">addition</span> 
+
+<span class="nb">print</span><span class="p">(</span><span class="n">matematicas</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">))</span>
+
+<span class="mf">3.0</span>
+</pre></div>
+<ol>
+<li>Code some <font color="#ffffc2" style="font-weight: bold">procedures</font> that use <font color="#ffffc2" style="font-weight: bold">arguments</font> and <font color="#ffffc2" style="font-weight: bold">parameters</font> with Javascript and HTML (make sure they are interactive on your hacks page, allowing the user to input numbers and click a button to produce an output)<ul>
+<li>Add two numbers</li>
+<li>Subtract two numbers</li>
+<li>Multiply two numbers</li>
+<li>Divide two numbers</li>
+</ul>
+</li>
+</ol>
+<p><button id="add" type="button" onclick="addition(x,y)">addition</button></p>
+<p><p id="output"></p></p>
+<p><button id="subtract" type="button" onclick="subtraction(x,y)">subtraction</button></p>
+<p><p id="output2"></p></p>
+<p><button id="divide" type="button" onclick="divide(x,y)">divide</button></p>
+<p><p id="output3"></p></p>
+<p><button id="multiply" type="button" onclick="multiply(x,y)">multiply</button></p>
+<p><p id="output4"></p></p>
+<script>
+  var x = 1
+  var y = 2
+  function addition(x,y) {
+    document.getElementById("output").innerHTML = x + y
+    }
+  function subtraction(x,y) {
+    document.getElementById("output2").innerHTML = x - y
+    }
+  function divide(x,y) {
+    document.getElementById("output3").innerHTML = x/y
+    }
+  function multiply(x,y) {
+    document.getElementById("output4").innerHTML = x * y
+    }
+</script>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr />
+<p>Extra credit</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+
+<span class="k">def</span> <span class="nf">hypotenuse</span><span class="p">(</span><span class="n">leg1</span><span class="p">,</span> <span class="n">leg2</span><span class="p">):</span>
+    <span class="c1"># notice we&#39;re using this &lt;var&gt; * &lt;var&gt; syntax multiple times?</span>
+    <span class="c1"># this has multiple drawbacks:</span>
+    <span class="c1"># - it&#39;s repetitive and makes the code longer</span>
+    <span class="c1"># - if we wanted to change the operator being </span>
+    <span class="c1">#   applied to `leg1` and `leg2`, we&#39;d have to do it twice!</span>
+    <span class="n">leg1_squared</span> <span class="o">=</span> <span class="n">leg1</span> <span class="o">*</span> <span class="n">leg1</span>
+    <span class="n">leg2_squared</span> <span class="o">=</span> <span class="n">leg2</span> <span class="o">*</span> <span class="n">leg2</span>
+    <span class="k">return</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">leg1_squared</span> <span class="o">+</span> <span class="n">leg2_squared</span><span class="p">)</span>
+
+<span class="c1">## VERSUS ##</span>
+
+<span class="c1"># this works, but let&#39;s try to write the &quot;squared&quot; variable assignment statements more concisely....</span>
+<span class="k">def</span> <span class="nf">square</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">*</span> <span class="n">a</span>
+
+<span class="k">def</span> <span class="nf">hypotenuse_abstracted</span><span class="p">(</span><span class="n">leg1</span><span class="p">,</span> <span class="n">leg2</span><span class="p">):</span>
+    <span class="c1"># not only is this shorter, but we can now:</span>
+    <span class="c1"># - better understand the code at a glance--we know exactly </span>
+    <span class="c1">#   what `square` should do</span>
+    <span class="c1"># - change the operator in a single place (`square`) rather than</span>
+    <span class="c1">#   multiple times within this hypotenuse function</span>
+    <span class="n">leg1_squared</span> <span class="o">=</span> <span class="n">square</span><span class="p">(</span><span class="n">leg1</span><span class="p">)</span>
+    <span class="n">leg2_squared</span> <span class="o">=</span> <span class="n">square</span><span class="p">(</span><span class="n">leg2</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">leg1_squared</span> <span class="o">+</span> <span class="n">leg2_squared</span><span class="p">)</span>
+
+<span class="c1">## EXTRA CHALLENGE ##</span>
+<span class="c1"># is it possible to write the `hypotenuse` function in a single line?</span>
+<span class="k">def</span> <span class="nf">hypotenuse_abstracted2</span><span class="p">(</span><span class="n">leg1</span><span class="p">,</span> <span class="n">leg2</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">square</span><span class="p">(</span><span class="n">leg1</span><span class="p">)</span><span class="o">+</span><span class="n">square</span><span class="p">(</span><span class="n">leg2</span><span class="p">))</span>
+  
+<span class="nb">print</span><span class="p">(</span><span class="n">hypotenuse_abstracted2</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span> 
+
+<span class="k">assert</span> <span class="n">hypotenuse</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span> <span class="o">==</span> <span class="n">hypotenuse_abstracted</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span> <span class="o">==</span> <span class="mi">5</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+</div>
+
+
+
+  </div><a class="u-url" href="/Compsci22/2022/12/12/Lesson12-13-hacks.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/Compsci22/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/Compsci22/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/Compsci22/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>Taiyo Iwazakis Fast Pages</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li>
+  <a rel="me" href="https://github.com/nighthawkcoders" target="_blank" title="github">
+    <svg class="svg-icon grey">
+      <use xlink:href="/Compsci22/assets/minima-social-icons.svg#github"></use>
+    </svg>
+  </a>
+</li>
+<li>
+  <a rel="me" href="https://twitter.com/NighthawkCoding" target="_blank" title="twitter">
+    <svg class="svg-icon grey">
+      <use xlink:href="/Compsci22/assets/minima-social-icons.svg#twitter"></use>
+    </svg>
+  </a>
+</li>
+<li>
+  <a rel="me" href="https://www.youtube.com/channel/UClIKOsDS5dsfzFA3zveDT3Q" target="_blank" title="youtube">
+    <svg class="svg-icon grey">
+      <use xlink:href="/Compsci22/assets/minima-social-icons.svg#youtube"></use>
+    </svg>
+  </a>
+</li>
+</ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

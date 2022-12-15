@@ -135,138 +135,68 @@ toc: true</p>
 </div>
 </div>
 </div>
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="o">/*</span> <span class="n">Variables</span><span class="p">,</span> <span class="n">Data</span> <span class="n">Types</span><span class="p">,</span> <span class="n">Assignment</span> <span class="n">Operators</span> <span class="o">*/</span>
-<span class="n">var</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
-<span class="n">var</span> <span class="n">y</span> <span class="o">=</span> <span class="s2">&quot;Hello World&quot;</span><span class="p">;</span>
-<span class="n">var</span> <span class="n">z</span> <span class="o">=</span> <span class="n">true</span><span class="p">;</span>
-<span class="n">var</span> <span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">];</span>
-<span class="n">var</span> <span class="n">b</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;John&quot;</span><span class="p">,</span>
-  <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span>
-  <span class="s2">&quot;cars&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Ford&quot;</span><span class="p">,</span> <span class="s2">&quot;BMW&quot;</span><span class="p">,</span> <span class="s2">&quot;Fiat&quot;</span><span class="p">]</span>
-<span class="p">};</span>
-<span class="o">/*</span> <span class="n">Managing</span> <span class="n">Complexity</span> <span class="k">with</span> <span class="n">Variables</span><span class="p">:</span>  <span class="n">Lists</span><span class="p">,</span> <span class="mi">2</span><span class="n">D</span> <span class="n">Lists</span><span class="p">,</span> <span class="n">Dictionaries</span><span class="p">,</span> <span class="n">Class</span> <span class="o">*/</span>
-<span class="n">var</span> <span class="nb">list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">];</span>
-<span class="n">var</span> <span class="n">list2D</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]];</span>
-<span class="n">var</span> <span class="nb">dict</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;John&quot;</span><span class="p">,</span>
-  <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span>
-  <span class="s2">&quot;cars&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Ford&quot;</span><span class="p">,</span> <span class="s2">&quot;BMW&quot;</span><span class="p">,</span> <span class="s2">&quot;Fiat&quot;</span><span class="p">]</span>
-<span class="p">};</span>
-<span class="n">function</span> <span class="n">Person</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="n">cars</span><span class="p">)</span> <span class="p">{</span>
-  <span class="n">this</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span><span class="p">;</span>
-  <span class="n">this</span><span class="o">.</span><span class="n">age</span> <span class="o">=</span> <span class="n">age</span><span class="p">;</span>
-  <span class="n">this</span><span class="o">.</span><span class="n">cars</span> <span class="o">=</span> <span class="n">cars</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="n">var</span> <span class="n">john</span> <span class="o">=</span> <span class="n">new</span> <span class="n">Person</span><span class="p">(</span><span class="s2">&quot;John&quot;</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;Ford&quot;</span><span class="p">,</span> <span class="s2">&quot;BMW&quot;</span><span class="p">,</span> <span class="s2">&quot;Fiat&quot;</span><span class="p">]);</span>
-<span class="o">/*</span> <span class="n">Algorithms</span><span class="p">,</span> <span class="n">Sequence</span><span class="p">,</span> <span class="n">Selection</span><span class="p">,</span> <span class="n">Iteration</span> <span class="o">*/</span>
-<span class="n">var</span> <span class="nb">list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">];</span>
-<span class="k">for</span> <span class="p">(</span><span class="n">var</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">list</span><span class="o">.</span><span class="n">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-  <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="nb">list</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
-<span class="p">}</span>
-<span class="o">/*</span> <span class="n">Expressions</span><span class="p">,</span> <span class="n">Comparison</span> <span class="n">Operators</span><span class="p">,</span> <span class="n">Booleans</span> <span class="n">Expressions</span> <span class="ow">and</span> <span class="n">Selection</span><span class="p">,</span> <span class="n">Booleans</span> <span class="n">Expressions</span> <span class="ow">and</span> <span class="n">Iteration</span><span class="p">,</span> <span class="n">Truth</span> <span class="n">Tables</span> <span class="o">*/</span>
-<span class="n">var</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
-<span class="n">var</span> <span class="n">y</span> <span class="o">=</span> <span class="s2">&quot;Hello World&quot;</span><span class="p">;</span>
-<span class="n">var</span> <span class="n">z</span> <span class="o">=</span> <span class="n">true</span><span class="p">;</span>
-<span class="n">var</span> <span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">];</span>
-<span class="n">var</span> <span class="n">b</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;John&quot;</span><span class="p">,</span>
-  <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span>
-  <span class="s2">&quot;cars&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Ford&quot;</span><span class="p">,</span> <span class="s2">&quot;BMW&quot;</span><span class="p">,</span> <span class="s2">&quot;Fiat&quot;</span><span class="p">]</span>
-<span class="p">};</span>
-<span class="o">/*</span> <span class="n">Characters</span><span class="p">,</span> <span class="n">Strings</span><span class="p">,</span> <span class="n">Length</span><span class="p">,</span> <span class="n">Concatenation</span><span class="p">,</span> <span class="n">Upper</span><span class="p">,</span> <span class="n">Lower</span><span class="p">,</span> <span class="n">Traversing</span> <span class="n">Strings</span> <span class="o">*/</span>
-<span class="n">var</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;Hello World&quot;</span><span class="p">;</span>
-<span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="nb">str</span><span class="o">.</span><span class="n">length</span><span class="p">);</span>
-<span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="nb">str</span><span class="o">.</span><span class="n">toUpperCase</span><span class="p">());</span>
-<span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="nb">str</span><span class="o">.</span><span class="n">toLowerCase</span><span class="p">());</span>
-<span class="k">for</span> <span class="p">(</span><span class="n">var</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">str</span><span class="o">.</span><span class="n">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-  <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="nb">str</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
-<span class="p">}</span>
-<span class="o">/*</span> <span class="n">Python</span> <span class="n">If</span><span class="p">,</span> <span class="n">Elif</span><span class="p">,</span> <span class="n">Else</span> <span class="n">conditionals</span><span class="p">;</span> <span class="n">Nested</span> <span class="n">Selection</span> <span class="n">Statements</span> <span class="o">*/</span>
-<span class="n">var</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
-<span class="n">var</span> <span class="n">y</span> <span class="o">=</span> <span class="s2">&quot;Hello World&quot;</span><span class="p">;</span>
-<span class="n">var</span> <span class="n">z</span> <span class="o">=</span> <span class="n">true</span><span class="p">;</span>
-<span class="n">var</span> <span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">];</span>
-<span class="n">var</span> <span class="n">b</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;John&quot;</span><span class="p">,</span>
-  <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span>
-  <span class="s2">&quot;cars&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Ford&quot;</span><span class="p">,</span> <span class="s2">&quot;BMW&quot;</span><span class="p">,</span> <span class="s2">&quot;Fiat&quot;</span><span class="p">]</span>
-<span class="p">};</span>
-<span class="o">/*</span> <span class="n">Python</span> <span class="n">For</span><span class="p">,</span> <span class="n">While</span> <span class="n">loops</span> <span class="k">with</span> <span class="n">Range</span><span class="p">,</span> <span class="k">with</span> <span class="n">List</span> <span class="o">*/</span>
-<span class="n">var</span> <span class="nb">list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">];</span>
-<span class="k">for</span> <span class="p">(</span><span class="n">var</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">list</span><span class="o">.</span><span class="n">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-  <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="nb">list</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
-<span class="p">}</span>
-<span class="o">/*</span> <span class="n">Combining</span> <span class="n">loops</span> <span class="k">with</span> <span class="n">conditionals</span> <span class="n">to</span> <span class="n">Break</span><span class="p">,</span> <span class="n">Continue</span> <span class="o">*/</span>
-<span class="n">var</span> <span class="nb">list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">];</span>
-<span class="k">for</span> <span class="p">(</span><span class="n">var</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">list</span><span class="o">.</span><span class="n">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-  <span class="k">if</span> <span class="p">(</span><span class="nb">list</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="mi">2</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">continue</span><span class="p">;</span>
-  <span class="p">}</span>
-  <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="nb">list</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
-<span class="p">}</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Variables">Variables<a class="anchor-link" href="#Variables"> </a></h1><h1 id="Declaring-a-variable-in-Python">Declaring a variable in Python<a class="anchor-link" href="#Declaring-a-variable-in-Python"> </a></h1><p>name = "John"</p>
+<h1 id="Data-Types">Data Types<a class="anchor-link" href="#Data-Types"> </a></h1><h1 id="Creating-an-integer">Creating an integer<a class="anchor-link" href="#Creating-an-integer"> </a></h1><p>integer_example = 5</p>
+<h1 id="Creating-a-float">Creating a float<a class="anchor-link" href="#Creating-a-float"> </a></h1><p>float_example = 3.14</p>
+<h1 id="Creating-a-Boolean">Creating a Boolean<a class="anchor-link" href="#Creating-a-Boolean"> </a></h1><p>boolean_example = True</p>
+<h1 id="Creating-a-string">Creating a string<a class="anchor-link" href="#Creating-a-string"> </a></h1><p>string_example = "Hello World"</p>
+<h1 id="Assignment-Operators">Assignment Operators<a class="anchor-link" href="#Assignment-Operators"> </a></h1><h1 id="Assigning-the-value-of-a-variable">Assigning the value of a variable<a class="anchor-link" href="#Assigning-the-value-of-a-variable"> </a></h1><p>x = 5</p>
+<h1 id="Adding-to-a-variable">Adding to a variable<a class="anchor-link" href="#Adding-to-a-variable"> </a></h1><p>x += 5</p>
+<h1 id="Subtracting-from-a-variable">Subtracting from a variable<a class="anchor-link" href="#Subtracting-from-a-variable"> </a></h1><p>x -= 5</p>
+<h1 id="Managing-Complexity-with-Variables:-Lists">Managing Complexity with Variables: Lists<a class="anchor-link" href="#Managing-Complexity-with-Variables:-Lists"> </a></h1><h1 id="Creating-a-list">Creating a list<a class="anchor-link" href="#Creating-a-list"> </a></h1><p>list_example = [1, 2, 3]</p>
+<h1 id="Adding-an-element-to-a-list">Adding an element to a list<a class="anchor-link" href="#Adding-an-element-to-a-list"> </a></h1><p>list_example.append(4)</p>
+<h1 id="Creating-a-2D-list">Creating a 2D list<a class="anchor-link" href="#Creating-a-2D-list"> </a></h1><p>list_example_2d = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]</p>
+<h1 id="Creating-a-dictionary">Creating a dictionary<a class="anchor-link" href="#Creating-a-dictionary"> </a></h1><p>dict_example = {'name': 'John', 'age': 29}</p>
+<h1 id="Creating-a-class">Creating a class<a class="anchor-link" href="#Creating-a-class"> </a></h1><p>class Car:
+  def <strong>init</strong>(self, make, model):
+    self.make = make
+    self.model = model</p>
+<h1 id="Algorithms">Algorithms<a class="anchor-link" href="#Algorithms"> </a></h1><h1 id="Creating-a-sequence">Creating a sequence<a class="anchor-link" href="#Creating-a-sequence"> </a></h1><p>sequence_example = [1, 2, 3, 4, 5]</p>
+<h1 id="Creating-a-selection">Creating a selection<a class="anchor-link" href="#Creating-a-selection"> </a></h1><p>selection_example = [i for i in sequence_example if i % 2 == 0]</p>
+<h1 id="Creating-an-iteration">Creating an iteration<a class="anchor-link" href="#Creating-an-iteration"> </a></h1><p>for i in sequence_example:
+  print(i)</p>
+<h1 id="Expressions">Expressions<a class="anchor-link" href="#Expressions"> </a></h1><h1 id="Creating-a-comparison-operator">Creating a comparison operator<a class="anchor-link" href="#Creating-a-comparison-operator"> </a></h1><p>x = 5
+y = 6
+x_less_than_y = x &lt; y</p>
+<h1 id="Creating-a-Boolean-expression">Creating a Boolean expression<a class="anchor-link" href="#Creating-a-Boolean-expression"> </a></h1><p>my_bool = True</p>
+<h1 id="Creating-a-truth-table">Creating a truth table<a class="anchor-link" href="#Creating-a-truth-table"> </a></h1><p>truth_table = {
+  True: 'Yes',
+  False: 'No'
+}</p>
+<h1 id="Characters">Characters<a class="anchor-link" href="#Characters"> </a></h1><h1 id="Creating-a-string">Creating a string<a class="anchor-link" href="#Creating-a-string"> </a></h1><p>string_example = "Hello World"</p>
+<h1 id="Calculating-the-length-of-a-string">Calculating the length of a string<a class="anchor-link" href="#Calculating-the-length-of-a-string"> </a></h1><p>string_example_length = len(string_example)</p>
+<h1 id="Concatenating-two-strings">Concatenating two strings<a class="anchor-link" href="#Concatenating-two-strings"> </a></h1><p>concatenated_string = string_example + "!"</p>
+<h1 id="Changing-a-string-to-upper-case">Changing a string to upper case<a class="anchor-link" href="#Changing-a-string-to-upper-case"> </a></h1><p>upper_string = string_example.upper()</p>
+<h1 id="Changing-a-string-to-lower-case">Changing a string to lower case<a class="anchor-link" href="#Changing-a-string-to-lower-case"> </a></h1><p>lower_string = string_example.lower()</p>
+<h1 id="Traversing-a-string">Traversing a string<a class="anchor-link" href="#Traversing-a-string"> </a></h1><p>for char in string_example:
+  print(char)</p>
+<h1 id="Python-If,-Elif,-Else-conditionals">Python If, Elif, Else conditionals<a class="anchor-link" href="#Python-If,-Elif,-Else-conditionals"> </a></h1><h1 id="Creating-a-simple-if-statement">Creating a simple if statement<a class="anchor-link" href="#Creating-a-simple-if-statement"> </a></h1><p>if x &lt; 10:
+  print("x is less than 10")</p>
+<h1 id="Creating-a-nested-selection-statement">Creating a nested selection statement<a class="anchor-link" href="#Creating-a-nested-selection-statement"> </a></h1><p>if x &gt; 5:
+  if x &lt; 10:
+    print("x is between 5 and 10")</p>
+<h1 id="Python-For,-While-loops-with-Range,-with-List">Python For, While loops with Range, with List<a class="anchor-link" href="#Python-For,-While-loops-with-Range,-with-List"> </a></h1><h1 id="Creating-a-for-loop-with-a-range">Creating a for loop with a range<a class="anchor-link" href="#Creating-a-for-loop-with-a-range"> </a></h1><p>for i in range(10):
+  print(i)</p>
+<h1 id="Creating-a-while-loop">Creating a while loop<a class="anchor-link" href="#Creating-a-while-loop"> </a></h1><p>while x &gt; 0:
+  print(x)
+  x -= 1</p>
+<h1 id="Creating-a-for-loop-with-a-list">Creating a for loop with a list<a class="anchor-link" href="#Creating-a-for-loop-with-a-list"> </a></h1><p>for item in list_example:
+  print(item)</p>
+<h1 id="Combining-loops-with-conditionals-to-Break,-Continue">Combining loops with conditionals to Break, Continue<a class="anchor-link" href="#Combining-loops-with-conditionals-to-Break,-Continue"> </a></h1><h1 id="Creating-a-for-loop-with-a-break">Creating a for loop with a break<a class="anchor-link" href="#Creating-a-for-loop-with-a-break"> </a></h1><p>for i in range(10):
+  if i == 5:
+    break
+  print(i)</p>
+<h1 id="Creating-a-for-loop-with-a-continue">Creating a for loop with a continue<a class="anchor-link" href="#Creating-a-for-loop-with-a-continue"> </a></h1><p>for i in range(10):
+  if i == 5:
+    continue
+  print(i)</p>
+<h1 id="Procedural-Abstraction">Procedural Abstraction<a class="anchor-link" href="#Procedural-Abstraction"> </a></h1><h1 id="Creating-a-Python-Def-Procedure">Creating a Python Def Procedure<a class="anchor-link" href="#Creating-a-Python-Def-Procedure"> </a></h1><p>def add_</p>
 
 </div>
-    
-
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="o">/*</span> <span class="n">Bits</span><span class="p">,</span> <span class="n">Bytes</span><span class="p">,</span> <span class="n">Hexadecimal</span> <span class="o">/</span> <span class="n">Nibbles</span> <span class="o">*/</span>
-<span class="n">var</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
-<span class="n">var</span> <span class="n">y</span> <span class="o">=</span> <span class="s2">&quot;Hello World&quot;</span><span class="p">;</span>
-<span class="n">var</span> <span class="n">z</span> <span class="o">=</span> <span class="n">true</span><span class="p">;</span>
-<span class="n">var</span> <span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">];</span>
-<span class="n">var</span> <span class="n">b</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;John&quot;</span><span class="p">,</span>
-  <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span>
-  <span class="s2">&quot;cars&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Ford&quot;</span><span class="p">,</span> <span class="s2">&quot;BMW&quot;</span><span class="p">,</span> <span class="s2">&quot;Fiat&quot;</span><span class="p">]</span>
-<span class="p">};</span>
-<span class="o">/*</span> <span class="n">Binary</span> <span class="n">Numbers</span><span class="p">:</span> <span class="n">Unsigned</span> <span class="n">Integer</span><span class="p">,</span> <span class="n">Signed</span> <span class="n">Integer</span><span class="p">,</span> <span class="n">Floating</span> <span class="n">Point</span> <span class="o">*/</span>
-<span class="n">var</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
-<span class="n">var</span> <span class="n">y</span> <span class="o">=</span> <span class="s2">&quot;Hello World&quot;</span><span class="p">;</span>
-<span class="n">var</span> <span class="n">z</span> <span class="o">=</span> <span class="n">true</span><span class="p">;</span>
-<span class="n">var</span> <span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">];</span>
-<span class="n">var</span> <span class="n">b</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;John&quot;</span><span class="p">,</span>
-  <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span>
-  <span class="s2">&quot;cars&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Ford&quot;</span><span class="p">,</span> <span class="s2">&quot;BMW&quot;</span><span class="p">,</span> <span class="s2">&quot;Fiat&quot;</span><span class="p">]</span>
-<span class="p">};</span>
-<span class="o">/*</span> <span class="n">Binary</span> <span class="n">Data</span> <span class="n">Abstractions</span><span class="p">:</span> <span class="n">Boolean</span><span class="p">,</span> <span class="n">ASCII</span><span class="p">,</span> <span class="n">Unicode</span><span class="p">,</span> <span class="n">RGB</span> <span class="o">*/</span>
-<span class="n">var</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
-<span class="n">var</span> <span class="n">y</span> <span class="o">=</span> <span class="s2">&quot;Hello World&quot;</span><span class="p">;</span>
-<span class="n">var</span> <span class="n">z</span> <span class="o">=</span> <span class="n">true</span><span class="p">;</span>
-<span class="n">var</span> <span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">];</span>
-<span class="n">var</span> <span class="n">b</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;John&quot;</span><span class="p">,</span>
-  <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span>
-  <span class="s2">&quot;cars&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Ford&quot;</span><span class="p">,</span> <span class="s2">&quot;BMW&quot;</span><span class="p">,</span> <span class="s2">&quot;Fiat&quot;</span><span class="p">]</span>
-<span class="p">};</span>
-</pre></div>
-
-    </div>
 </div>
 </div>
-
-</div>
-    
-
 </div>
 
 

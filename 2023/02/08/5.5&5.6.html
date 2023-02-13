@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>5.5-5.6 notes | Taiyo I</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="5.5-5.6 notes" />
+<meta name="author" content="Taiyo Iwazaki" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="5.5-5.6 notes" />
+<meta property="og:description" content="5.5-5.6 notes" />
+<link rel="canonical" href="https://taiyoi.github.io/Compsci22/2023/02/08/5.5&5.6.html" />
+<meta property="og:url" content="https://taiyoi.github.io/Compsci22/2023/02/08/5.5&5.6.html" />
+<meta property="og:site_name" content="Taiyo I" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-02-08T00:00:00-06:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="5.5-5.6 notes" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Taiyo Iwazaki"},"dateModified":"2023-02-08T00:00:00-06:00","datePublished":"2023-02-08T00:00:00-06:00","description":"5.5-5.6 notes","headline":"5.5-5.6 notes","mainEntityOfPage":{"@type":"WebPage","@id":"https://taiyoi.github.io/Compsci22/2023/02/08/5.5&5.6.html"},"url":"https://taiyoi.github.io/Compsci22/2023/02/08/5.5&5.6.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/Compsci22/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://taiyoi.github.io/Compsci22/feed.xml" title="Taiyo I" /><link rel="shortcut icon" type="image/x-icon" href="/Compsci22/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/Compsci22/">Taiyo I</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/Compsci22/Vocab/">Vocab</a><a class="page-link" href="/Compsci22/categories/">Tags 🏷</a><a class="page-link" href="/Compsci22/techtalk/javascript">SubMenu</a><a class="page-link" href="/Compsci22/game/">Game</a><a class="page-link" href="/Compsci22/search/">Search</a><a class="page-link" href="/Compsci22/calculator/">Calculator</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">5.5-5.6 notes</h1><p class="page-description">5.5-5.6 notes</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2023-02-08T00:00:00-06:00" itemprop="datePublished">
+        Feb 8, 2023
+      </time>• 
+          <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <span class="p-author h-card" itemprop="name">Taiyo Iwazaki</span></span>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      6 min read
+    
+</span></p>
+
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h1"><a href="#notes">Notes</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#55-reflection">5.5 Reflection</a></li>
+<li class="toc-entry toc-h2"><a href="#56-reflection">5.6 Reflection</a></li>
+</ul>
+</li>
+</ul><h1 id="notes">
+<a class="anchor" href="#notes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Notes</h1>
+
+<p>Software Security : Software security is the practice of protecting software from malicious attacks and data theft. This is done through the use of encryption, authentication, and digital signatures. It is important to remember that software security is an ongoing process and not a one-time event.</p>
+
+<p>Data Protection : Data protection is the practice of protecting data from unauthorized access or misuse. This is done through the use of data encryption, data masking, and secure access protocols.</p>
+
+<p>Legal and Ethical Thoughts : The legal and ethical implications of protecting personal data and software security are that companies must ensure that they are in compliance with all laws and regulations. Companies must also ensure that their customers are aware of the security measures that are in place and that their data is being protected. Additionally, companies must ensure that any data or software that they collect is being used ethically and not for any malicious purposes.</p>
+
+<p>Qualcomm wants all derivative work to require a royalty payment payment
+closed source: can not just get anywhere
+open source: can be open to the public
+open source idea is for the community, use, support
+GPL is about the community
+closed source is about capitalism making money
+Qualcomm made money off of hardware and they sold phone chips using open source (their type of business model)
+Collaboration 5.5
+Software Licenses/Options : There are different License options, some companies may have a pay wall to their code or they only allow their company workers to access the code. While some code can be accessed to the public, many advanced code is blocked
+Digital Rights : Many companies use digital rights and the “Red Hat” company although they had an advanced software they had released it for free, even though this happened they were the first to do it so they gained a good reputation
+Legal and Ethical thoughts:
+Many of the code is ok that they are protected by a paywall or a company because it may be harmful if put in the wrong hands
+This can limit the amount of people who are able to access said code and can be the digital divide
+Collaboration 5.6
+PII : personal identifiable information, examples like linkedin where people show off their information to inform others about their accomplishments. These are simple types of information
+—</p>
+<h2 id="55-reflection">
+<a class="anchor" href="#55-reflection" aria-hidden="true"><span class="octicon octicon-link"></span></a>5.5 Reflection</h2>
+
+<p>When you create a GitHub repository it requests a license type. Review the license types in relationship to this Tech Talk and make some notes in your personal blog.
+MIT: The community has access to the code however when they use it they must credit the owner of the code in their “readme” file
+OPEN SOURCE: The community has access to the code and is able to use the code freely
+CLOSED SOURCE: Only people who have access to the code are able to use it, it is not opened to the public hence the names “closed” and “open” source
+Make a license for your personal (blog) and Team repositories for the CPT project. Be sure to have a license for both Team GitHub repositories (frontend/backend). Document license(s) you picked and why. FYI, frontend, since it is built on GitHub pages may come with a license and restrictions. Document in blog how team made license choice and process of update.
+As a team we decided that the MIT license was the best to use since we will be able to be cited in the code others use. We want others to use our website freely especially since we learned about the digital divide and some might want to use parts that others use. We also added a Creative Commons license for our blog pages, which will allow for others to share our work with attribution. We also wanted to make sure to respect the privacy of our users, so we added a Privacy Policy to our website. This policy will outline how we use and protect any information that our users provide us.</p>
+
+<hr>
+<h2 id="56-reflection">
+<a class="anchor" href="#56-reflection" aria-hidden="true"><span class="octicon octicon-link"></span></a>5.6 Reflection</h2>
+
+<p>Describe PII you have seen on project in CompSci Principles.
+Many of the PII used in the Computer Science projects seen in the class projects are like student emails, names, and date of birth. Many of these types of information found in the class databases are simple and not as personal like a social security password .</p>
+
+<p>What are your feelings about PII and your personal exposure?
+PII helps websites and companies to localize users, for example I think cookies are something like PII because they collect the user data in a way and by collecting that data they make the user’s experience much better.</p>
+
+<p>Describe good and bad passwords? What is another step that is used to assist in authentication.
+Good passwords must contain capital and lowercase letters, any type of symbol, and numbers that are NOT the user’s birthday! Many people try to reuse their passwords mny times as a way of just remembering one password but if their data is given away in a data leak then almost all of the other accounts with the same password will also be leaked. If you are trying to protect really important data it is crucially important to protect it with a secure one time password. Another step that can be used is to make a security question consisting of simple questions only the user would know.</p>
+
+<p>Try to describe Symmetric and Asymmetric encryption.
+Symmetric encryption is a type of encryption where only one key (a secret key) is used to both encrypt and decrypt electronic information.
+Asymmetric cryptography, also known as public-key cryptography, is a process that uses a pair of related keys one public key and one private key – to encrypt and decrypt a message and protect it from unauthorized access or use.
+Provide an example of encryption we used in AWS deployment.
+An example of encryption that we used in the AWS deployment is the different ports and how we only specifically used a secure user and password. And Mort had only activated the ones and shut down the other things.</p>
+
+<p>Describe a phishing scheme you have learned about the hard way. Describe some other phishing techniques.
+ALWAYS USE A VPN WHEN ON NEFARIOUS / ILLEGAL WEBSITES. A phishing scheme I experienced was when I was browsing a website, I clicked an ad that redirected me to a malicious website. It looked like a legitimate page, but when I clicked a link it asked me to input my email and password. Fortunately, I didn’t give away any information, but it was a close call. Other phishing techniques include using malicious attachments, sending links that redirect to malicious websites, and creating fake websites that look like legitimate ones.</p>
+
+  </div><!-- from https://github.com/utterance/utterances -->
+<script src="https://utteranc.es/client.js"
+        repo="TaiyoI/Compsci22"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/Compsci22/2023/02/08/5.5&5.6.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/Compsci22/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="https://taiyoi.github.io/Compsci22/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/Compsci22/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>Taiyo Iwazakis Fast Pages</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li>
+  <a rel="me" href="https://github.com/nighthawkcoders" target="_blank" title="github">
+    <svg class="svg-icon grey">
+      <use xlink:href="/Compsci22/assets/minima-social-icons.svg#github"></use>
+    </svg>
+  </a>
+</li>
+<li>
+  <a rel="me" href="https://twitter.com/NighthawkCoding" target="_blank" title="twitter">
+    <svg class="svg-icon grey">
+      <use xlink:href="/Compsci22/assets/minima-social-icons.svg#twitter"></use>
+    </svg>
+  </a>
+</li>
+<li>
+  <a rel="me" href="https://www.youtube.com/channel/UClIKOsDS5dsfzFA3zveDT3Q" target="_blank" title="youtube">
+    <svg class="svg-icon grey">
+      <use xlink:href="/Compsci22/assets/minima-social-icons.svg#youtube"></use>
+    </svg>
+  </a>
+</li>
+</ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

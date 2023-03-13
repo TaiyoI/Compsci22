@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      16 min read
+      18 min read
     
 </span></p>
 
@@ -117,8 +117,7 @@ window.onload = wrap_img;
 
   <div class="post-content e-content" itemprop="articleBody">
     <ul id="toc" class="section-nav">
-<li class="toc-entry toc-h1"><a href="#Files-To-Get">Files To Get </a></li>
-<li class="toc-entry toc-h1"><a href="#Pandas-and-DataFrames">Pandas and DataFrames </a></li>
+<li class="toc-entry toc-h1"><a href="#Pandas-and-DataFrames-Notes">Pandas and DataFrames Notes </a></li>
 <li class="toc-entry toc-h1"><a href="#Cleaning-Data">Cleaning Data </a></li>
 <li class="toc-entry toc-h1"><a href="#Extracting-Info">Extracting Info </a>
 <ul>
@@ -159,43 +158,10 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Files-To-Get">
-<a class="anchor" href="#Files-To-Get" aria-hidden="true"><span class="octicon octicon-link"></span></a>Files To Get<a class="anchor-link" href="#Files-To-Get"> </a>
+<h1 id="Pandas-and-DataFrames-Notes">
+<a class="anchor" href="#Pandas-and-DataFrames-Notes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Pandas and DataFrames Notes<a class="anchor-link" href="#Pandas-and-DataFrames-Notes"> </a>
 </h1>
-<p>Save this file to your <strong>_notebooks</strong> folder</p>
-<p>wget <a href="https://raw.githubusercontent.com/nighthawkcoders/APCSP/master/_notebooks/2023-03-09-AP-unit2-3.ipynb">https://raw.githubusercontent.com/nighthawkcoders/APCSP/master/_notebooks/2023-03-09-AP-unit2-3.ipynb</a></p>
-<p>Save these files into a subfolder named <strong>files</strong> in your <strong>_notebooks</strong> folder</p>
-<p>wget <a href="https://raw.githubusercontent.com/nighthawkcoders/APCSP/master/_notebooks/files/data.csv">https://raw.githubusercontent.com/nighthawkcoders/APCSP/master/_notebooks/files/data.csv</a></p>
-<p>wget <a href="https://raw.githubusercontent.com/nighthawkcoders/APCSP/master/_notebooks/files/grade.json">https://raw.githubusercontent.com/nighthawkcoders/APCSP/master/_notebooks/files/grade.json</a></p>
-<p>Save this image into a subfolder named <strong>images</strong> in your <strong>_notebooks</strong> folder</p>
-<p>wget <a href="https://raw.githubusercontent.com/nighthawkcoders/APCSP/master/_notebooks/images/table_dataframe.png">https://raw.githubusercontent.com/nighthawkcoders/APCSP/master/_notebooks/images/table_dataframe.png</a></p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Pandas-and-DataFrames">
-<a class="anchor" href="#Pandas-and-DataFrames" aria-hidden="true"><span class="octicon octicon-link"></span></a>Pandas and DataFrames<a class="anchor-link" href="#Pandas-and-DataFrames"> </a>
-</h1>
-<blockquote>
-<p>In this lesson we will be exploring data analysis using Pandas.</p>
-</blockquote>
-<ul>
-<li>College Board talks about ideas like <ul>
-<li>Tools. "the ability to process data depends on users capabilities and their tools"</li>
-<li>Combining Data.  "combine county data sets"</li>
-<li>Status on Data"determining the artist with the greatest attendance during a particular month"</li>
-<li>Data poses challenge. "the need to clean data", "incomplete data"</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li>
-<a href="https://pandas.pydata.org/docs/getting_started/index.html">From Pandas Overview</a> -- When working with tabular data, such as data stored in spreadsheets or databases, pandas is the right tool for you. pandas will help you to explore, clean, and process your data. In pandas, a data table is called a DataFrame.</li>
-</ul>
-<p><img src="/Compsci22/images/copied_from_nb/../images/table_dataframe.png" alt="DataFrame"></p>
+<p>-</p>
 
 </div>
 </div>
@@ -231,6 +197,30 @@ window.onload = wrap_img;
 <li>Inaccurate Data</li>
 </ul>
 <p>Run the following code to see what needs to be cleaned</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>
+<p>Pandas is a popular Python library that enables you to work with data more efficiently. One of the key features of Pandas is its ability to create dataframes, which are similar to tables in SQL and store data along with metadata. With Pandas, you can work with both data and metadata in a seamless manner, making it easier for you to manipulate and analyze large datasets.</p>
+</li>
+<li>
+<p>A great benefit of using Pandas is that it allows you to create your own custom dataframes in Python, providing you with the flexibility to tailor your data analysis needs to your specific project requirements. Additionally, Pandas provides a range of tools for cleaning and manipulating data. For instance, common issues that can lead to errors, such as missing or duplicate data, can be easily identified and addressed with the help of Pandas.</p>
+</li>
+<li>
+<p>In addition to cleaning data, Pandas also provides functionality for extracting information from dataframes. You can extract specific columns of data from a dataframe, and use the index to count the amount of datapoints in a given column. Moreover, you can use the "print df" function to display data related to the data in a referenced dataframe. Another way to filter data is through dataframe selection, which enables you to use logical operations like Demorgans law to select data that meets certain criteria.</p>
+</li>
+<li>
+<p>Another useful feature of Pandas is the ability to view the front or back of a dataset with the "head" and "tail" functions. The head function displays the first few rows of data, while the tail function displays the last few rows.</p>
+</li>
+<li>
+<p>Lastly, APIs can be a valuable source for writing programs with data. Pandas provides functionality to access and manipulate data from APIs, allowing you to integrate external data sources into your data analysis. In summary, Pandas is a powerful library that provides many tools and functions for working with data and metadata, making it a valuable asset for data analysis and manipulation.</p>
+</li>
+</ul>
 
 </div>
 </div>
@@ -880,6 +870,128 @@ None
 <ul>
 <li>Continue this Blog using Pandas extract info from that dataset (ex. max, min, mean, median, mode, etc.)</li>
 </ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="c1"># Create a data table using pandas of top track times</span>
+<span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">'Name'</span><span class="p">:</span> <span class="p">[</span><span class="s1">'Liav'</span><span class="p">,</span> <span class="s1">'Safin'</span><span class="p">,</span> <span class="s1">'Adi'</span><span class="p">,</span> <span class="s1">'Arnav'</span><span class="p">,</span> <span class="s1">'Taiyo'</span><span class="p">],</span>
+    <span class="s1">'Age'</span><span class="p">:</span> <span class="p">[</span><span class="mi">17</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">16</span><span class="p">],</span>
+    <span class="s1">'Weight'</span><span class="p">:</span> <span class="p">[</span><span class="mi">130</span><span class="p">,</span> <span class="mi">130</span><span class="p">,</span> <span class="mi">130</span><span class="p">,</span> <span class="mi">130</span><span class="p">,</span> <span class="mi">120</span><span class="p">],</span>
+    <span class="s1">'Height'</span><span class="p">:</span> <span class="p">[</span><span class="mi">180</span><span class="p">,</span> <span class="mi">165</span><span class="p">,</span> <span class="mi">175</span><span class="p">,</span> <span class="mi">160</span><span class="p">,</span> <span class="mi">190</span><span class="p">],</span>
+    <span class="s1">'Event'</span><span class="p">:</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">3200</span><span class="p">,</span> <span class="mi">1600</span><span class="p">],</span>
+    <span class="s1">'PR'</span><span class="p">:</span> <span class="p">[</span><span class="mf">11.2</span><span class="p">,</span> <span class="mf">23.4</span><span class="p">,</span> <span class="mf">10.5</span><span class="p">,</span> <span class="mi">618</span><span class="p">,</span> <span class="mi">270</span><span class="p">]</span>
+<span class="p">}</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+
+<span class="c1"># Display the dataset</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">'Etracker User Data:'</span><span class="p">)</span>
+
+<span class="c1"># Calculate some basic statistics</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">'Age:'</span><span class="p">)</span>
+<span class="n">age_stats</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'Max'</span><span class="p">:</span> <span class="n">df</span><span class="p">[</span><span class="s1">'Age'</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">(),</span>
+             <span class="s1">'Min'</span><span class="p">:</span> <span class="n">df</span><span class="p">[</span><span class="s1">'Age'</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span>
+             <span class="s1">'Mean'</span><span class="p">:</span> <span class="n">df</span><span class="p">[</span><span class="s1">'Age'</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span>
+             <span class="s1">'Median'</span><span class="p">:</span> <span class="n">df</span><span class="p">[</span><span class="s1">'Age'</span><span class="p">]</span><span class="o">.</span><span class="n">median</span><span class="p">(),</span>
+             <span class="s1">'Mode'</span><span class="p">:</span> <span class="n">df</span><span class="p">[</span><span class="s1">'Age'</span><span class="p">]</span><span class="o">.</span><span class="n">mode</span><span class="p">()[</span><span class="mi">0</span><span class="p">]}</span>
+
+<span class="k">for</span> <span class="n">stat</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">age_stats</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'User </span><span class="si">{</span><span class="n">stat</span><span class="si">}</span><span class="s1"> age: </span><span class="si">{</span><span class="n">value</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">'Weight:'</span><span class="p">)</span>
+<span class="n">weight_stats</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'Max'</span><span class="p">:</span> <span class="n">df</span><span class="p">[</span><span class="s1">'Weight'</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">(),</span>
+             <span class="s1">'Min'</span><span class="p">:</span> <span class="n">df</span><span class="p">[</span><span class="s1">'Weight'</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span>
+             <span class="s1">'Mean'</span><span class="p">:</span> <span class="n">df</span><span class="p">[</span><span class="s1">'Weight'</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span>
+             <span class="s1">'Median'</span><span class="p">:</span> <span class="n">df</span><span class="p">[</span><span class="s1">'Weight'</span><span class="p">]</span><span class="o">.</span><span class="n">median</span><span class="p">(),</span>
+             <span class="s1">'Mode'</span><span class="p">:</span> <span class="n">df</span><span class="p">[</span><span class="s1">'Weight'</span><span class="p">]</span><span class="o">.</span><span class="n">mode</span><span class="p">()[</span><span class="mi">0</span><span class="p">]}</span>
+
+<span class="k">for</span> <span class="n">stat</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">weight_stats</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'User </span><span class="si">{</span><span class="n">stat</span><span class="si">}</span><span class="s1"> Weight: </span><span class="si">{</span><span class="n">value</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">'Height:'</span><span class="p">)</span>
+<span class="n">height_stats</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'Max'</span><span class="p">:</span> <span class="n">df</span><span class="p">[</span><span class="s1">'Height'</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">(),</span>
+             <span class="s1">'Min'</span><span class="p">:</span> <span class="n">df</span><span class="p">[</span><span class="s1">'Height'</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span>
+             <span class="s1">'Mean'</span><span class="p">:</span> <span class="n">df</span><span class="p">[</span><span class="s1">'Height'</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span>
+             <span class="s1">'Median'</span><span class="p">:</span> <span class="n">df</span><span class="p">[</span><span class="s1">'Height'</span><span class="p">]</span><span class="o">.</span><span class="n">median</span><span class="p">(),</span>
+             <span class="s1">'Mode'</span><span class="p">:</span> <span class="n">df</span><span class="p">[</span><span class="s1">'Height'</span><span class="p">]</span><span class="o">.</span><span class="n">mode</span><span class="p">()[</span><span class="mi">0</span><span class="p">]}</span>
+
+<span class="k">for</span> <span class="n">stat</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">height_stats</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'User </span><span class="si">{</span><span class="n">stat</span><span class="si">}</span><span class="s1"> Height: </span><span class="si">{</span><span class="n">value</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">'Event:'</span><span class="p">)</span>
+<span class="n">event_stats</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'Max'</span><span class="p">:</span> <span class="n">df</span><span class="p">[</span><span class="s1">'Event'</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">(),</span>
+             <span class="s1">'Min'</span><span class="p">:</span> <span class="n">df</span><span class="p">[</span><span class="s1">'Event'</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span>
+<span class="p">}</span>
+
+<span class="k">for</span> <span class="n">stat</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">event_stats</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'User </span><span class="si">{</span><span class="n">stat</span><span class="si">}</span><span class="s1"> Event: </span><span class="si">{</span><span class="n">value</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>    Name  Age  Weight  Height  Event     PR
+0   Liav   17     130     180    100   11.2
+1  Safin   17     130     165    200   23.4
+2    Adi   17     130     175    100   10.5
+3  Arnav   18     130     160   3200  618.0
+4  Taiyo   16     120     190   1600  270.0
+Etracker User Data:
+Age:
+User Max age: 18
+User Min age: 16
+User Mean age: 17.0
+User Median age: 17.0
+User Mode age: 17
+Weight:
+User Max Weight: 130
+User Min Weight: 120
+User Mean Weight: 128.0
+User Median Weight: 130.0
+User Mode Weight: 130
+Height:
+User Max Height: 190
+User Min Height: 160
+User Mean Height: 174.0
+User Median Height: 175.0
+User Mode Height: 160
+Event:
+User Max Event: 3200
+User Min Event: 100
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Hack-Helpers">
 <a class="anchor" href="#Hack-Helpers" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hack Helpers<a class="anchor-link" href="#Hack-Helpers"> </a>
 </h2>
@@ -974,118 +1086,40 @@ None
 
 <div class="output_area">
 
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">KeyboardInterrupt</span>                         Traceback (most recent call last)
-<span class="ansi-green-intense-fg ansi-bold">/Users/taiyoi/Documents/Compsci22-1/_notebooks/2023-03-09-AP-unit2-3.ipynb Cell 29</span> in <span class="ansi-cyan-fg">&lt;cell line: 1&gt;</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-fg">----&gt; &lt;a href='vscode-notebook-cell:/Users/taiyoi/Documents/Compsci22-1/_notebooks/2023-03-09-AP-unit2-3.ipynb#X40sZmlsZQ%3D%3D?line=0'&gt;1&lt;/a&gt;</span> import seaborn as sns
-<span class="ansi-green-intense-fg ansi-bold">      &lt;a href='vscode-notebook-cell:/Users/taiyoi/Documents/Compsci22-1/_notebooks/2023-03-09-AP-unit2-3.ipynb#X40sZmlsZQ%3D%3D?line=2'&gt;3&lt;/a&gt;</span> # Load the titanic dataset
-<span class="ansi-green-intense-fg ansi-bold">      &lt;a href='vscode-notebook-cell:/Users/taiyoi/Documents/Compsci22-1/_notebooks/2023-03-09-AP-unit2-3.ipynb#X40sZmlsZQ%3D%3D?line=3'&gt;4&lt;/a&gt;</span> titanic_data = sns.load_dataset('titanic')
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Titanic Data
+Index(['survived', 'pclass', 'sex', 'age', 'sibsp', 'parch', 'fare',
+       'embarked', 'class', 'who', 'adult_male', 'deck', 'embark_town',
+       'alive', 'alone'],
+      dtype='object')
+     survived  pclass     sex   age  sibsp  parch   class     fare  \
+0           0       3    male  22.0      1      0   Third   7.2500   
+1           1       1  female  38.0      1      0   First  71.2833   
+2           1       3  female  26.0      0      0   Third   7.9250   
+3           1       1  female  35.0      1      0   First  53.1000   
+4           0       3    male  35.0      0      0   Third   8.0500   
+..        ...     ...     ...   ...    ...    ...     ...      ...   
+886         0       2    male  27.0      0      0  Second  13.0000   
+887         1       1  female  19.0      0      0   First  30.0000   
+888         0       3  female   NaN      1      2   Third  23.4500   
+889         1       1    male  26.0      0      0   First  30.0000   
+890         0       3    male  32.0      0      0   Third   7.7500   
 
-File <span class="ansi-green-fg">~/opt/anaconda3/lib/python3.9/site-packages/seaborn/__init__.py:2</span>, in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-intense-fg ansi-bold">      1</span> # Import seaborn objects
-<span class="ansi-green-fg">----&gt; 2</span> from .rcmod import *  # noqa: F401,F403
-<span class="ansi-green-intense-fg ansi-bold">      3</span> from .utils import *  # noqa: F401,F403
-<span class="ansi-green-intense-fg ansi-bold">      4</span> from .palettes import *  # noqa: F401,F403
+     embark_town  
+0    Southampton  
+1      Cherbourg  
+2    Southampton  
+3    Southampton  
+4    Southampton  
+..           ...  
+886  Southampton  
+887  Southampton  
+888  Southampton  
+889    Cherbourg  
+890   Queenstown  
 
-File <span class="ansi-green-fg">~/opt/anaconda3/lib/python3.9/site-packages/seaborn/rcmod.py:7</span>, in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-intense-fg ansi-bold">      5</span> import matplotlib as mpl
-<span class="ansi-green-intense-fg ansi-bold">      6</span> from cycler import cycler
-<span class="ansi-green-fg">----&gt; 7</span> from . import palettes
-<span class="ansi-green-intense-fg ansi-bold">     10</span> __all__ = ["set_theme", "set", "reset_defaults", "reset_orig",
-<span class="ansi-green-intense-fg ansi-bold">     11</span>            "axes_style", "set_style", "plotting_context", "set_context",
-<span class="ansi-green-intense-fg ansi-bold">     12</span>            "set_palette"]
-<span class="ansi-green-intense-fg ansi-bold">     15</span> _style_keys = [
-<span class="ansi-green-intense-fg ansi-bold">     16</span> 
-<span class="ansi-green-intense-fg ansi-bold">     17</span>     "axes.facecolor",
-<span class="ansi-green-fg">   (...)</span>
-<span class="ansi-green-intense-fg ansi-bold">     52</span> 
-<span class="ansi-green-intense-fg ansi-bold">     53</span> ]
-
-File <span class="ansi-green-fg">~/opt/anaconda3/lib/python3.9/site-packages/seaborn/palettes.py:9</span>, in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-intense-fg ansi-bold">      5</span> import matplotlib as mpl
-<span class="ansi-green-intense-fg ansi-bold">      7</span> from .external import husl
-<span class="ansi-green-fg">----&gt; 9</span> from .utils import desaturate, get_color_cycle
-<span class="ansi-green-intense-fg ansi-bold">     10</span> from .colors import xkcd_rgb, crayons
-<span class="ansi-green-intense-fg ansi-bold">     13</span> __all__ = ["color_palette", "hls_palette", "husl_palette", "mpl_palette",
-<span class="ansi-green-intense-fg ansi-bold">     14</span>            "dark_palette", "light_palette", "diverging_palette",
-<span class="ansi-green-intense-fg ansi-bold">     15</span>            "blend_palette", "xkcd_palette", "crayon_palette",
-<span class="ansi-green-intense-fg ansi-bold">     16</span>            "cubehelix_palette", "set_color_codes"]
-
-File <span class="ansi-green-fg">~/opt/anaconda3/lib/python3.9/site-packages/seaborn/utils.py:10</span>, in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-intense-fg ansi-bold">      7</span> from urllib.request import urlopen, urlretrieve
-<span class="ansi-green-intense-fg ansi-bold">      9</span> import numpy as np
-<span class="ansi-green-fg">---&gt; 10</span> from scipy import stats
-<span class="ansi-green-intense-fg ansi-bold">     11</span> import pandas as pd
-<span class="ansi-green-intense-fg ansi-bold">     12</span> import matplotlib as mpl
-
-File <span class="ansi-green-fg">~/opt/anaconda3/lib/python3.9/site-packages/scipy/stats/__init__.py:441</span>, in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-intense-fg ansi-bold">      1</span> """
-<span class="ansi-green-intense-fg ansi-bold">      2</span> .. _statsrefmanual:
-<span class="ansi-green-intense-fg ansi-bold">      3</span> 
-<span class="ansi-green-fg">   (...)</span>
-<span class="ansi-green-intense-fg ansi-bold">    438</span> 
-<span class="ansi-green-intense-fg ansi-bold">    439</span> """
-<span class="ansi-green-fg">--&gt; 441</span> from .stats import *
-<span class="ansi-green-intense-fg ansi-bold">    442</span> from .distributions import *
-<span class="ansi-green-intense-fg ansi-bold">    443</span> from .morestats import *
-
-File <span class="ansi-green-fg">~/opt/anaconda3/lib/python3.9/site-packages/scipy/stats/stats.py:43</span>, in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-intense-fg ansi-bold">     41</span> import scipy.special as special
-<span class="ansi-green-intense-fg ansi-bold">     42</span> from scipy import linalg
-<span class="ansi-green-fg">---&gt; 43</span> from . import distributions
-<span class="ansi-green-intense-fg ansi-bold">     44</span> from . import mstats_basic
-<span class="ansi-green-intense-fg ansi-bold">     45</span> from ._stats_mstats_common import (_find_repeats, linregress, theilslopes,
-<span class="ansi-green-intense-fg ansi-bold">     46</span>                                    siegelslopes)
-
-File <span class="ansi-green-fg">~/opt/anaconda3/lib/python3.9/site-packages/scipy/stats/distributions.py:8</span>, in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-intense-fg ansi-bold">      1</span> #
-<span class="ansi-green-intense-fg ansi-bold">      2</span> # Author:  Travis Oliphant  2002-2011 with contributions from
-<span class="ansi-green-intense-fg ansi-bold">      3</span> #          SciPy Developers 2004-2011
-<span class="ansi-green-fg">   (...)</span>
-<span class="ansi-green-intense-fg ansi-bold">      6</span> #       instead of `git blame -Lxxx,+x`.
-<span class="ansi-green-intense-fg ansi-bold">      7</span> #
-<span class="ansi-green-fg">----&gt; 8</span> from ._distn_infrastructure import (rv_discrete, rv_continuous, rv_frozen)
-<span class="ansi-green-intense-fg ansi-bold">     10</span> from . import _continuous_distns
-<span class="ansi-green-intense-fg ansi-bold">     11</span> from . import _discrete_distns
-
-File <span class="ansi-green-fg">~/opt/anaconda3/lib/python3.9/site-packages/scipy/stats/_distn_infrastructure.py:24</span>, in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-intense-fg ansi-bold">     20</span> from scipy.special import (comb, chndtr, entr, xlogy, ive)
-<span class="ansi-green-intense-fg ansi-bold">     22</span> # for root finding for continuous distribution ppf, and max likelihood
-<span class="ansi-green-intense-fg ansi-bold">     23</span> # estimation
-<span class="ansi-green-fg">---&gt; 24</span> from scipy import optimize
-<span class="ansi-green-intense-fg ansi-bold">     26</span> # for functions of continuous distributions (e.g. moments, entropy, cdf)
-<span class="ansi-green-intense-fg ansi-bold">     27</span> from scipy import integrate
-
-File <span class="ansi-green-fg">~/opt/anaconda3/lib/python3.9/site-packages/scipy/optimize/__init__.py:403</span>, in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-intense-fg ansi-bold">    401</span> from ._minimize import *
-<span class="ansi-green-intense-fg ansi-bold">    402</span> from ._root import *
-<span class="ansi-green-fg">--&gt; 403</span> from ._root_scalar import *
-<span class="ansi-green-intense-fg ansi-bold">    404</span> from .minpack import *
-<span class="ansi-green-intense-fg ansi-bold">    405</span> from .zeros import *
-
-File <span class="ansi-green-fg">~/opt/anaconda3/lib/python3.9/site-packages/scipy/optimize/_root_scalar.py:11</span>, in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-intense-fg ansi-bold">      1</span> """
-<span class="ansi-green-intense-fg ansi-bold">      2</span> Unified interfaces to root finding algorithms for real or complex
-<span class="ansi-green-intense-fg ansi-bold">      3</span> scalar functions.
-<span class="ansi-green-fg">   (...)</span>
-<span class="ansi-green-intense-fg ansi-bold">      7</span> - root : find a root of a scalar function.
-<span class="ansi-green-intense-fg ansi-bold">      8</span> """
-<span class="ansi-green-intense-fg ansi-bold">      9</span> import numpy as np
-<span class="ansi-green-fg">---&gt; 11</span> from . import zeros as optzeros
-<span class="ansi-green-intense-fg ansi-bold">     13</span> __all__ = ['root_scalar']
-<span class="ansi-green-intense-fg ansi-bold">     15</span> ROOT_SCALAR_METHODS = ['bisect', 'brentq', 'brenth', 'ridder', 'toms748',
-<span class="ansi-green-intense-fg ansi-bold">     16</span>                        'newton', 'secant', 'halley']
-
-File <span class="ansi-green-fg">~/opt/anaconda3/lib/python3.9/site-packages/scipy/optimize/zeros.py:4</span>, in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-intense-fg ansi-bold">      2</span> from collections import namedtuple
-<span class="ansi-green-intense-fg ansi-bold">      3</span> import operator
-<span class="ansi-green-fg">----&gt; 4</span> from . import _zeros
-<span class="ansi-green-intense-fg ansi-bold">      5</span> import numpy as np
-<span class="ansi-green-intense-fg ansi-bold">      8</span> _iter = 100
-
-<span class="ansi-red-fg">KeyboardInterrupt</span>: </pre>
+[891 rows x 9 columns]
+</pre>
 </div>
 </div>
 
@@ -1112,8 +1146,7 @@ File <span class="ansi-green-fg">~/opt/anaconda3/lib/python3.9/site-packages/sci
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Preprocess the data</span>
-<span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">OneHotEncoder</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">OneHotEncoder</span>
 
 
 <span class="n">td</span> <span class="o">=</span> <span class="n">titanic_data</span>
@@ -1135,6 +1168,46 @@ File <span class="ansi-green-fg">~/opt/anaconda3/lib/python3.9/site-packages/sci
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>     survived  pclass  sex   age  sibsp  parch      fare  alone  embarked_C  \
+0           0       3    1  22.0      1      0    7.2500      0         0.0   
+1           1       1    0  38.0      1      0   71.2833      0         1.0   
+2           1       3    0  26.0      0      0    7.9250      1         0.0   
+3           1       1    0  35.0      1      0   53.1000      0         0.0   
+4           0       3    1  35.0      0      0    8.0500      1         0.0   
+..        ...     ...  ...   ...    ...    ...       ...    ...         ...   
+705         0       2    1  39.0      0      0   26.0000      1         0.0   
+706         1       2    0  45.0      0      0   13.5000      1         0.0   
+707         1       1    1  42.0      0      0   26.2875      1         0.0   
+708         1       1    0  22.0      0      0  151.5500      1         0.0   
+710         1       1    0  24.0      0      0   49.5042      1         1.0   
+
+     embarked_Q  embarked_S  
+0           0.0         1.0  
+1           0.0         0.0  
+2           0.0         1.0  
+3           0.0         1.0  
+4           0.0         1.0  
+..          ...         ...  
+705         0.0         1.0  
+706         0.0         1.0  
+707         1.0         0.0  
+708         0.0         1.0  
+710         0.0         0.0  
+
+[564 rows x 11 columns]
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -1185,6 +1258,31 @@ File <span class="ansi-green-fg">~/opt/anaconda3/lib/python3.9/site-packages/sci
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>survived       0.000000
+pclass         2.464072
+sex            0.844311
+age           31.073353
+sibsp          0.562874
+parch          0.398204
+fare          24.835902
+alone          0.616766
+embarked_C     0.185629
+embarked_Q     0.038922
+embarked_S     0.775449
+dtype: float64
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
     
 
@@ -1209,6 +1307,31 @@ File <span class="ansi-green-fg">~/opt/anaconda3/lib/python3.9/site-packages/sci
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>survived       1.000000
+pclass         1.878261
+sex            0.326087
+age           28.481522
+sibsp          0.504348
+parch          0.508696
+fare          50.188806
+alone          0.456522
+embarked_C     0.152174
+embarked_Q     0.034783
+embarked_S     0.813043
+dtype: float64
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -1237,6 +1360,43 @@ File <span class="ansi-green-fg">~/opt/anaconda3/lib/python3.9/site-packages/sci
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>survived        1.0000
+pclass          3.0000
+sex             1.0000
+age            80.0000
+sibsp           4.0000
+parch           5.0000
+fare          512.3292
+alone           1.0000
+embarked_C      1.0000
+embarked_Q      1.0000
+embarked_S      1.0000
+dtype: float64
+survived      1.00
+pclass        1.00
+sex           0.00
+age           0.75
+sibsp         0.00
+parch         0.00
+fare          0.00
+alone         0.00
+embarked_C    0.00
+embarked_Q    0.00
+embarked_S    0.00
+dtype: float64
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -1308,18 +1468,25 @@ File <span class="ansi-green-fg">~/opt/anaconda3/lib/python3.9/site-packages/sci
 
 <div class="output_area">
 
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-intense-fg ansi-bold">/Users/taiyoi/Documents/Compsci22-1/_notebooks/2023-03-09-AP-unit2-3.ipynb Cell 39</span> in <span class="ansi-cyan-fg">&lt;cell line: 7&gt;</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-intense-fg ansi-bold">      &lt;a href='vscode-notebook-cell:/Users/taiyoi/Documents/Compsci22-1/_notebooks/2023-03-09-AP-unit2-3.ipynb#X53sZmlsZQ%3D%3D?line=3'&gt;4&lt;/a&gt;</span> from sklearn.metrics import accuracy_score
-<span class="ansi-green-intense-fg ansi-bold">      &lt;a href='vscode-notebook-cell:/Users/taiyoi/Documents/Compsci22-1/_notebooks/2023-03-09-AP-unit2-3.ipynb#X53sZmlsZQ%3D%3D?line=5'&gt;6&lt;/a&gt;</span> # Split arrays or matrices into random train and test subsets.
-<span class="ansi-green-fg">----&gt; &lt;a href='vscode-notebook-cell:/Users/taiyoi/Documents/Compsci22-1/_notebooks/2023-03-09-AP-unit2-3.ipynb#X53sZmlsZQ%3D%3D?line=6'&gt;7&lt;/a&gt;</span> X = td.drop('survived', axis=1)
-<span class="ansi-green-intense-fg ansi-bold">      &lt;a href='vscode-notebook-cell:/Users/taiyoi/Documents/Compsci22-1/_notebooks/2023-03-09-AP-unit2-3.ipynb#X53sZmlsZQ%3D%3D?line=7'&gt;8&lt;/a&gt;</span> y = td['survived']
-<span class="ansi-green-intense-fg ansi-bold">      &lt;a href='vscode-notebook-cell:/Users/taiyoi/Documents/Compsci22-1/_notebooks/2023-03-09-AP-unit2-3.ipynb#X53sZmlsZQ%3D%3D?line=8'&gt;9&lt;/a&gt;</span> X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>DecisionTreeClassifier Accuracy: 0.7588235294117647
+LogisticRegression Accuracy: 0.788235294117647
+</pre>
+</div>
+</div>
 
-<span class="ansi-red-fg">NameError</span>: name 'td' is not defined</pre>
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>/Users/taiyoi/opt/anaconda3/lib/python3.9/site-packages/sklearn/linear_model/_logistic.py:814: ConvergenceWarning: lbfgs failed to converge (status=1):
+STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+</pre>
 </div>
 </div>
 

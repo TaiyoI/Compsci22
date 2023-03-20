@@ -81,7 +81,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      23 min read
+      20 min read
     
 </span></p>
 
@@ -445,151 +445,6 @@ The class User is a Python class that represents a user entity in an application
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>/opt/homebrew/lib/python3.10/site-packages/flask_sqlalchemy/model.py:120: SAWarning: This declarative base already contains a class with the same class name and module name as __main__.Restaurant_B, and will be replaced in the string-lookup table.
-  super().__init__(name, bases, d, **kwargs)
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">InvalidRequestError</span>                       Traceback (most recent call last)
-<span class="ansi-green-intense-fg ansi-bold">/Users/taiyoi/Documents/Compsci22-1/_notebooks/2023-03-13-AP-unit2-4a.ipynb Cell 6</span> in <span class="ansi-cyan-fg">&lt;cell line: 20&gt;</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell:/Users/taiyoi/Documents/Compsci22-1/_notebooks/2023-03-13-AP-unit2-4a.ipynb#X24sZmlsZQ%3D%3D?line=11'&gt;12&lt;/a&gt;</span> ''' Tutorial: https://www.sqlalchemy.org/library.html#tutorials, try to get into a Python shell and follow along '''
-<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell:/Users/taiyoi/Documents/Compsci22-1/_notebooks/2023-03-13-AP-unit2-4a.ipynb#X24sZmlsZQ%3D%3D?line=13'&gt;14&lt;/a&gt;</span> # Define the User class to manage actions in the 'users' table
-<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell:/Users/taiyoi/Documents/Compsci22-1/_notebooks/2023-03-13-AP-unit2-4a.ipynb#X24sZmlsZQ%3D%3D?line=14'&gt;15&lt;/a&gt;</span> # -- Object Relational Mapping (ORM) is the key concept of SQLAlchemy
-<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell:/Users/taiyoi/Documents/Compsci22-1/_notebooks/2023-03-13-AP-unit2-4a.ipynb#X24sZmlsZQ%3D%3D?line=15'&gt;16&lt;/a&gt;</span> # -- a.) db.Model is like an inner layer of the onion in ORM
-<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell:/Users/taiyoi/Documents/Compsci22-1/_notebooks/2023-03-13-AP-unit2-4a.ipynb#X24sZmlsZQ%3D%3D?line=16'&gt;17&lt;/a&gt;</span> # -- b.) User represents data we want to store, something that is built on db.Model
-<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell:/Users/taiyoi/Documents/Compsci22-1/_notebooks/2023-03-13-AP-unit2-4a.ipynb#X24sZmlsZQ%3D%3D?line=17'&gt;18&lt;/a&gt;</span> # -- c.) SQLAlchemy ORM is layer on top of SQLAlchemy Core, then SQLAlchemy engine, SQL
-<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell:/Users/taiyoi/Documents/Compsci22-1/_notebooks/2023-03-13-AP-unit2-4a.ipynb#X24sZmlsZQ%3D%3D?line=18'&gt;19&lt;/a&gt;</span> # defining the template the class of Users, class definition template, helps us create objects which are of the type User, template for future object
-<span class="ansi-green-fg">---&gt; &lt;a href='vscode-notebook-cell:/Users/taiyoi/Documents/Compsci22-1/_notebooks/2023-03-13-AP-unit2-4a.ipynb#X24sZmlsZQ%3D%3D?line=19'&gt;20&lt;/a&gt;</span> class Restaurant_B(db.Model):
-<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell:/Users/taiyoi/Documents/Compsci22-1/_notebooks/2023-03-13-AP-unit2-4a.ipynb#X24sZmlsZQ%3D%3D?line=20'&gt;21&lt;/a&gt;</span>     __tablename__ = 'Restaurant_business'  # table name is plural, class name is singular
-<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell:/Users/taiyoi/Documents/Compsci22-1/_notebooks/2023-03-13-AP-unit2-4a.ipynb#X24sZmlsZQ%3D%3D?line=22'&gt;23&lt;/a&gt;</span>     # Define the User schema with "vars" from object
-
-File <span class="ansi-green-fg">/opt/homebrew/lib/python3.10/site-packages/flask_sqlalchemy/model.py:100</span>, in <span class="ansi-cyan-fg">BindMetaMixin.__init__</span><span class="ansi-blue-fg">(cls, name, bases, d, **kwargs)</span>
-<span class="ansi-green-intense-fg ansi-bold">     97</span>     if metadata is not parent_metadata:
-<span class="ansi-green-intense-fg ansi-bold">     98</span>         cls.metadata = metadata
-<span class="ansi-green-fg">--&gt; 100</span> super().__init__(name, bases, d, **kwargs)
-
-File <span class="ansi-green-fg">/opt/homebrew/lib/python3.10/site-packages/flask_sqlalchemy/model.py:120</span>, in <span class="ansi-cyan-fg">NameMetaMixin.__init__</span><span class="ansi-blue-fg">(cls, name, bases, d, **kwargs)</span>
-<span class="ansi-green-intense-fg ansi-bold">    117</span> if should_set_tablename(cls):
-<span class="ansi-green-intense-fg ansi-bold">    118</span>     cls.__tablename__ = camel_to_snake_case(cls.__name__)
-<span class="ansi-green-fg">--&gt; 120</span> super().__init__(name, bases, d, **kwargs)
-<span class="ansi-green-intense-fg ansi-bold">    122</span> # __table_cls__ has run. If no table was created, use the parent table.
-<span class="ansi-green-intense-fg ansi-bold">    123</span> if (
-<span class="ansi-green-intense-fg ansi-bold">    124</span>     "__tablename__" not in cls.__dict__
-<span class="ansi-green-intense-fg ansi-bold">    125</span>     and "__table__" in cls.__dict__
-<span class="ansi-green-intense-fg ansi-bold">    126</span>     and cls.__dict__["__table__"] is None
-<span class="ansi-green-intense-fg ansi-bold">    127</span> ):
-
-File <span class="ansi-green-fg">/opt/homebrew/lib/python3.10/site-packages/sqlalchemy/orm/decl_api.py:199</span>, in <span class="ansi-cyan-fg">DeclarativeMeta.__init__</span><span class="ansi-blue-fg">(cls, classname, bases, dict_, **kw)</span>
-<span class="ansi-green-intense-fg ansi-bold">    196</span>         cls._sa_registry = reg
-<span class="ansi-green-intense-fg ansi-bold">    198</span> if not cls.__dict__.get("__abstract__", False):
-<span class="ansi-green-fg">--&gt; 199</span>     _as_declarative(reg, cls, dict_)
-<span class="ansi-green-intense-fg ansi-bold">    200</span> type.__init__(cls, classname, bases, dict_)
-
-File <span class="ansi-green-fg">/opt/homebrew/lib/python3.10/site-packages/sqlalchemy/orm/decl_base.py:248</span>, in <span class="ansi-cyan-fg">_as_declarative</span><span class="ansi-blue-fg">(registry, cls, dict_)</span>
-<span class="ansi-green-intense-fg ansi-bold">    242</span> def _as_declarative(
-<span class="ansi-green-intense-fg ansi-bold">    243</span>     registry: _RegistryType, cls: Type[Any], dict_: _ClassDict
-<span class="ansi-green-intense-fg ansi-bold">    244</span> ) -&gt; Optional[_MapperConfig]:
-<span class="ansi-green-intense-fg ansi-bold">    245</span> 
-<span class="ansi-green-intense-fg ansi-bold">    246</span>     # declarative scans the class for attributes.  no table or mapper
-<span class="ansi-green-intense-fg ansi-bold">    247</span>     # args passed separately.
-<span class="ansi-green-fg">--&gt; 248</span>     return _MapperConfig.setup_mapping(registry, cls, dict_, None, {})
-
-File <span class="ansi-green-fg">/opt/homebrew/lib/python3.10/site-packages/sqlalchemy/orm/decl_base.py:329</span>, in <span class="ansi-cyan-fg">_MapperConfig.setup_mapping</span><span class="ansi-blue-fg">(cls, registry, cls_, dict_, table, mapper_kw)</span>
-<span class="ansi-green-intense-fg ansi-bold">    325</span>     return _DeferredMapperConfig(
-<span class="ansi-green-intense-fg ansi-bold">    326</span>         registry, cls_, dict_, table, mapper_kw
-<span class="ansi-green-intense-fg ansi-bold">    327</span>     )
-<span class="ansi-green-intense-fg ansi-bold">    328</span> else:
-<span class="ansi-green-fg">--&gt; 329</span>     return _ClassScanMapperConfig(
-<span class="ansi-green-intense-fg ansi-bold">    330</span>         registry, cls_, dict_, table, mapper_kw
-<span class="ansi-green-intense-fg ansi-bold">    331</span>     )
-
-File <span class="ansi-green-fg">/opt/homebrew/lib/python3.10/site-packages/sqlalchemy/orm/decl_base.py:578</span>, in <span class="ansi-cyan-fg">_ClassScanMapperConfig.__init__</span><span class="ansi-blue-fg">(self, registry, cls_, dict_, table, mapper_kw)</span>
-<span class="ansi-green-intense-fg ansi-bold">    574</span> self._extract_mappable_attributes()
-<span class="ansi-green-intense-fg ansi-bold">    576</span> self._extract_declared_columns()
-<span class="ansi-green-fg">--&gt; 578</span> self._setup_table(table)
-<span class="ansi-green-intense-fg ansi-bold">    580</span> self._setup_inheriting_columns(mapper_kw)
-<span class="ansi-green-intense-fg ansi-bold">    582</span> self._early_mapping(mapper_kw)
-
-File <span class="ansi-green-fg">/opt/homebrew/lib/python3.10/site-packages/sqlalchemy/orm/decl_base.py:1663</span>, in <span class="ansi-cyan-fg">_ClassScanMapperConfig._setup_table</span><span class="ansi-blue-fg">(self, table)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1655</span>             table_kw["autoload"] = True
-<span class="ansi-green-intense-fg ansi-bold">   1657</span>         sorted_columns = sorted(
-<span class="ansi-green-intense-fg ansi-bold">   1658</span>             declared_columns,
-<span class="ansi-green-intense-fg ansi-bold">   1659</span>             key=lambda c: column_ordering.get(c, 0),
-<span class="ansi-green-intense-fg ansi-bold">   1660</span>         )
-<span class="ansi-green-intense-fg ansi-bold">   1661</span>         table = self.set_cls_attribute(
-<span class="ansi-green-intense-fg ansi-bold">   1662</span>             "__table__",
-<span class="ansi-green-fg">-&gt; 1663</span>             table_cls(
-<span class="ansi-green-intense-fg ansi-bold">   1664</span>                 tablename,
-<span class="ansi-green-intense-fg ansi-bold">   1665</span>                 self._metadata_for_cls(manager),
-<span class="ansi-green-intense-fg ansi-bold">   1666</span>                 *sorted_columns,
-<span class="ansi-green-intense-fg ansi-bold">   1667</span>                 *args,
-<span class="ansi-green-intense-fg ansi-bold">   1668</span>                 **table_kw,
-<span class="ansi-green-intense-fg ansi-bold">   1669</span>             ),
-<span class="ansi-green-intense-fg ansi-bold">   1670</span>         )
-<span class="ansi-green-intense-fg ansi-bold">   1671</span> else:
-<span class="ansi-green-intense-fg ansi-bold">   1672</span>     if table is None:
-
-File <span class="ansi-green-fg">/opt/homebrew/lib/python3.10/site-packages/flask_sqlalchemy/model.py:147</span>, in <span class="ansi-cyan-fg">NameMetaMixin.__table_cls__</span><span class="ansi-blue-fg">(cls, *args, **kwargs)</span>
-<span class="ansi-green-intense-fg ansi-bold">    144</span> # Check if a table with this name already exists. Allows reflected tables to be
-<span class="ansi-green-intense-fg ansi-bold">    145</span> # applied to models by name.
-<span class="ansi-green-intense-fg ansi-bold">    146</span> if key in cls.metadata.tables:
-<span class="ansi-green-fg">--&gt; 147</span>     return sa.Table(*args, **kwargs)
-<span class="ansi-green-intense-fg ansi-bold">    149</span> # If a primary key is found, create a table for joined-table inheritance.
-<span class="ansi-green-intense-fg ansi-bold">    150</span> for arg in args:
-
-File <span class="ansi-green-fg">&lt;string&gt;:2</span>, in <span class="ansi-cyan-fg">__new__</span><span class="ansi-blue-fg">(cls, *args, **kw)</span>
-
-File <span class="ansi-green-fg">/opt/homebrew/lib/python3.10/site-packages/sqlalchemy/util/deprecations.py:277</span>, in <span class="ansi-cyan-fg">deprecated_params.&lt;locals&gt;.decorate.&lt;locals&gt;.warned</span><span class="ansi-blue-fg">(fn, *args, **kwargs)</span>
-<span class="ansi-green-intense-fg ansi-bold">    270</span>     if m in kwargs:
-<span class="ansi-green-intense-fg ansi-bold">    271</span>         _warn_with_version(
-<span class="ansi-green-intense-fg ansi-bold">    272</span>             messages[m],
-<span class="ansi-green-intense-fg ansi-bold">    273</span>             versions[m],
-<span class="ansi-green-intense-fg ansi-bold">    274</span>             version_warnings[m],
-<span class="ansi-green-intense-fg ansi-bold">    275</span>             stacklevel=3,
-<span class="ansi-green-intense-fg ansi-bold">    276</span>         )
-<span class="ansi-green-fg">--&gt; 277</span> return fn(*args, **kwargs)
-
-File <span class="ansi-green-fg">/opt/homebrew/lib/python3.10/site-packages/sqlalchemy/sql/schema.py:428</span>, in <span class="ansi-cyan-fg">Table.__new__</span><span class="ansi-blue-fg">(cls, *args, **kw)</span>
-<span class="ansi-green-intense-fg ansi-bold">    421</span> @util.deprecated_params(
-<span class="ansi-green-intense-fg ansi-bold">    422</span>     mustexist=(
-<span class="ansi-green-intense-fg ansi-bold">    423</span>         "1.4",
-<span class="ansi-green-fg">   (...)</span>
-<span class="ansi-green-intense-fg ansi-bold">    426</span> )
-<span class="ansi-green-intense-fg ansi-bold">    427</span> def __new__(cls, *args: Any, **kw: Any) -&gt; Any:
-<span class="ansi-green-fg">--&gt; 428</span>     return cls._new(*args, **kw)
-
-File <span class="ansi-green-fg">/opt/homebrew/lib/python3.10/site-packages/sqlalchemy/sql/schema.py:460</span>, in <span class="ansi-cyan-fg">Table._new</span><span class="ansi-blue-fg">(cls, *args, **kw)</span>
-<span class="ansi-green-intense-fg ansi-bold">    458</span> if key in metadata.tables:
-<span class="ansi-green-intense-fg ansi-bold">    459</span>     if not keep_existing and not extend_existing and bool(args):
-<span class="ansi-green-fg">--&gt; 460</span>         raise exc.InvalidRequestError(
-<span class="ansi-green-intense-fg ansi-bold">    461</span>             "Table '%s' is already defined for this MetaData "
-<span class="ansi-green-intense-fg ansi-bold">    462</span>             "instance.  Specify 'extend_existing=True' "
-<span class="ansi-green-intense-fg ansi-bold">    463</span>             "to redefine "
-<span class="ansi-green-intense-fg ansi-bold">    464</span>             "options and columns on an "
-<span class="ansi-green-intense-fg ansi-bold">    465</span>             "existing Table object." % key
-<span class="ansi-green-intense-fg ansi-bold">    466</span>         )
-<span class="ansi-green-intense-fg ansi-bold">    467</span>     table = metadata.tables[key]
-<span class="ansi-green-intense-fg ansi-bold">    468</span>     if extend_existing:
-
-<span class="ansi-red-fg">InvalidRequestError</span>: Table 'Restaurant_business' is already defined for this MetaData instance.  Specify 'extend_existing=True' to redefine options and columns on an existing Table object.</pre>
-</div>
-</div>
-
-</div>
-</div>
-
 </div>
     
 
@@ -829,7 +684,7 @@ user.find_by_uid() is a method that is used to retrieve a user object from the d
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Created
- {'id': 17, 'Restaurant': 'Tio2', 'Sales': '2', 'Avg': '2', 'City': '2', 'State': '2', 'Meals': '2'}
+ {'id': 16, 'Restaurant': 'In-n-out', 'Sales': '1200', 'Avg': '30', 'City': 'San Diego', 'State': 'California', 'Meals': '800000'}
 </pre>
 </div>
 </div>
@@ -997,19 +852,12 @@ User.query.all is a method that is used to retrieve all User objects from the da
   'State': 'N/A',
   'Meals': '255,000'},
  {'id': 16,
-  'Restaurant': 'Tio',
-  'Sales': '1',
-  'Avg': '1',
-  'City': '1',
-  'State': '1',
-  'Meals': '1'},
- {'id': 17,
-  'Restaurant': 'Tio2',
-  'Sales': '2',
-  'Avg': '2',
-  'City': '2',
-  'State': '2',
-  'Meals': '2'}]</pre>
+  'Restaurant': 'In-n-out',
+  'Sales': '1200',
+  'Avg': '30',
+  'City': 'San Diego',
+  'State': 'California',
+  'Meals': '800000'}]</pre>
 </div>
 
 </div>
@@ -1032,8 +880,8 @@ User.query.all is a method that is used to retrieve all User objects from the da
     <span class="n">Dinner</span> <span class="o">=</span> <span class="n">find_by_Restaurant</span><span class="p">(</span><span class="n">Restaurant</span><span class="p">)</span>
     
     <span class="c1"># Request new values for the QB attributes</span>
-    <span class="n">Sales</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter their Total Sales passes: "</span><span class="p">)</span>
-    <span class="n">Avg</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter their Average Checks passes: "</span><span class="p">)</span>
+    <span class="n">Sales</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter their Total Sales : "</span><span class="p">)</span>
+    <span class="n">Avg</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter their Average Checks : "</span><span class="p">)</span>
     <span class="n">City</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter their City season: "</span><span class="p">)</span>
     <span class="n">State</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter Their state: "</span><span class="p">)</span>
     <span class="n">Meals</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter their total Meals: "</span><span class="p">)</span>
@@ -1058,7 +906,7 @@ User.query.all is a method that is used to retrieve all User objects from the da
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Updated Restaurrant Tio
+<pre>Updated Restaurant In-n-out
 </pre>
 </div>
 </div>
@@ -1105,7 +953,7 @@ User.query.all is a method that is used to retrieve all User objects from the da
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Deleted
- {"id": 17, "Restaurant": "Tio2", "Sales": "2", "Avg": "2", "City": "2", "State": "2", "Meals": "2"}
+ {"id": 16, "Restaurant": "In-n-out", "Sales": "5000", "Avg": "30", "City": "San Diego", "State": "California", "Meals": "100000"}
 </pre>
 </div>
 </div>
@@ -1152,8 +1000,8 @@ User.query.all is a method that is used to retrieve all User objects from the da
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Deleted
- {"id": 16, "Restaurant": "Tio", "Sales": "2", "Avg": "2", "City": "2", "State": "2", "Meals": "2"}
+<pre>Created
+ {'id': 16, 'Restaurant': '1', 'Sales': '1', 'Avg': '1', 'City': '1', 'State': '', 'Meals': '11'}
 </pre>
 </div>
 </div>

@@ -1,0 +1,1259 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Unit 2.4a Using Programs with Data, SQLAlchemy | Taiyo I</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Unit 2.4a Using Programs with Data, SQLAlchemy" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Using Programs with Data is focused on SQL and database actions. Part A focuses on SQLAlchemy and an OOP programming style," />
+<meta property="og:description" content="Using Programs with Data is focused on SQL and database actions. Part A focuses on SQLAlchemy and an OOP programming style," />
+<link rel="canonical" href="https://taiyoi.github.io/Compsci22/2023/03/13/AP-unit2-4a.html" />
+<meta property="og:url" content="https://taiyoi.github.io/Compsci22/2023/03/13/AP-unit2-4a.html" />
+<meta property="og:site_name" content="Taiyo I" />
+<meta property="og:image" content="https://taiyoi.github.io/Compsci22/images/python.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-03-13T00:00:00-05:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://taiyoi.github.io/Compsci22/images/python.png" />
+<meta property="twitter:title" content="Unit 2.4a Using Programs with Data, SQLAlchemy" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-03-13T00:00:00-05:00","datePublished":"2023-03-13T00:00:00-05:00","description":"Using Programs with Data is focused on SQL and database actions. Part A focuses on SQLAlchemy and an OOP programming style,","headline":"Unit 2.4a Using Programs with Data, SQLAlchemy","image":"https://taiyoi.github.io/Compsci22/images/python.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://taiyoi.github.io/Compsci22/2023/03/13/AP-unit2-4a.html"},"url":"https://taiyoi.github.io/Compsci22/2023/03/13/AP-unit2-4a.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/Compsci22/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://taiyoi.github.io/Compsci22/feed.xml" title="Taiyo I" /><link rel="shortcut icon" type="image/x-icon" href="/Compsci22/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/Compsci22/">Taiyo I</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/Compsci22/Vocab/">Vocab</a><a class="page-link" href="/Compsci22/categories/">Tags 🏷</a><a class="page-link" href="/Compsci22/techtalk/javascript">SubMenu</a><a class="page-link" href="/Compsci22/game/">Game</a><a class="page-link" href="/Compsci22/search/">Search</a><a class="page-link" href="/Compsci22/calculator/">Calculator</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Unit 2.4a Using Programs with Data, SQLAlchemy</h1><p class="page-description">Using Programs with Data is focused on SQL and database actions.  Part A focuses on SQLAlchemy and an OOP programming style,</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2023-03-13T00:00:00-05:00" itemprop="datePublished">
+        Mar 13, 2023
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      23 min read
+    
+</span></p>
+
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-justify-center">
+          <div class="px-2">
+
+    <a href="https://github.com/TaiyoI/Compsci22/tree/master/_notebooks/2023-03-13-AP-unit2-4a.ipynb" role="button" target="_blank">
+<img class="notebook-badge-image" src="/Compsci22/assets/badges/github.svg" alt="View On GitHub">
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://mybinder.org/v2/gh/TaiyoI/Compsci22/master?filepath=_notebooks%2F2023-03-13-AP-unit2-4a.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/Compsci22/assets/badges/binder.svg" alt="Open In Binder"/>
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/TaiyoI/Compsci22/blob/master/_notebooks/2023-03-13-AP-unit2-4a.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/Compsci22/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+          <div class="px-2">
+  <a href="https://deepnote.com/launch?url=https%3A%2F%2Fgithub.com%2FTaiyoI%2FCompsci22%2Fblob%2Fmaster%2F_notebooks%2F2023-03-13-AP-unit2-4a.ipynb" target="_blank">
+      <img class="notebook-badge-image" src="/Compsci22/assets/badges/deepnote.svg" alt="Launch in Deepnote"/>
+  </a>
+</div>
+
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h1"><a href="#2.4-A-Notes">2.4 A Notes </a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#College-Board-talks-about-ideas-like:">College Board talks about ideas like: </a></li>
+<li class="toc-entry toc-h3"><a href="#PBL,-Databases,-Iterative/OOP:">PBL, Databases, Iterative/OOP: </a></li>
+<li class="toc-entry toc-h2"><a href="#Imports-and-Flask-Objects">Imports and Flask Objects </a></li>
+<li class="toc-entry toc-h2"><a href="#Model-Definition">Model Definition </a></li>
+<li class="toc-entry toc-h2"><a href="#Initial-Data">Initial Data </a></li>
+<li class="toc-entry toc-h2"><a href="#Check-for-given-Credentials-in-users-table-in-sqlite.db">Check for given Credentials in users table in sqlite.db </a></li>
+<li class="toc-entry toc-h2"><a href="#Create-a-new-User-in-table-in-Sqlite.db">Create a new User in table in Sqlite.db </a></li>
+<li class="toc-entry toc-h2"><a href="#Reading-users-table-in-sqlite.db">Reading users table in sqlite.db </a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h1"><a href="#Hacks">Hacks </a></li>
+</ul><!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2023-03-13-AP-unit2-4a.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="2.4-A-Notes">
+<a class="anchor" href="#2.4-A-Notes" aria-hidden="true"><span class="octicon octicon-link"></span></a>2.4 A Notes<a class="anchor-link" href="#2.4-A-Notes"> </a>
+</h1>
+<h3 id="College-Board-talks-about-ideas-like:">
+<a class="anchor" href="#College-Board-talks-about-ideas-like:" aria-hidden="true"><span class="octicon octicon-link"></span></a>College Board talks about ideas like:<a class="anchor-link" href="#College-Board-talks-about-ideas-like:"> </a>
+</h3>
+<ul>
+<li>
+<p><strong>Program Usage:</strong> This refers to the way in which programs are used to process information in an iterative and interactive manner.</p>
+</li>
+<li>
+<p><strong>Managing Data:</strong> This involves classifying data as part of the process of using programs, and organizing data files in a table.</p>
+</li>
+<li>
+<p><strong>Insight:</strong> The College Board suggests that insight and knowledge can be obtained from digitally represented information.</p>
+</li>
+<li>
+<p><strong>Filter Systems:</strong> This refers to the tools used to find information and recognize patterns within data.</p>
+</li>
+<li>
+<p>Application: The College Board gives an example of an employee wanting to count the number of books in two databases that the preserve has.</p>
+</li>
+</ul>
+<h3 id="PBL,-Databases,-Iterative/OOP:">
+<a class="anchor" href="#PBL,-Databases,-Iterative/OOP:" aria-hidden="true"><span class="octicon octicon-link"></span></a>PBL, Databases, Iterative/OOP:<a class="anchor-link" href="#PBL,-Databases,-Iterative/OOP:"> </a>
+</h3>
+<ul>
+<li>
+<p><strong>Iterative:</strong> Refers to a process in which a sequence of instructions or code is repeated until a specific end result is achieved.</p>
+</li>
+<li>
+<p><strong>OOP:</strong> An approach to computer programming in which software design is based on objects or data, rather than functions and logic.</p>
+</li>
+<li>
+<p><strong>SQL:</strong> Structured Query Language, abbreviated as SQL, is a language used in programming, managing, and structuring data, often used in managing databases.</p>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Imports-and-Flask-Objects">
+<a class="anchor" href="#Imports-and-Flask-Objects" aria-hidden="true"><span class="octicon octicon-link"></span></a>Imports and Flask Objects<a class="anchor-link" href="#Imports-and-Flask-Objects"> </a>
+</h2>
+<blockquote>
+<p>Defines and key object creations</p>
+</blockquote>
+<ul>
+<li>
+<p>Comment on where you have observed these working?  Provide a defintion of purpose.</p>
+</li>
+<li>
+<p><strong>Flask app object:</strong>
+I have observed the Flask app object working in various web development projects. Flask is a popular web framework for building web applications with Python. The Flask app object is the central point of the application, and is used to configure the application and define the application routes. Its purpose is to create and configure the Flask application, including any extensions or third-party libraries, and handle the routing of incoming requests.</p>
+</li>
+<li>
+<p><strong>SQLAlchemy db object:</strong></p>
+</li>
+</ul>
+<p>I have also observed the SQLAlchemy db object in various Python-based web development projects. SQLAlchemy is a popular Object Relational Mapper (ORM) for working with databases in Python. The db object is used to represent the database connection, and is used to interact with the database, including creating tables, querying data, and performing transactions. Its purpose is to provide a high-level, object-oriented interface for working with databases, and to abstract away the details of the underlying database engine, allowing developers to focus on their application logic rather than low-level database operations.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="sd">"""</span>
+<span class="sd">These imports define the key objects</span>
+<span class="sd">"""</span>
+
+<span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span>
+<span class="kn">from</span> <span class="nn">flask_sqlalchemy</span> <span class="kn">import</span> <span class="n">SQLAlchemy</span>
+
+<span class="sd">"""</span>
+<span class="sd">These object and definitions are used throughout the Jupyter Notebook.</span>
+<span class="sd">"""</span>
+
+<span class="c1"># Setup of key Flask object (app)</span>
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="c1"># Setup SQLAlchemy object and properties for the database (db)</span>
+<span class="n">database</span> <span class="o">=</span> <span class="s1">'sqlite:///sqlite.db'</span>  <span class="c1"># path and filename of database</span>
+<span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s1">'SQLALCHEMY_TRACK_MODIFICATIONS'</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s1">'SQLALCHEMY_DATABASE_URI'</span><span class="p">]</span> <span class="o">=</span> <span class="n">database</span>
+<span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s1">'SECRET_KEY'</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'SECRET_KEY'</span>
+<span class="n">db</span> <span class="o">=</span> <span class="n">SQLAlchemy</span><span class="p">()</span>
+
+
+<span class="c1"># This belongs in place where it runs once per project</span>
+<span class="n">db</span><span class="o">.</span><span class="n">init_app</span><span class="p">(</span><span class="n">app</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Model-Definition">
+<a class="anchor" href="#Model-Definition" aria-hidden="true"><span class="octicon octicon-link"></span></a>Model Definition<a class="anchor-link" href="#Model-Definition"> </a>
+</h2>
+<blockquote>
+<p>Define columns, initialization, and CRUD methods for users table in sqlite.db</p>
+</blockquote>
+<ul>
+<li>
+<p><strong>class User:</strong>
+The class User is a Python class that represents a user entity in an application. It is used in many web applications to store user-related information, such as their name, email, and password. Its purpose is to provide a blueprint for creating user objects that can be stored and retrieved from a database.</p>
+</li>
+<li>
+<p><strong>db.Model inheritance:</strong></p>
+</li>
+</ul>
+<p>The db.Model inheritance refers to the inheritance of the db.Model class from the SQLAlchemy library. In Python-based web applications, this inheritance is commonly used to define database models for different entities, such as users, posts, and comments. The purpose of inheriting from the db.Model class is to provide a set of predefined methods and attributes that enable interaction with the underlying database. By using this inheritance, developers can create more efficient and streamlined code for database operations.</p>
+<ul>
+<li><strong>init method:</strong></li>
+</ul>
+<p>The init method is a special method in Python classes that is called when an object of the class is created. In database models, this method is commonly used to initialize the attributes of an object with default or user-defined values. The purpose of the init method is to provide a way to create instances of the class with specific attributes, making it easier to work with the class in other parts of the application.</p>
+<ul>
+<li><strong>@property, @<column>.setter:&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+<p>These are Python decorators that are commonly used in database models. The @property decorator is used to define a getter method for a class attribute, while the @<column>.setter decorator is used to define a setter method for a specific column in the database. The purpose of these decorators is to provide a more Pythonic way of working with class attributes and database columns, and to enable additional functionality, such as validation or formatting, when getting or setting attributes.&lt;/p&gt;
+<ul>
+<li><strong>create, read, update, delete methods:</strong></li>
+</ul>
+<p>These are commonly used methods in database models that represent the basic operations that can be performed on a database entity. The create method is used to create a new entity in the database, the read method is used to retrieve one or more entities from the database, the update method is used to update an existing entity in the database, and the delete method is used to remove an entity from the database. The purpose of these methods is to provide a way to interact with the database in a standard way that is easy to understand and maintain. By using these methods, developers can create more efficient and streamlined code for database operations.</p>
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="sd">""" database dependencies to support sqlite examples """</span>
+<span class="kn">import</span> <span class="nn">datetime</span> 
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+<span class="kn">import</span> <span class="nn">json</span>
+
+<span class="kn">from</span> <span class="nn">sqlalchemy.exc</span> <span class="kn">import</span> <span class="n">IntegrityError</span>
+<span class="kn">from</span> <span class="nn">werkzeug.security</span> <span class="kn">import</span> <span class="n">generate_password_hash</span><span class="p">,</span> <span class="n">check_password_hash</span>
+
+
+<span class="sd">''' Tutorial: https://www.sqlalchemy.org/library.html#tutorials, try to get into a Python shell and follow along '''</span>
+
+<span class="c1"># Define the User class to manage actions in the 'users' table</span>
+<span class="c1"># -- Object Relational Mapping (ORM) is the key concept of SQLAlchemy</span>
+<span class="c1"># -- a.) db.Model is like an inner layer of the onion in ORM</span>
+<span class="c1"># -- b.) User represents data we want to store, something that is built on db.Model</span>
+<span class="c1"># -- c.) SQLAlchemy ORM is layer on top of SQLAlchemy Core, then SQLAlchemy engine, SQL</span>
+<span class="c1"># defining the template the class of Users, class definition template, helps us create objects which are of the type User, template for future object</span>
+<span class="k">class</span> <span class="nc">Restaurant_B</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">__tablename__</span> <span class="o">=</span> <span class="s1">'Restaurant_business'</span>  <span class="c1"># table name is plural, class name is singular</span>
+
+    <span class="c1"># Define the User schema with "vars" from object</span>
+    <span class="nb">id</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">Column</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">Integer</span><span class="p">,</span> <span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">_Restaurant</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">Column</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">String</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span> <span class="n">unique</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">_Sales</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">Column</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">String</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span> <span class="n">unique</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">_Avg</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">Column</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">String</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span> <span class="n">unique</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">_City</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">Column</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">String</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span> <span class="n">unique</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">_State</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">Column</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">String</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span> <span class="n">unique</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">_Meals</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">Column</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">String</span><span class="p">,</span> <span class="n">unique</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+    <span class="c1"># constructor of a User object, initializes the instance variables within object (self)</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">Restaurant</span><span class="p">,</span> <span class="n">Sales</span><span class="p">,</span> <span class="n">Avg</span><span class="p">,</span> <span class="n">City</span><span class="p">,</span> <span class="n">State</span><span class="p">,</span> <span class="n">Meals</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_Restaurant</span> <span class="o">=</span> <span class="n">Restaurant</span>    <span class="c1"># variables with self prefix become part of the object, </span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_Sales</span> <span class="o">=</span> <span class="n">Sales</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_Avg</span> <span class="o">=</span> <span class="n">Avg</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_City</span> <span class="o">=</span> <span class="n">City</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_State</span> <span class="o">=</span> <span class="n">State</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_Meals</span> <span class="o">=</span> <span class="n">Meals</span>
+
+    <span class="c1"># a name getter method, extracts name from object</span>
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">Restaurant</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_Restaurant</span>
+    
+    <span class="c1"># a setter function, allows name to be updated after initial object creation</span>
+    <span class="nd">@Restaurant</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">Restaurant</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">Restaurant</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_Restaurant</span> <span class="o">=</span> <span class="n">Restaurant</span>
+    
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">Sales</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_Sales</span>
+    
+    <span class="c1"># a setter function, allows name to be updated after initial object creation</span>
+    <span class="nd">@Sales</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">Sales</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">Sales</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_Sales</span> <span class="o">=</span> <span class="n">Sales</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">Avg</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_Avg</span>
+    
+    <span class="c1"># a setter function, allows name to be updated after initial object creation</span>
+    <span class="nd">@Avg</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">Avg</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">Avg</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_Avg</span> <span class="o">=</span> <span class="n">Avg</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">City</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_City</span>
+    
+    <span class="c1"># a setter function, allows name to be updated after initial object creation</span>
+    <span class="nd">@City</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">City</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">City</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_City</span> <span class="o">=</span> <span class="n">City</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">State</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_State</span>
+    
+    <span class="c1"># a setter function, allows name to be updated after initial object creation</span>
+    <span class="nd">@State</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">State</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">State</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_State</span> <span class="o">=</span> <span class="n">State</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">Meals</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_Meals</span>
+    
+    <span class="nd">@Meals</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">Meals</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">Meals</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_Meals</span> <span class="o">=</span> <span class="n">Meals</span>
+    
+    <span class="c1"># output content using str(object) in human readable form, uses getter</span>
+    <span class="c1"># output content using json dumps, this is ready for API response</span>
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
+
+    <span class="c1"># CRUD create/add a new record to the table</span>
+    <span class="c1"># returns self or None on error</span>
+    <span class="k">def</span> <span class="nf">create</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="c1"># creates a person object from User(db.Model) class, passes initializers</span>
+            <span class="n">db</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>  <span class="c1"># add prepares to persist person object to Users table</span>
+            <span class="n">db</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>  <span class="c1"># SqlAlchemy "unit of work pattern" requires a manual commit</span>
+            <span class="k">return</span> <span class="bp">self</span>
+        <span class="k">except</span> <span class="n">IntegrityError</span><span class="p">:</span>
+            <span class="n">db</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">remove</span><span class="p">()</span>
+            <span class="k">return</span> <span class="kc">None</span>
+
+    <span class="c1"># CRUD read converts self to dictionary</span>
+    <span class="c1"># returns dictionary</span>
+    <span class="k">def</span> <span class="nf">read</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">{</span>
+            <span class="s2">"id"</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+            <span class="s2">"Restaurant"</span> <span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">Restaurant</span><span class="p">,</span>
+            <span class="s2">"Sales"</span> <span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">Sales</span><span class="p">,</span>
+            <span class="s2">"Avg"</span> <span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">Avg</span><span class="p">,</span>
+            <span class="s2">"City"</span> <span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">City</span><span class="p">,</span>
+            <span class="s2">"State"</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">State</span><span class="p">,</span>
+            <span class="s2">"Meals"</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">Meals</span>
+        <span class="p">}</span>
+
+    <span class="c1"># CRUD update: updates user name, password, phone</span>
+    <span class="c1"># returns self</span>
+    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">Restaurant</span><span class="p">,</span> <span class="n">Sales</span><span class="p">,</span> <span class="n">Avg</span><span class="p">,</span> <span class="n">City</span><span class="p">,</span> <span class="n">State</span><span class="p">,</span> <span class="n">Meals</span><span class="p">):</span>
+        <span class="sd">"""only updates values with length"""</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">Restaurant</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">Restaurant</span> <span class="o">=</span> <span class="n">Restaurant</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">Sales</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">Sales</span> <span class="o">=</span> <span class="n">Sales</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">Avg</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">Avg</span> <span class="o">=</span> <span class="n">Avg</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">City</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">City</span> <span class="o">=</span> <span class="n">City</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">State</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">State</span> <span class="o">=</span> <span class="n">State</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">Meals</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">Meals</span> <span class="o">=</span> <span class="n">Meals</span>
+        <span class="n">db</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="n">db</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+        <span class="k">return</span> <span class="bp">self</span>
+
+    <span class="c1"># CRUD delete: remove self</span>
+    <span class="c1"># None</span>
+    <span class="k">def</span> <span class="nf">delete</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">db</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="n">db</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+        <span class="k">return</span> <span class="kc">None</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>/opt/homebrew/lib/python3.10/site-packages/flask_sqlalchemy/model.py:120: SAWarning: This declarative base already contains a class with the same class name and module name as __main__.Restaurant_B, and will be replaced in the string-lookup table.
+  super().__init__(name, bases, d, **kwargs)
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">InvalidRequestError</span>                       Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">/Users/taiyoi/Documents/Compsci22-1/_notebooks/2023-03-13-AP-unit2-4a.ipynb Cell 6</span> in <span class="ansi-cyan-fg">&lt;cell line: 20&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell:/Users/taiyoi/Documents/Compsci22-1/_notebooks/2023-03-13-AP-unit2-4a.ipynb#X24sZmlsZQ%3D%3D?line=11'&gt;12&lt;/a&gt;</span> ''' Tutorial: https://www.sqlalchemy.org/library.html#tutorials, try to get into a Python shell and follow along '''
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell:/Users/taiyoi/Documents/Compsci22-1/_notebooks/2023-03-13-AP-unit2-4a.ipynb#X24sZmlsZQ%3D%3D?line=13'&gt;14&lt;/a&gt;</span> # Define the User class to manage actions in the 'users' table
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell:/Users/taiyoi/Documents/Compsci22-1/_notebooks/2023-03-13-AP-unit2-4a.ipynb#X24sZmlsZQ%3D%3D?line=14'&gt;15&lt;/a&gt;</span> # -- Object Relational Mapping (ORM) is the key concept of SQLAlchemy
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell:/Users/taiyoi/Documents/Compsci22-1/_notebooks/2023-03-13-AP-unit2-4a.ipynb#X24sZmlsZQ%3D%3D?line=15'&gt;16&lt;/a&gt;</span> # -- a.) db.Model is like an inner layer of the onion in ORM
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell:/Users/taiyoi/Documents/Compsci22-1/_notebooks/2023-03-13-AP-unit2-4a.ipynb#X24sZmlsZQ%3D%3D?line=16'&gt;17&lt;/a&gt;</span> # -- b.) User represents data we want to store, something that is built on db.Model
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell:/Users/taiyoi/Documents/Compsci22-1/_notebooks/2023-03-13-AP-unit2-4a.ipynb#X24sZmlsZQ%3D%3D?line=17'&gt;18&lt;/a&gt;</span> # -- c.) SQLAlchemy ORM is layer on top of SQLAlchemy Core, then SQLAlchemy engine, SQL
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell:/Users/taiyoi/Documents/Compsci22-1/_notebooks/2023-03-13-AP-unit2-4a.ipynb#X24sZmlsZQ%3D%3D?line=18'&gt;19&lt;/a&gt;</span> # defining the template the class of Users, class definition template, helps us create objects which are of the type User, template for future object
+<span class="ansi-green-fg">---&gt; &lt;a href='vscode-notebook-cell:/Users/taiyoi/Documents/Compsci22-1/_notebooks/2023-03-13-AP-unit2-4a.ipynb#X24sZmlsZQ%3D%3D?line=19'&gt;20&lt;/a&gt;</span> class Restaurant_B(db.Model):
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell:/Users/taiyoi/Documents/Compsci22-1/_notebooks/2023-03-13-AP-unit2-4a.ipynb#X24sZmlsZQ%3D%3D?line=20'&gt;21&lt;/a&gt;</span>     __tablename__ = 'Restaurant_business'  # table name is plural, class name is singular
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell:/Users/taiyoi/Documents/Compsci22-1/_notebooks/2023-03-13-AP-unit2-4a.ipynb#X24sZmlsZQ%3D%3D?line=22'&gt;23&lt;/a&gt;</span>     # Define the User schema with "vars" from object
+
+File <span class="ansi-green-fg">/opt/homebrew/lib/python3.10/site-packages/flask_sqlalchemy/model.py:100</span>, in <span class="ansi-cyan-fg">BindMetaMixin.__init__</span><span class="ansi-blue-fg">(cls, name, bases, d, **kwargs)</span>
+<span class="ansi-green-intense-fg ansi-bold">     97</span>     if metadata is not parent_metadata:
+<span class="ansi-green-intense-fg ansi-bold">     98</span>         cls.metadata = metadata
+<span class="ansi-green-fg">--&gt; 100</span> super().__init__(name, bases, d, **kwargs)
+
+File <span class="ansi-green-fg">/opt/homebrew/lib/python3.10/site-packages/flask_sqlalchemy/model.py:120</span>, in <span class="ansi-cyan-fg">NameMetaMixin.__init__</span><span class="ansi-blue-fg">(cls, name, bases, d, **kwargs)</span>
+<span class="ansi-green-intense-fg ansi-bold">    117</span> if should_set_tablename(cls):
+<span class="ansi-green-intense-fg ansi-bold">    118</span>     cls.__tablename__ = camel_to_snake_case(cls.__name__)
+<span class="ansi-green-fg">--&gt; 120</span> super().__init__(name, bases, d, **kwargs)
+<span class="ansi-green-intense-fg ansi-bold">    122</span> # __table_cls__ has run. If no table was created, use the parent table.
+<span class="ansi-green-intense-fg ansi-bold">    123</span> if (
+<span class="ansi-green-intense-fg ansi-bold">    124</span>     "__tablename__" not in cls.__dict__
+<span class="ansi-green-intense-fg ansi-bold">    125</span>     and "__table__" in cls.__dict__
+<span class="ansi-green-intense-fg ansi-bold">    126</span>     and cls.__dict__["__table__"] is None
+<span class="ansi-green-intense-fg ansi-bold">    127</span> ):
+
+File <span class="ansi-green-fg">/opt/homebrew/lib/python3.10/site-packages/sqlalchemy/orm/decl_api.py:199</span>, in <span class="ansi-cyan-fg">DeclarativeMeta.__init__</span><span class="ansi-blue-fg">(cls, classname, bases, dict_, **kw)</span>
+<span class="ansi-green-intense-fg ansi-bold">    196</span>         cls._sa_registry = reg
+<span class="ansi-green-intense-fg ansi-bold">    198</span> if not cls.__dict__.get("__abstract__", False):
+<span class="ansi-green-fg">--&gt; 199</span>     _as_declarative(reg, cls, dict_)
+<span class="ansi-green-intense-fg ansi-bold">    200</span> type.__init__(cls, classname, bases, dict_)
+
+File <span class="ansi-green-fg">/opt/homebrew/lib/python3.10/site-packages/sqlalchemy/orm/decl_base.py:248</span>, in <span class="ansi-cyan-fg">_as_declarative</span><span class="ansi-blue-fg">(registry, cls, dict_)</span>
+<span class="ansi-green-intense-fg ansi-bold">    242</span> def _as_declarative(
+<span class="ansi-green-intense-fg ansi-bold">    243</span>     registry: _RegistryType, cls: Type[Any], dict_: _ClassDict
+<span class="ansi-green-intense-fg ansi-bold">    244</span> ) -&gt; Optional[_MapperConfig]:
+<span class="ansi-green-intense-fg ansi-bold">    245</span> 
+<span class="ansi-green-intense-fg ansi-bold">    246</span>     # declarative scans the class for attributes.  no table or mapper
+<span class="ansi-green-intense-fg ansi-bold">    247</span>     # args passed separately.
+<span class="ansi-green-fg">--&gt; 248</span>     return _MapperConfig.setup_mapping(registry, cls, dict_, None, {})
+
+File <span class="ansi-green-fg">/opt/homebrew/lib/python3.10/site-packages/sqlalchemy/orm/decl_base.py:329</span>, in <span class="ansi-cyan-fg">_MapperConfig.setup_mapping</span><span class="ansi-blue-fg">(cls, registry, cls_, dict_, table, mapper_kw)</span>
+<span class="ansi-green-intense-fg ansi-bold">    325</span>     return _DeferredMapperConfig(
+<span class="ansi-green-intense-fg ansi-bold">    326</span>         registry, cls_, dict_, table, mapper_kw
+<span class="ansi-green-intense-fg ansi-bold">    327</span>     )
+<span class="ansi-green-intense-fg ansi-bold">    328</span> else:
+<span class="ansi-green-fg">--&gt; 329</span>     return _ClassScanMapperConfig(
+<span class="ansi-green-intense-fg ansi-bold">    330</span>         registry, cls_, dict_, table, mapper_kw
+<span class="ansi-green-intense-fg ansi-bold">    331</span>     )
+
+File <span class="ansi-green-fg">/opt/homebrew/lib/python3.10/site-packages/sqlalchemy/orm/decl_base.py:578</span>, in <span class="ansi-cyan-fg">_ClassScanMapperConfig.__init__</span><span class="ansi-blue-fg">(self, registry, cls_, dict_, table, mapper_kw)</span>
+<span class="ansi-green-intense-fg ansi-bold">    574</span> self._extract_mappable_attributes()
+<span class="ansi-green-intense-fg ansi-bold">    576</span> self._extract_declared_columns()
+<span class="ansi-green-fg">--&gt; 578</span> self._setup_table(table)
+<span class="ansi-green-intense-fg ansi-bold">    580</span> self._setup_inheriting_columns(mapper_kw)
+<span class="ansi-green-intense-fg ansi-bold">    582</span> self._early_mapping(mapper_kw)
+
+File <span class="ansi-green-fg">/opt/homebrew/lib/python3.10/site-packages/sqlalchemy/orm/decl_base.py:1663</span>, in <span class="ansi-cyan-fg">_ClassScanMapperConfig._setup_table</span><span class="ansi-blue-fg">(self, table)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1655</span>             table_kw["autoload"] = True
+<span class="ansi-green-intense-fg ansi-bold">   1657</span>         sorted_columns = sorted(
+<span class="ansi-green-intense-fg ansi-bold">   1658</span>             declared_columns,
+<span class="ansi-green-intense-fg ansi-bold">   1659</span>             key=lambda c: column_ordering.get(c, 0),
+<span class="ansi-green-intense-fg ansi-bold">   1660</span>         )
+<span class="ansi-green-intense-fg ansi-bold">   1661</span>         table = self.set_cls_attribute(
+<span class="ansi-green-intense-fg ansi-bold">   1662</span>             "__table__",
+<span class="ansi-green-fg">-&gt; 1663</span>             table_cls(
+<span class="ansi-green-intense-fg ansi-bold">   1664</span>                 tablename,
+<span class="ansi-green-intense-fg ansi-bold">   1665</span>                 self._metadata_for_cls(manager),
+<span class="ansi-green-intense-fg ansi-bold">   1666</span>                 *sorted_columns,
+<span class="ansi-green-intense-fg ansi-bold">   1667</span>                 *args,
+<span class="ansi-green-intense-fg ansi-bold">   1668</span>                 **table_kw,
+<span class="ansi-green-intense-fg ansi-bold">   1669</span>             ),
+<span class="ansi-green-intense-fg ansi-bold">   1670</span>         )
+<span class="ansi-green-intense-fg ansi-bold">   1671</span> else:
+<span class="ansi-green-intense-fg ansi-bold">   1672</span>     if table is None:
+
+File <span class="ansi-green-fg">/opt/homebrew/lib/python3.10/site-packages/flask_sqlalchemy/model.py:147</span>, in <span class="ansi-cyan-fg">NameMetaMixin.__table_cls__</span><span class="ansi-blue-fg">(cls, *args, **kwargs)</span>
+<span class="ansi-green-intense-fg ansi-bold">    144</span> # Check if a table with this name already exists. Allows reflected tables to be
+<span class="ansi-green-intense-fg ansi-bold">    145</span> # applied to models by name.
+<span class="ansi-green-intense-fg ansi-bold">    146</span> if key in cls.metadata.tables:
+<span class="ansi-green-fg">--&gt; 147</span>     return sa.Table(*args, **kwargs)
+<span class="ansi-green-intense-fg ansi-bold">    149</span> # If a primary key is found, create a table for joined-table inheritance.
+<span class="ansi-green-intense-fg ansi-bold">    150</span> for arg in args:
+
+File <span class="ansi-green-fg">&lt;string&gt;:2</span>, in <span class="ansi-cyan-fg">__new__</span><span class="ansi-blue-fg">(cls, *args, **kw)</span>
+
+File <span class="ansi-green-fg">/opt/homebrew/lib/python3.10/site-packages/sqlalchemy/util/deprecations.py:277</span>, in <span class="ansi-cyan-fg">deprecated_params.&lt;locals&gt;.decorate.&lt;locals&gt;.warned</span><span class="ansi-blue-fg">(fn, *args, **kwargs)</span>
+<span class="ansi-green-intense-fg ansi-bold">    270</span>     if m in kwargs:
+<span class="ansi-green-intense-fg ansi-bold">    271</span>         _warn_with_version(
+<span class="ansi-green-intense-fg ansi-bold">    272</span>             messages[m],
+<span class="ansi-green-intense-fg ansi-bold">    273</span>             versions[m],
+<span class="ansi-green-intense-fg ansi-bold">    274</span>             version_warnings[m],
+<span class="ansi-green-intense-fg ansi-bold">    275</span>             stacklevel=3,
+<span class="ansi-green-intense-fg ansi-bold">    276</span>         )
+<span class="ansi-green-fg">--&gt; 277</span> return fn(*args, **kwargs)
+
+File <span class="ansi-green-fg">/opt/homebrew/lib/python3.10/site-packages/sqlalchemy/sql/schema.py:428</span>, in <span class="ansi-cyan-fg">Table.__new__</span><span class="ansi-blue-fg">(cls, *args, **kw)</span>
+<span class="ansi-green-intense-fg ansi-bold">    421</span> @util.deprecated_params(
+<span class="ansi-green-intense-fg ansi-bold">    422</span>     mustexist=(
+<span class="ansi-green-intense-fg ansi-bold">    423</span>         "1.4",
+<span class="ansi-green-fg">   (...)</span>
+<span class="ansi-green-intense-fg ansi-bold">    426</span> )
+<span class="ansi-green-intense-fg ansi-bold">    427</span> def __new__(cls, *args: Any, **kw: Any) -&gt; Any:
+<span class="ansi-green-fg">--&gt; 428</span>     return cls._new(*args, **kw)
+
+File <span class="ansi-green-fg">/opt/homebrew/lib/python3.10/site-packages/sqlalchemy/sql/schema.py:460</span>, in <span class="ansi-cyan-fg">Table._new</span><span class="ansi-blue-fg">(cls, *args, **kw)</span>
+<span class="ansi-green-intense-fg ansi-bold">    458</span> if key in metadata.tables:
+<span class="ansi-green-intense-fg ansi-bold">    459</span>     if not keep_existing and not extend_existing and bool(args):
+<span class="ansi-green-fg">--&gt; 460</span>         raise exc.InvalidRequestError(
+<span class="ansi-green-intense-fg ansi-bold">    461</span>             "Table '%s' is already defined for this MetaData "
+<span class="ansi-green-intense-fg ansi-bold">    462</span>             "instance.  Specify 'extend_existing=True' "
+<span class="ansi-green-intense-fg ansi-bold">    463</span>             "to redefine "
+<span class="ansi-green-intense-fg ansi-bold">    464</span>             "options and columns on an "
+<span class="ansi-green-intense-fg ansi-bold">    465</span>             "existing Table object." % key
+<span class="ansi-green-intense-fg ansi-bold">    466</span>         )
+<span class="ansi-green-intense-fg ansi-bold">    467</span>     table = metadata.tables[key]
+<span class="ansi-green-intense-fg ansi-bold">    468</span>     if extend_existing:
+
+<span class="ansi-red-fg">InvalidRequestError</span>: Table 'Restaurant_business' is already defined for this MetaData instance.  Specify 'extend_existing=True' to redefine options and columns on an existing Table object.</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Initial-Data">
+<a class="anchor" href="#Initial-Data" aria-hidden="true"><span class="octicon octicon-link"></span></a>Initial Data<a class="anchor-link" href="#Initial-Data"> </a>
+</h2>
+<blockquote>
+<p>Uses SQLALchemy db.create_all() to initialize rows into sqlite.db</p>
+</blockquote>
+<ul>
+<li>
+<p><strong>Create All Tables from db Object:</strong>
+Creating all tables from the db object involves using SQLAlchemy's create_all method to generate the necessary database tables based on the defined models. This method scans the application for all models that inherit from db.Model and creates the corresponding tables in the database. The purpose of this method is to automate the process of creating database tables, rather than manually creating them in the database. This method can be used during the application's initialization to ensure that all the required tables exist before the application starts serving requests.</p>
+</li>
+<li>
+<p><strong>User Object Constructors:</strong></p>
+</li>
+</ul>
+<p>In Python, object constructors are special methods that are called when an object is created. User object constructors are used to initialize user objects with default or user-defined values. They are used to set initial attributes for the user object, such as the user's name, email, and password. The purpose of the user object constructors is to provide a way to create user objects with specific attributes that can be used throughout the application.</p>
+<ul>
+<li><strong>Try / Except:</strong></li>
+</ul>
+<p>The try/except statement in Python is used to handle exceptions or errors that may occur during the execution of code. The try block contains the code that may raise an exception, while the except block contains the code that should be executed if an exception occurs. The purpose of the try/except statement is to gracefully handle exceptions, preventing the application from crashing due to unhandled errors. This is particularly useful in web applications, where users may interact with the application in unpredictable ways, and errors can occur at any time. By using try/except statements, developers can catch and handle errors, providing a better user experience and preventing security vulnerabilities.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="sd">"""Database Creation and Testing """</span>
+
+
+<span class="c1"># Builds working data for testing</span>
+<span class="k">def</span> <span class="nf">initRestaurant_business</span><span class="p">():</span>
+    <span class="k">with</span> <span class="n">app</span><span class="o">.</span><span class="n">app_context</span><span class="p">():</span>
+        <span class="sd">"""Create database and tables"""</span>
+        <span class="n">db</span><span class="o">.</span><span class="n">create_all</span><span class="p">()</span>
+        <span class="sd">"""Tester data for table"""</span>
+        <span class="n">R1</span> <span class="o">=</span> <span class="n">Restaurant_B</span><span class="p">(</span><span class="n">Restaurant</span><span class="o">=</span><span class="s1">'Komodo'</span><span class="p">,</span> <span class="n">Sales</span><span class="o">=</span><span class="s1">'41,000,000'</span><span class="p">,</span> <span class="n">Avg</span><span class="o">=</span><span class="s1">'115'</span><span class="p">,</span> <span class="n">City</span><span class="o">=</span><span class="s1">'Miami'</span><span class="p">,</span> <span class="n">State</span><span class="o">=</span><span class="s1">'Fla.'</span><span class="p">,</span> <span class="n">Meals</span><span class="o">=</span><span class="s1">'285,000'</span><span class="p">)</span>
+        <span class="n">R2</span> <span class="o">=</span> <span class="n">Restaurant_B</span><span class="p">(</span><span class="n">Restaurant</span><span class="o">=</span><span class="s1">'The Boathouse Orlando'</span><span class="p">,</span> <span class="n">Sales</span><span class="o">=</span><span class="s1">'39,863,628'</span><span class="p">,</span> <span class="n">Avg</span><span class="o">=</span><span class="s1">'44'</span><span class="p">,</span> <span class="n">City</span><span class="o">=</span><span class="s1">'Fla.'</span><span class="p">,</span> <span class="n">State</span><span class="o">=</span><span class="s1">'25'</span><span class="p">,</span> <span class="n">Meals</span><span class="o">=</span><span class="s1">'921,785'</span><span class="p">)</span>
+        <span class="n">R3</span> <span class="o">=</span> <span class="n">Restaurant_B</span><span class="p">(</span><span class="n">Restaurant</span><span class="o">=</span><span class="s1">'Swan'</span><span class="p">,</span> <span class="n">Sales</span><span class="o">=</span><span class="s1">'31,000,000'</span><span class="p">,</span> <span class="n">Avg</span><span class="o">=</span><span class="s1">'85'</span><span class="p">,</span> <span class="n">City</span><span class="o">=</span><span class="s1">'Miami'</span><span class="p">,</span><span class="n">State</span><span class="o">=</span><span class="s1">'Fla.'</span><span class="p">,</span> <span class="n">Meals</span><span class="o">=</span><span class="s1">'185,000'</span><span class="p">)</span>
+        <span class="n">R4</span> <span class="o">=</span> <span class="n">Restaurant_B</span><span class="p">(</span><span class="n">Restaurant</span><span class="o">=</span><span class="s1">'Maple &amp; Ash (Chicago)'</span><span class="p">,</span> <span class="n">Sales</span><span class="o">=</span><span class="s1">'30,286,684'</span><span class="p">,</span> <span class="n">Avg</span><span class="o">=</span><span class="s1">'106'</span><span class="p">,</span> <span class="n">City</span><span class="o">=</span><span class="s1">'Chicago'</span><span class="p">,</span> <span class="n">State</span><span class="o">=</span><span class="s1">'Ill.'</span><span class="p">,</span> <span class="n">Meals</span><span class="o">=</span><span class="s1">'285,714'</span><span class="p">)</span>
+        <span class="n">R5</span> <span class="o">=</span> <span class="n">Restaurant_B</span><span class="p">(</span><span class="n">Restaurant</span><span class="o">=</span><span class="s1">'Mila'</span><span class="p">,</span> <span class="n">Sales</span><span class="o">=</span><span class="s1">'27,350,000'</span><span class="p">,</span> <span class="n">Avg</span><span class="o">=</span><span class="s1">'134'</span><span class="p">,</span> <span class="n">City</span><span class="o">=</span><span class="s1">'Miami Beach'</span><span class="p">,</span> <span class="n">State</span><span class="o">=</span><span class="s1">'Fla.'</span><span class="p">,</span> <span class="n">Meals</span><span class="o">=</span><span class="s1">'203,990'</span><span class="p">)</span>
+        <span class="n">R6</span> <span class="o">=</span> <span class="n">Restaurant_B</span><span class="p">(</span><span class="n">Restaurant</span><span class="o">=</span><span class="s1">'Alinea'</span><span class="p">,</span> <span class="n">Sales</span><span class="o">=</span><span class="s1">'27,072,500'</span><span class="p">,</span> <span class="n">Avg</span><span class="o">=</span><span class="s1">'650'</span><span class="p">,</span> <span class="n">City</span><span class="o">=</span><span class="s1">'Chicago'</span><span class="p">,</span> <span class="n">State</span><span class="o">=</span><span class="s1">'Ill.'</span><span class="p">,</span> <span class="n">Meals</span><span class="o">=</span><span class="s1">'41,650'</span><span class="p">)</span>
+        <span class="n">R7</span> <span class="o">=</span> <span class="n">Restaurant_B</span><span class="p">(</span><span class="n">Restaurant</span><span class="o">=</span><span class="s1">'CTop of the World'</span><span class="p">,</span> <span class="n">Sales</span><span class="o">=</span><span class="s1">'25,672,308'</span><span class="p">,</span> <span class="n">Avg</span><span class="o">=</span><span class="s1">'133'</span><span class="p">,</span> <span class="n">City</span><span class="o">=</span><span class="s1">'Las Vegas'</span><span class="p">,</span> <span class="n">State</span><span class="o">=</span><span class="s1">'Nev.'</span><span class="p">,</span> <span class="n">Meals</span><span class="o">=</span><span class="s1">'218,586'</span><span class="p">)</span>
+        <span class="n">R8</span> <span class="o">=</span> <span class="n">Restaurant_B</span><span class="p">(</span><span class="n">Restaurant</span><span class="o">=</span><span class="s1">'Shooters Waterfront'</span><span class="p">,</span> <span class="n">Sales</span><span class="o">=</span><span class="s1">'25,025,370'</span><span class="p">,</span> <span class="n">Avg</span><span class="o">=</span><span class="s1">'68'</span><span class="p">,</span> <span class="n">City</span><span class="o">=</span><span class="s1">'Fort Lauderdale'</span><span class="p">,</span> <span class="n">State</span><span class="o">=</span><span class="s1">'Fla.'</span><span class="p">,</span> <span class="n">Meals</span><span class="o">=</span><span class="s1">'419,972'</span><span class="p">)</span>
+        <span class="n">R9</span> <span class="o">=</span> <span class="n">Restaurant_B</span><span class="p">(</span><span class="n">Restaurant</span><span class="o">=</span><span class="s1">'Prime 112'</span><span class="p">,</span> <span class="n">Sales</span><span class="o">=</span><span class="s1">'24,750,000'</span><span class="p">,</span> <span class="n">Avg</span><span class="o">=</span><span class="s1">'155'</span><span class="p">,</span> <span class="n">City</span><span class="o">=</span><span class="s1">'Miami Beach'</span><span class="p">,</span> <span class="n">State</span><span class="o">=</span><span class="s1">'Fla.'</span><span class="p">,</span> <span class="n">Meals</span><span class="o">=</span><span class="s1">'210,000'</span><span class="p">)</span>
+        <span class="n">R10</span> <span class="o">=</span> <span class="n">Restaurant_B</span><span class="p">(</span><span class="n">Restaurant</span><span class="o">=</span><span class="s1">'Paddlefish'</span><span class="p">,</span> <span class="n">Sales</span><span class="o">=</span><span class="s1">'23,795,000'</span><span class="p">,</span> <span class="n">Avg</span><span class="o">=</span><span class="s1">'52'</span><span class="p">,</span> <span class="n">City</span><span class="o">=</span><span class="s1">'Orlando'</span><span class="p">,</span> <span class="n">State</span><span class="o">=</span><span class="s1">'Fla.'</span><span class="p">,</span> <span class="n">Meals</span><span class="o">=</span><span class="s1">'485,000'</span><span class="p">)</span>
+        <span class="n">R11</span> <span class="o">=</span> <span class="n">Restaurant_B</span><span class="p">(</span><span class="n">Restaurant</span><span class="o">=</span><span class="s1">'Capa'</span><span class="p">,</span> <span class="n">Sales</span><span class="o">=</span><span class="s1">'23,547,000'</span><span class="p">,</span> <span class="n">Avg</span><span class="o">=</span><span class="s1">'121'</span><span class="p">,</span> <span class="n">City</span><span class="o">=</span><span class="s1">'Orlando'</span><span class="p">,</span> <span class="n">State</span><span class="o">=</span><span class="s1">'Fla.'</span><span class="p">,</span> <span class="n">Meals</span><span class="o">=</span><span class="s1">'197,000'</span><span class="p">)</span>
+        <span class="n">R12</span> <span class="o">=</span> <span class="n">Restaurant_B</span><span class="p">(</span><span class="n">Restaurant</span><span class="o">=</span><span class="s1">'Maple &amp; Ash (Scottsdale)'</span><span class="p">,</span> <span class="n">Sales</span><span class="o">=</span><span class="s1">'23,487,122'</span><span class="p">,</span> <span class="n">Avg</span><span class="o">=</span><span class="s1">'95'</span><span class="p">,</span> <span class="n">City</span><span class="o">=</span><span class="s1">'Scottsdale'</span><span class="p">,</span> <span class="n">State</span><span class="o">=</span><span class="s1">'Ariz.'</span><span class="p">,</span> <span class="n">Meals</span><span class="o">=</span><span class="s1">'247,232'</span><span class="p">)</span>
+        <span class="n">R13</span> <span class="o">=</span> <span class="n">Restaurant_B</span><span class="p">(</span><span class="n">Restaurant</span><span class="o">=</span><span class="s1">'Commanders Palace'</span><span class="p">,</span> <span class="n">Sales</span><span class="o">=</span><span class="s1">'23,184,000'</span><span class="p">,</span> <span class="n">Avg</span><span class="o">=</span><span class="s1">'89'</span><span class="p">,</span> <span class="n">City</span><span class="o">=</span><span class="s1">'New Orleans'</span><span class="p">,</span> <span class="n">State</span><span class="o">=</span><span class="s1">'La.'</span><span class="p">,</span> <span class="n">Meals</span><span class="o">=</span><span class="s1">'264,000'</span> <span class="p">)</span>
+        <span class="n">R14</span> <span class="o">=</span> <span class="n">Restaurant_B</span><span class="p">(</span><span class="n">Restaurant</span><span class="o">=</span><span class="s1">'Taste of Texas'</span><span class="p">,</span> <span class="n">Sales</span><span class="o">=</span><span class="s1">'23,180,522'</span><span class="p">,</span> <span class="n">Avg</span><span class="o">=</span><span class="s1">'64'</span><span class="p">,</span> <span class="n">City</span><span class="o">=</span><span class="s1">'Houston'</span><span class="p">,</span> <span class="n">State</span><span class="o">=</span><span class="s1">'Texas'</span><span class="p">,</span> <span class="n">Meals</span><span class="o">=</span><span class="s1">'356,894'</span><span class="p">)</span>
+        <span class="n">R15</span> <span class="o">=</span> <span class="n">Restaurant_B</span><span class="p">(</span><span class="n">Restaurant</span><span class="o">=</span><span class="s1">'Joes Seafood, Prime Steak &amp; Stone Crab'</span><span class="p">,</span> <span class="n">Sales</span><span class="o">=</span><span class="s1">'22,477,000'</span><span class="p">,</span> <span class="n">Avg</span><span class="o">=</span><span class="s1">'94'</span><span class="p">,</span> <span class="n">City</span><span class="o">=</span><span class="s1">'Washington'</span><span class="p">,</span> <span class="n">State</span><span class="o">=</span><span class="s1">'N/A'</span><span class="p">,</span> <span class="n">Meals</span><span class="o">=</span><span class="s1">'255,000'</span><span class="p">)</span>
+        <span class="n">Rest</span> <span class="o">=</span> <span class="p">[</span><span class="n">R1</span><span class="p">,</span> <span class="n">R2</span><span class="p">,</span> <span class="n">R3</span><span class="p">,</span> <span class="n">R4</span><span class="p">,</span> <span class="n">R5</span><span class="p">,</span> <span class="n">R6</span><span class="p">,</span> <span class="n">R7</span><span class="p">,</span> <span class="n">R8</span><span class="p">,</span> <span class="n">R9</span><span class="p">,</span> <span class="n">R10</span><span class="p">,</span> <span class="n">R11</span><span class="p">,</span> <span class="n">R12</span><span class="p">,</span> <span class="n">R13</span><span class="p">,</span> <span class="n">R14</span><span class="p">,</span> <span class="n">R15</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">R</span> <span class="ow">in</span> <span class="n">Rest</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="nb">object</span> <span class="o">=</span> <span class="n">R</span><span class="o">.</span><span class="n">create</span><span class="p">()</span>
+                <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Added data for </span><span class="si">{</span><span class="nb">object</span><span class="o">.</span><span class="n">Restaurant</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+            <span class="k">except</span> <span class="n">IntegrityError</span><span class="p">:</span>
+                <span class="sd">'''fails with bad or duplicate data'''</span>
+                <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Records exist, duplicate email, or error: </span><span class="si">{</span><span class="n">R</span><span class="o">.</span><span class="n">Restaurant</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span> 
+
+<span class="n">initRestaurant_business</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Added data for Komodo
+Added data for The Boathouse Orlando
+Added data for Swan
+Added data for Maple &amp; Ash (Chicago)
+Added data for Mila
+Added data for Alinea
+Added data for CTop of the World
+Added data for Shooters Waterfront
+Added data for Prime 112
+Added data for Paddlefish
+Added data for Capa
+Added data for Maple &amp; Ash (Scottsdale)
+Added data for Commanders Palace
+Added data for Taste of Texas
+Added data for Joes Seafood, Prime Steak &amp; Stone Crab
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Check-for-given-Credentials-in-users-table-in-sqlite.db">
+<a class="anchor" href="#Check-for-given-Credentials-in-users-table-in-sqlite.db" aria-hidden="true"><span class="octicon octicon-link"></span></a>Check for given Credentials in users table in sqlite.db<a class="anchor-link" href="#Check-for-given-Credentials-in-users-table-in-sqlite.db"> </a>
+</h2>
+<blockquote>
+<p>Use of ORM Query object and custom methods to identify user to credentials uid and password</p>
+</blockquote>
+<ul>
+<li>
+<p><strong>User.query.filter_by:</strong>
+User.query.filter_by is a method in SQLAlchemy that is used to retrieve data from the database based on specific filter conditions. In this case, it is used to retrieve a specific user object from the database based on the value of one or more attributes, such as the user's email or ID. The purpose of this method is to provide a convenient way to retrieve data from the database that meets specific criteria. By using filter_by, developers can write more efficient code that retrieves only the data that is needed, rather than retrieving all data and filtering it in the application code.</p>
+</li>
+<li>
+<p><strong>user.password:</strong></p>
+</li>
+</ul>
+<p>user.password refers to the password attribute of a User object. This attribute is commonly used to store a user's password in a secure and encrypted format, such as using a hash function. The purpose of this attribute is to store the user's password securely, ensuring that it is not visible or easily accessible to anyone, including the application developers or database administrators. By storing passwords securely, applications can protect user accounts from unauthorized access and prevent security breaches.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">find_by_Restaurant</span><span class="p">(</span><span class="n">Restaurant</span><span class="p">):</span>
+    <span class="k">with</span> <span class="n">app</span><span class="o">.</span><span class="n">app_context</span><span class="p">():</span>
+        <span class="c1"># ORM allows us to do query methods on our data</span>
+        <span class="c1"># only returns the match to the first match to the database</span>
+        <span class="n">restaurant_B</span> <span class="o">=</span> <span class="n">Restaurant_B</span><span class="o">.</span><span class="n">query</span><span class="o">.</span><span class="n">filter_by</span><span class="p">(</span><span class="n">_Restaurant</span><span class="o">=</span><span class="n">Restaurant</span><span class="p">)</span><span class="o">.</span><span class="n">first</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">restaurant_B</span> <span class="c1"># returns user object</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Create-a-new-User-in-table-in-Sqlite.db">
+<a class="anchor" href="#Create-a-new-User-in-table-in-Sqlite.db" aria-hidden="true"><span class="octicon octicon-link"></span></a>Create a new User in table in Sqlite.db<a class="anchor-link" href="#Create-a-new-User-in-table-in-Sqlite.db"> </a>
+</h2>
+<blockquote>
+<p>Uses SQLALchemy and custom user.create() method to add row.</p>
+</blockquote>
+<ul>
+<li>
+<p><strong>user.find_by_uid() and try/except:</strong>
+user.find_by_uid() is a method that is used to retrieve a user object from the database based on the user's ID. The purpose of this method is to provide a convenient way to retrieve user objects based on a unique identifier, such as an ID or email address. The try/except block is used to handle any errors that may occur during the execution of the method, such as if the user does not exist in the database. By using try/except, developers can catch and handle errors gracefully, providing a better user experience and preventing security vulnerabilities.</p>
+</li>
+<li>
+<p><strong>user = User(...):</strong></p>
+</li>
+</ul>
+<p>user = User(...) is a statement that creates a new user object with the specified attributes, such as the user's name, email, and password. The purpose of this statement is to create a new user object that can be saved to the database or used in the application code.</p>
+<ul>
+<li><strong>user.dob and try/except:</strong></li>
+</ul>
+<p>user.dob refers to the date of birth attribute of a User object. The try/except block is used to handle any errors that may occur during the execution of the code that accesses this attribute, such as if the attribute is not set or is invalid. By using try/except, developers can catch and handle errors gracefully, providing a better user experience and preventing security vulnerabilities.</p>
+<ul>
+<li><strong>user.create() and try/except:</strong></li>
+</ul>
+<p>user.create() is a method that is used to save a new user object to the database. The try/except block is used to handle any errors that may occur during the execution of the method, such as if the user object is invalid or if there is an error connecting to the database. By using try/except, developers can catch and handle errors gracefully, providing a better user experience and preventing security vulnerabilities.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">create</span><span class="p">():</span>
+    <span class="c1"># optimize user time to see if uid exists</span>
+    <span class="n">Restaurant</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter a Restaurant name:"</span><span class="p">)</span>
+    <span class="n">Dinner</span> <span class="o">=</span> <span class="n">find_by_Restaurant</span><span class="p">(</span><span class="n">Restaurant</span><span class="p">)</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Found</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span> <span class="n">Dinner</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
+        <span class="k">return</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="k">pass</span> <span class="c1"># keep going</span>
+    
+    <span class="c1"># request value that ensure creating valid object</span>
+    <span class="n">Sales</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter the total sales:"</span><span class="p">)</span>
+    <span class="n">Avg</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter their average check:"</span><span class="p">)</span>
+    <span class="n">City</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter the City:"</span><span class="p">)</span>
+    <span class="n">State</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter the state:"</span><span class="p">)</span>
+    <span class="n">Meals</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter the total meals served:"</span><span class="p">)</span>
+
+    <span class="c1"># Initialize User object before date</span>
+    <span class="n">restaurant_B</span> <span class="o">=</span> <span class="n">Restaurant_B</span><span class="p">(</span><span class="n">Restaurant</span><span class="o">=</span><span class="n">Restaurant</span><span class="p">,</span> 
+                <span class="n">Sales</span><span class="o">=</span><span class="n">Sales</span><span class="p">,</span> 
+                <span class="n">Avg</span><span class="o">=</span><span class="n">Avg</span><span class="p">,</span>
+                <span class="n">City</span><span class="o">=</span><span class="n">City</span><span class="p">,</span>
+                <span class="n">State</span><span class="o">=</span><span class="n">State</span><span class="p">,</span>
+                <span class="n">Meals</span><span class="o">=</span><span class="n">Meals</span>
+                <span class="p">)</span>
+           
+    <span class="c1"># write object to database</span>
+    <span class="k">with</span> <span class="n">app</span><span class="o">.</span><span class="n">app_context</span><span class="p">():</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="nb">object</span> <span class="o">=</span> <span class="n">restaurant_B</span><span class="o">.</span><span class="n">create</span><span class="p">()</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"Created</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span> <span class="nb">object</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
+        <span class="k">except</span><span class="p">:</span>  <span class="c1"># error raised if object not created</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"Unknown error uid </span><span class="si">{Restaurant}</span><span class="s2">"</span><span class="p">)</span>
+        
+<span class="n">create</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Created
+ {'id': 17, 'Restaurant': 'Tio2', 'Sales': '2', 'Avg': '2', 'City': '2', 'State': '2', 'Meals': '2'}
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Reading-users-table-in-sqlite.db">
+<a class="anchor" href="#Reading-users-table-in-sqlite.db" aria-hidden="true"><span class="octicon octicon-link"></span></a>Reading users table in sqlite.db<a class="anchor-link" href="#Reading-users-table-in-sqlite.db"> </a>
+</h2>
+<blockquote>
+<p>Uses SQLALchemy query.all method to read data</p>
+</blockquote>
+<ul>
+<li>
+<p><strong>User.query.all:</strong>
+User.query.all is a method that is used to retrieve all User objects from the database. The purpose of this method is to provide a convenient way to retrieve all User objects for use in the application code. The returned objects can be used for further processing, such as displaying them to the user or manipulating them in some way.</p>
+</li>
+<li>
+<p><strong>json_ready assignment, google List Comprehension:</strong></p>
+</li>
+</ul>
+<p>json_ready is a variable that is assigned the result of a list comprehension, which is a concise way to create a list in Python. The purpose of this variable is to create a list of dictionaries that can be easily converted to JSON format for use in a web application. List comprehension is used to create a list of dictionaries based on the User objects retrieved from the database, with each dictionary representing a User object and its attributes. The resulting list of dictionaries can be easily serialized to JSON format and sent to the client-side of a web application.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">read</span><span class="p">():</span>
+    <span class="k">with</span> <span class="n">app</span><span class="o">.</span><span class="n">app_context</span><span class="p">():</span>
+        <span class="n">table</span> <span class="o">=</span> <span class="n">Restaurant_B</span><span class="o">.</span><span class="n">query</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+    <span class="n">json_ready</span> <span class="o">=</span> <span class="p">[</span><span class="n">restaurant_B</span><span class="o">.</span><span class="n">read</span><span class="p">()</span> <span class="k">for</span> <span class="n">restaurant_B</span> <span class="ow">in</span> <span class="n">table</span><span class="p">]</span> <span class="c1"># "List Comprehensions", for each user add user.read() to list</span>
+    <span class="k">return</span> <span class="n">json_ready</span>
+
+<span class="n">read</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[{'id': 1,
+  'Restaurant': 'Komodo',
+  'Sales': '41,000,000',
+  'Avg': '115',
+  'City': 'Miami',
+  'State': 'Fla.',
+  'Meals': '285,000'},
+ {'id': 2,
+  'Restaurant': 'The Boathouse Orlando',
+  'Sales': '39,863,628',
+  'Avg': '44',
+  'City': 'Fla.',
+  'State': '25',
+  'Meals': '921,785'},
+ {'id': 3,
+  'Restaurant': 'Swan',
+  'Sales': '31,000,000',
+  'Avg': '85',
+  'City': 'Miami',
+  'State': 'Fla.',
+  'Meals': '185,000'},
+ {'id': 4,
+  'Restaurant': 'Maple &amp; Ash (Chicago)',
+  'Sales': '30,286,684',
+  'Avg': '106',
+  'City': 'Chicago',
+  'State': 'Ill.',
+  'Meals': '285,714'},
+ {'id': 5,
+  'Restaurant': 'Mila',
+  'Sales': '27,350,000',
+  'Avg': '134',
+  'City': 'Miami Beach',
+  'State': 'Fla.',
+  'Meals': '203,990'},
+ {'id': 6,
+  'Restaurant': 'Alinea',
+  'Sales': '27,072,500',
+  'Avg': '650',
+  'City': 'Chicago',
+  'State': 'Ill.',
+  'Meals': '41,650'},
+ {'id': 7,
+  'Restaurant': 'CTop of the World',
+  'Sales': '25,672,308',
+  'Avg': '133',
+  'City': 'Las Vegas',
+  'State': 'Nev.',
+  'Meals': '218,586'},
+ {'id': 8,
+  'Restaurant': 'Shooters Waterfront',
+  'Sales': '25,025,370',
+  'Avg': '68',
+  'City': 'Fort Lauderdale',
+  'State': 'Fla.',
+  'Meals': '419,972'},
+ {'id': 9,
+  'Restaurant': 'Prime 112',
+  'Sales': '24,750,000',
+  'Avg': '155',
+  'City': 'Miami Beach',
+  'State': 'Fla.',
+  'Meals': '210,000'},
+ {'id': 10,
+  'Restaurant': 'Paddlefish',
+  'Sales': '23,795,000',
+  'Avg': '52',
+  'City': 'Orlando',
+  'State': 'Fla.',
+  'Meals': '485,000'},
+ {'id': 11,
+  'Restaurant': 'Capa',
+  'Sales': '23,547,000',
+  'Avg': '121',
+  'City': 'Orlando',
+  'State': 'Fla.',
+  'Meals': '197,000'},
+ {'id': 12,
+  'Restaurant': 'Maple &amp; Ash (Scottsdale)',
+  'Sales': '23,487,122',
+  'Avg': '95',
+  'City': 'Scottsdale',
+  'State': 'Ariz.',
+  'Meals': '247,232'},
+ {'id': 13,
+  'Restaurant': 'Commanders Palace',
+  'Sales': '23,184,000',
+  'Avg': '89',
+  'City': 'New Orleans',
+  'State': 'La.',
+  'Meals': '264,000'},
+ {'id': 14,
+  'Restaurant': 'Taste of Texas',
+  'Sales': '23,180,522',
+  'Avg': '64',
+  'City': 'Houston',
+  'State': 'Texas',
+  'Meals': '356,894'},
+ {'id': 15,
+  'Restaurant': 'Joes Seafood, Prime Steak &amp; Stone Crab',
+  'Sales': '22,477,000',
+  'Avg': '94',
+  'City': 'Washington',
+  'State': 'N/A',
+  'Meals': '255,000'},
+ {'id': 16,
+  'Restaurant': 'Tio',
+  'Sales': '1',
+  'Avg': '1',
+  'City': '1',
+  'State': '1',
+  'Meals': '1'},
+ {'id': 17,
+  'Restaurant': 'Tio2',
+  'Sales': '2',
+  'Avg': '2',
+  'City': '2',
+  'State': '2',
+  'Meals': '2'}]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">updateq</span><span class="p">():</span>    
+    <span class="n">Restaurant</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter the name of the Restaurant to update: "</span><span class="p">)</span>
+    <span class="n">Dinner</span> <span class="o">=</span> <span class="n">find_by_Restaurant</span><span class="p">(</span><span class="n">Restaurant</span><span class="p">)</span>
+    
+    <span class="c1"># Request new values for the QB attributes</span>
+    <span class="n">Sales</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter their Total Sales passes: "</span><span class="p">)</span>
+    <span class="n">Avg</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter their Average Checks passes: "</span><span class="p">)</span>
+    <span class="n">City</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter their City season: "</span><span class="p">)</span>
+    <span class="n">State</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter Their state: "</span><span class="p">)</span>
+    <span class="n">Meals</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter their total Meals: "</span><span class="p">)</span>
+    
+    <span class="k">if</span> <span class="n">Dinner</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">with</span> <span class="n">app</span><span class="o">.</span><span class="n">app_context</span><span class="p">():</span>
+            <span class="n">Dinner</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">Restaurant</span><span class="o">=</span><span class="n">Restaurant</span><span class="p">,</span> <span class="n">Sales</span><span class="o">=</span><span class="n">Sales</span><span class="p">,</span> <span class="n">Avg</span><span class="o">=</span><span class="n">Avg</span><span class="p">,</span> <span class="n">City</span><span class="o">=</span><span class="n">City</span><span class="p">,</span> <span class="n">State</span><span class="o">=</span><span class="n">State</span><span class="p">,</span> <span class="n">Meals</span><span class="o">=</span><span class="n">Meals</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"Updated Restaurant"</span><span class="p">,</span> <span class="n">Restaurant</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"error"</span><span class="p">)</span>
+
+<span class="n">updateq</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Updated Restaurrant Tio
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">delete</span><span class="p">():</span>
+    <span class="c1"># optimize user time to see if uid exists</span>
+    <span class="n">Restaurant</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter a Restaurant name:"</span><span class="p">)</span>
+    <span class="n">Dinner</span> <span class="o">=</span> <span class="n">find_by_Restaurant</span><span class="p">(</span><span class="n">Restaurant</span><span class="p">)</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">pass</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="n">Restaurant</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Try again, that was not a valid Restaurant:"</span><span class="p">)</span>
+    
+    <span class="k">with</span> <span class="n">app</span><span class="o">.</span><span class="n">app_context</span><span class="p">():</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="nb">object</span> <span class="o">=</span> <span class="n">Dinner</span><span class="o">.</span><span class="n">delete</span><span class="p">()</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"Deleted</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span> <span class="n">Dinner</span><span class="p">)</span>
+        <span class="k">except</span><span class="p">:</span>  <span class="c1"># error raised if object not created</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"Unknown error uid </span><span class="si">{Restaurant}</span><span class="s2">"</span><span class="p">)</span>
+<span class="n">delete</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Deleted
+ {"id": 17, "Restaurant": "Tio2", "Sales": "2", "Avg": "2", "City": "2", "State": "2", "Meals": "2"}
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">crudmenu</span><span class="p">():</span>
+    <span class="n">selection</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter a letter to select your option --&gt; c: Create, r: Read, u: Update, d: delete"</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">selection</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s2">"c"</span><span class="p">:</span>
+        <span class="n">create</span><span class="p">()</span>
+    <span class="k">elif</span> <span class="n">selection</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s2">"r"</span><span class="p">:</span>
+        <span class="k">with</span> <span class="n">app</span><span class="o">.</span><span class="n">app_context</span><span class="p">():</span>
+            <span class="n">table</span> <span class="o">=</span> <span class="n">Restaurant_B</span><span class="o">.</span><span class="n">query</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+        <span class="n">json_ready</span> <span class="o">=</span> <span class="p">[</span><span class="n">restaurant_B</span><span class="o">.</span><span class="n">read</span><span class="p">()</span> <span class="k">for</span> <span class="n">restaurant_B</span> <span class="ow">in</span> <span class="n">table</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">json_ready</span>
+    <span class="k">elif</span> <span class="n">selection</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s2">"u"</span><span class="p">:</span>
+        <span class="n">updateq</span><span class="p">()</span>
+    <span class="k">elif</span> <span class="n">selection</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s2">"d"</span><span class="p">:</span>
+        <span class="n">delete</span><span class="p">()</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">selection</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Please enter a valid letter --&gt; c: Create, r: Read, u: Update, D: delete"</span><span class="p">)</span>
+
+<span class="n">crudmenu</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Deleted
+ {"id": 16, "Restaurant": "Tio", "Sales": "2", "Avg": "2", "City": "2", "State": "2", "Meals": "2"}
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The update() function takes an id parameter to identify which user to update, and a data parameter containing the updated user data. It first retrieves the user from the database using the filter_by() method and the provided id. If the user exists, it then calls the update() method on the user object, passing in the data parameter. The update() method is a custom method you would need to define on your User model that updates the user's attributes based on the provided data. Finally, the function commits the changes to the database and returns the updated user data in JSON format.</p>
+<p>The delete() function is similar to the update() function, but instead of updating the user, it deletes the user from the database. If the user exists, it calls the delete() method on the user object, commits the changes, and returns the deleted user data in JSON format. If the user does not exist, it returns None.</p>
+<p>Note that you would also need to define the update() and delete() methods on your User model in order to use these functions.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Hacks">
+<a class="anchor" href="#Hacks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hacks<a class="anchor-link" href="#Hacks"> </a>
+</h1>
+<ul>
+<li>Add this Blog to you own Blogging site.  In the Blog add notes and observations on each code cell.</li>
+<li>Change blog to your own database.</li>
+<li>Add additional CRUD<ul>
+<li>Add Update functionality to this blog.</li>
+<li>Add Delete functionality to this blog.</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+&lt;/div&gt;
+ 
+
+</column></p></column></strong></li>
+</ul>
+</div>
+</div></div>
+</div>
+
+
+  </div><a class="u-url" href="/Compsci22/2023/03/13/AP-unit2-4a.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/Compsci22/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="https://taiyoi.github.io/Compsci22/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/Compsci22/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>Taiyo Iwazakis Fast Pages</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li>
+  <a rel="me" href="https://github.com/nighthawkcoders" target="_blank" title="github">
+    <svg class="svg-icon grey">
+      <use xlink:href="/Compsci22/assets/minima-social-icons.svg#github"></use>
+    </svg>
+  </a>
+</li>
+<li>
+  <a rel="me" href="https://twitter.com/NighthawkCoding" target="_blank" title="twitter">
+    <svg class="svg-icon grey">
+      <use xlink:href="/Compsci22/assets/minima-social-icons.svg#twitter"></use>
+    </svg>
+  </a>
+</li>
+<li>
+  <a rel="me" href="https://www.youtube.com/channel/UClIKOsDS5dsfzFA3zveDT3Q" target="_blank" title="youtube">
+    <svg class="svg-icon grey">
+      <use xlink:href="/Compsci22/assets/minima-social-icons.svg#youtube"></use>
+    </svg>
+  </a>
+</li>
+</ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>DNS and setting up nighthawk service | Taiyo I</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="DNS and setting up nighthawk service" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Nighthawk service AWS" />
+<meta property="og:description" content="Nighthawk service AWS" />
+<link rel="canonical" href="https://taiyoi.github.io/Compsci22/2023/03/26/DNS-setting-up.html" />
+<meta property="og:url" content="https://taiyoi.github.io/Compsci22/2023/03/26/DNS-setting-up.html" />
+<meta property="og:site_name" content="Taiyo I" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-03-26T00:00:00-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="DNS and setting up nighthawk service" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-03-26T00:00:00-05:00","datePublished":"2023-03-26T00:00:00-05:00","description":"Nighthawk service AWS","headline":"DNS and setting up nighthawk service","mainEntityOfPage":{"@type":"WebPage","@id":"https://taiyoi.github.io/Compsci22/2023/03/26/DNS-setting-up.html"},"url":"https://taiyoi.github.io/Compsci22/2023/03/26/DNS-setting-up.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/Compsci22/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://taiyoi.github.io/Compsci22/feed.xml" title="Taiyo I" /><link rel="shortcut icon" type="image/x-icon" href="/Compsci22/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/Compsci22/">Taiyo I</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/Compsci22/Vocab/">Vocab</a><a class="page-link" href="/Compsci22/categories/">Tags 🏷</a><a class="page-link" href="/Compsci22/techtalk/javascript">SubMenu</a><a class="page-link" href="/Compsci22/game/">Game</a><a class="page-link" href="/Compsci22/search/">Search</a><a class="page-link" href="/Compsci22/calculator/">Calculator</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">DNS and setting up nighthawk service</h1><p class="page-description">Nighthawk service AWS</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2023-03-26T00:00:00-05:00" itemprop="datePublished">
+        Mar 26, 2023
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      2 min read
+    
+</span></p>
+
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-justify-center">
+          <div class="px-2">
+
+    <a href="https://github.com/TaiyoI/Compsci22/tree/master/_notebooks/2023-03-26-DNS-setting-up.ipynb" role="button" target="_blank">
+<img class="notebook-badge-image" src="/Compsci22/assets/badges/github.svg" alt="View On GitHub">
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://mybinder.org/v2/gh/TaiyoI/Compsci22/master?filepath=_notebooks%2F2023-03-26-DNS-setting-up.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/Compsci22/assets/badges/binder.svg" alt="Open In Binder"/>
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/TaiyoI/Compsci22/blob/master/_notebooks/2023-03-26-DNS-setting-up.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/Compsci22/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+          <div class="px-2">
+  <a href="https://deepnote.com/launch?url=https%3A%2F%2Fgithub.com%2FTaiyoI%2FCompsci22%2Fblob%2Fmaster%2F_notebooks%2F2023-03-26-DNS-setting-up.ipynb" target="_blank">
+      <img class="notebook-badge-image" src="/Compsci22/assets/badges/deepnote.svg" alt="Launch in Deepnote"/>
+  </a>
+</div>
+
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h2"><a href="#Why-should-you-use-the-Cloud,-DNS,-and-AWS?">Why should you use the Cloud, DNS, and AWS? </a></li>
+<li class="toc-entry toc-h2"><a href="#Setting-up-nighthawk-service-using-AWS:">Setting up nighthawk service using AWS: </a></li>
+<li class="toc-entry toc-h2"><a href="#Conclusion">Conclusion </a></li>
+</ul><!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2023-03-26-DNS-setting-up.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Why-should-you-use-the-Cloud,-DNS,-and-AWS?">
+<a class="anchor" href="#Why-should-you-use-the-Cloud,-DNS,-and-AWS?" aria-hidden="true"><span class="octicon octicon-link"></span></a>Why should you use the Cloud, DNS, and AWS?<a class="anchor-link" href="#Why-should-you-use-the-Cloud,-DNS,-and-AWS?"> </a>
+</h2>
+<p>In today's fast-paced digital world, having a reliable and scalable infrastructure is crucial for the success of any business. Amazon Web Services (AWS) provides a cloud platform that allows businesses to easily deploy and manage their applications and infrastructure. DNS (Domain Name System) is also an important component of any IT infrastructure as it translates human-readable domain names into IP addresses that computers use to identify each other on the internet. In this guide, we will explore how to set up a nighthawk service using AWS and DNS.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Setting-up-nighthawk-service-using-AWS:">
+<a class="anchor" href="#Setting-up-nighthawk-service-using-AWS:" aria-hidden="true"><span class="octicon octicon-link"></span></a>Setting up nighthawk service using AWS:<a class="anchor-link" href="#Setting-up-nighthawk-service-using-AWS:"> </a>
+</h2>
+<ul>
+<li><strong>Step 1: Create an EC2 instance</strong></li>
+</ul>
+<p>The first step in setting up a nighthawk service using AWS is to create an EC2 instance. An EC2 instance is a virtual machine that runs on AWS infrastructure. To create an EC2 instance, follow these steps:</p>
+<ol>
+<li>Login to your AWS account.</li>
+<li>Click on the EC2 service.</li>
+<li>Click on the "Launch Instance" button.</li>
+<li>Choose an Amazon Machine Image (AMI) to use for your instance.</li>
+<li>Choose the instance type that meets your needs.</li>
+<li>Configure your instance by selecting a VPC (Virtual Private Cloud), subnet, and security group.</li>
+<li>Review and launch your instance.</li>
+</ol>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>-- <strong>Step 2: Install and configure nighthawk</strong>
+Once your EC2 instance is up and running, the next step is to install and configure nighthawk. Nighthawk is a powerful load testing tool that can be used to measure the performance of web applications. To install and configure nighthawk on your EC2 instance, follow these steps:</p>
+<ol>
+<li>
+<p>Connect to your EC2 instance using SSH.</p>
+</li>
+<li>
+<p>Install nighthawk by running the following command:
+sudo apt-get install nighthawk</p>
+</li>
+<li>
+<p>Once nighthawk is installed, you can configure it by creating a configuration file. Here's an example configuration file:</p>
+</li>
+</ol>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="p">{</span>
+  <span class="s2">"requests"</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="s2">"url"</span><span class="p">:</span> <span class="s2">"https://www.example.com/"</span><span class="p">,</span>
+      <span class="s2">"connections"</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+      <span class="s2">"duration"</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+      <span class="s2">"timeout"</span><span class="p">:</span> <span class="mi">5000</span>
+    <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>This configuration file will make 10 connections to "<a href="https://www.example.com/">https://www.example.com/</a>" for 10 seconds and will time out after 5 seconds.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>
+<strong>Step 3: Set up DNS for your nighthawk service</strong>
+The final step in setting up your nighthawk service using AWS is to set up DNS. DNS allows you to use a human-readable domain name to access your nighthawk service instead of an IP address. To set up DNS, follow these steps:</li>
+</ul>
+<ol>
+<li>Go to the Route 53 service in your AWS console.</li>
+<li>Click on "Create Hosted Zone" and enter your domain name.</li>
+<li>Create an "A" record for your nighthawk service by clicking on "Create Record Set" and selecting "A" as the record type.</li>
+<li>Enter your EC2 instance's public IP address as the value for your "A" record.</li>
+<li>Click "Create Record Set" to save your changes.</li>
+</ol>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Conclusion">
+<a class="anchor" href="#Conclusion" aria-hidden="true"><span class="octicon octicon-link"></span></a>Conclusion<a class="anchor-link" href="#Conclusion"> </a>
+</h2>
+<p>In this guide, we have explored how to set up a nighthawk service using AWS and DNS. By using AWS, you can easily create and manage your infrastructure, and by using DNS, you can make your nighthawk service accessible using a human-readable domain name. With these tools, you can easily measure the performance of your web applications and ensure that they are running smoothly.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+  </div><a class="u-url" href="/Compsci22/2023/03/26/DNS-setting-up.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/Compsci22/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="https://taiyoi.github.io/Compsci22/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/Compsci22/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>Taiyo Iwazakis Fast Pages</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li>
+  <a rel="me" href="https://github.com/nighthawkcoders" target="_blank" title="github">
+    <svg class="svg-icon grey">
+      <use xlink:href="/Compsci22/assets/minima-social-icons.svg#github"></use>
+    </svg>
+  </a>
+</li>
+<li>
+  <a rel="me" href="https://twitter.com/NighthawkCoding" target="_blank" title="twitter">
+    <svg class="svg-icon grey">
+      <use xlink:href="/Compsci22/assets/minima-social-icons.svg#twitter"></use>
+    </svg>
+  </a>
+</li>
+<li>
+  <a rel="me" href="https://www.youtube.com/channel/UClIKOsDS5dsfzFA3zveDT3Q" target="_blank" title="youtube">
+    <svg class="svg-icon grey">
+      <use xlink:href="/Compsci22/assets/minima-social-icons.svg#youtube"></use>
+    </svg>
+  </a>
+</li>
+</ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

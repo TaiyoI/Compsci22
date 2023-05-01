@@ -158,6 +158,9 @@ The command ENV GUNICORN_CMD_ARGS=”–workers=1 –bind=0.0.0.0:8086” sets a
 
 ![image](https://user-images.githubusercontent.com/111478625/235525663-b5ced166-eb99-49f2-8fb6-55f2620d050f.png)
 
+
+![image](https://user-images.githubusercontent.com/111478625/235526903-702c95cb-3b73-4abe-bd28-01fb2f435105.png)
+
 ```python
 import ray
 

@@ -82,7 +82,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      11 min read
+      12 min read
     
 </span></p>
 
@@ -1230,7 +1230,7 @@ rivian
     <span class="s2">&quot;Chevrolet&quot;</span><span class="p">:</span> <span class="mi">23000</span>
 <span class="p">}</span>
 
-<span class="c1"># Ask the user to enter car brands and their prices</span>
+
 <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
     <span class="n">brand</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter a brand for your car list (or &#39;done&#39; to exit): &quot;</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">brand</span> <span class="o">==</span> <span class="s2">&quot;done&quot;</span><span class="p">:</span>
@@ -1239,7 +1239,6 @@ rivian
         <span class="n">price</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter the price of </span><span class="si">{}</span><span class="s2">: &quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">brand</span><span class="p">)))</span>
         <span class="n">car_dict</span><span class="p">[</span><span class="n">brand</span><span class="p">]</span> <span class="o">=</span> <span class="n">price</span>
 
-<span class="c1"># Print the car list and total cost</span>
 <span class="n">total_cost</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">car_dict</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
 <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Your car list:&quot;</span><span class="p">)</span>
@@ -1247,17 +1246,17 @@ rivian
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;- </span><span class="si">{}</span><span class="s2">: $</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">brand</span><span class="p">,</span> <span class="n">price</span><span class="p">))</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Total cost: $</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">total_cost</span><span class="p">))</span>
 
-    <span class="c1"># Ask the user to choose an action</span>
+<span class="c1"># ask the user to choose an action</span>
     <span class="n">action</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;What would you like to do? (add/remove/done) &quot;</span><span class="p">)</span>
 
-    <span class="c1"># Add a new item to the car list</span>
+
     <span class="k">if</span> <span class="n">action</span> <span class="o">==</span> <span class="s2">&quot;add&quot;</span><span class="p">:</span>
         <span class="n">brand</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter the name of the brand you would like to add: &quot;</span><span class="p">)</span>
         <span class="n">price</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter the price of </span><span class="si">{}</span><span class="s2">: &quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">brand</span><span class="p">)))</span>
         <span class="n">car_dict</span><span class="p">[</span><span class="n">brand</span><span class="p">]</span> <span class="o">=</span> <span class="n">price</span>
         <span class="n">total_cost</span> <span class="o">+=</span> <span class="n">price</span>
 
-    <span class="c1"># Remove an item from the car list</span>
+
     <span class="k">elif</span> <span class="n">action</span> <span class="o">==</span> <span class="s2">&quot;remove&quot;</span><span class="p">:</span>
         <span class="n">brand</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter the name of the brand you would like to remove: &quot;</span><span class="p">)</span>
         <span class="k">if</span> <span class="n">brand</span> <span class="ow">in</span> <span class="n">car_dict</span><span class="p">:</span>
@@ -1266,17 +1265,40 @@ rivian
         <span class="k">else</span><span class="p">:</span>
             <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Brand not found in car list!&quot;</span><span class="p">)</span>
 
-    <span class="c1"># Exit the loop and print the final car list and total cost</span>
+    <span class="c1"># exit the loop and print the final apple products list and total cost</span>
     <span class="k">elif</span> <span class="n">action</span> <span class="o">==</span> <span class="s2">&quot;done&quot;</span><span class="p">:</span>
         <span class="k">break</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Final car list:&quot;</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">brand</span><span class="p">,</span> <span class="n">price</span> <span class="ow">in</span> <span class="n">car_dict</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;- </span><span class="si">{}</span><span class="s2">: $</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">brand</span><span class="p">,</span> <span class="n">price</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Total cost: $</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">total_cost</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Total cost: $</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">total_cost</span><span class="p">))</span><span class="mi">2</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">ValueError</span>                                Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">/Users/taiyoi/Documents/Compsci22-1/_notebooks/2023-04-27-P4M-DataStructures-TeamEAAR.ipynb Cell 44</span> in <span class="ansi-cyan-fg">&lt;cell line: 11&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell:/Users/taiyoi/Documents/Compsci22-1/_notebooks/2023-04-27-P4M-DataStructures-TeamEAAR.ipynb#Y136sZmlsZQ%3D%3D?line=12&#39;&gt;13&lt;/a&gt;</span>         break
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell:/Users/taiyoi/Documents/Compsci22-1/_notebooks/2023-04-27-P4M-DataStructures-TeamEAAR.ipynb#Y136sZmlsZQ%3D%3D?line=13&#39;&gt;14&lt;/a&gt;</span>     else:
+<span class="ansi-green-fg">---&gt; &lt;a href=&#39;vscode-notebook-cell:/Users/taiyoi/Documents/Compsci22-1/_notebooks/2023-04-27-P4M-DataStructures-TeamEAAR.ipynb#Y136sZmlsZQ%3D%3D?line=14&#39;&gt;15&lt;/a&gt;</span>         price = float(input(&#34;Enter the price of {}: &#34;.format(brand)))
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell:/Users/taiyoi/Documents/Compsci22-1/_notebooks/2023-04-27-P4M-DataStructures-TeamEAAR.ipynb#Y136sZmlsZQ%3D%3D?line=15&#39;&gt;16&lt;/a&gt;</span>         car_dict[brand] = price
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell:/Users/taiyoi/Documents/Compsci22-1/_notebooks/2023-04-27-P4M-DataStructures-TeamEAAR.ipynb#Y136sZmlsZQ%3D%3D?line=17&#39;&gt;18&lt;/a&gt;</span> # print the apple products list and total cost
+
+<span class="ansi-red-fg">ValueError</span>: could not convert string to float: &#39;&#39;</pre>
+</div>
+</div>
+
 </div>
 </div>
 

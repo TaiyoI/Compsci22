@@ -46,8 +46,9 @@ Ports
 
 
 
-![Computer Hardware]({{site.baseurl}}/images/cpu.jpeg)
+![image](https://user-images.githubusercontent.com/111478625/235523327-8ff354e1-375b-49bb-ad94-2da9fcec5817.png)
 
+![image](https://user-images.githubusercontent.com/111478625/235525223-c4ef2968-d697-4aa9-bf05-bc5af09f4e3c.png)
 
 ### The Internet
 > Watch/review College Board Daily Video for 4.1.1
@@ -102,7 +103,8 @@ Ports
 - The World Wide Web is a separate system from the internet. (False - it uses the internet)
 - Go over AP videos, vocabulary, and essential knowledge.  Draw a diagram showing the internet and its many levels. A preferred diagram would using your knowledge of frontend, backend, deployment, etc.  Picture would highligh vocabulary by illustration. The below illustration have some ideas
 
-![Full Stack]({{site.baseurl}}/images/fullstack.png)
+![image](https://user-images.githubusercontent.com/111478625/235524026-fd886d20-5204-4c65-9ab3-096f8d00c139.png)
+
 
 
 - Often we draw pictures of machines communicating over the Internet with arrows.  However, the real communication goes through protocol layers and the machine and then is trasported of the network.   For College Board and future Computer Knowledge you should become familiar with the following ...
@@ -136,19 +138,25 @@ The "network" layer is responsible for ***routing data packets between networks*
 
 - Complete the network activity, summarize your understanding of fault tolerance.
 
+The network operation was a very good practical method to analyze the networks of certain tens of lines and check their malfunction. Basically, fault tolerance means that in a network of many different sources and destinations, if one route goes down, there is still redundancy and the network can go from the source to the destination. There is not only one path from A to B, so if that one path goes down, A can take several paths to eventually reach B.
 
 ### Parallel and Distributed Computing
 > Review previous lecture on Parallel Computing and watch Daily vidoe 4.3.  Think of ways to make something in you team project to utilize Cores more effectively.  Here are some thoughts to add to your story of Computers and Networks...
 
 - What is naturally Distributed in Frontend/Backend archeticture?  
 
+In a frontend/backend architecture, the user interface is naturally distributed to the frontend layer while the data storage is handled by the backend layer. The frontend layer is responsible for presenting the user interface and handling user interactions, while the backend layer is responsible for storing and managing data. This division of responsibilities allows for more efficient development and easier maintenance of the overall system.
+
 - Analyze this command in Docker: ```ENV GUNICORN_CMD_ARGS="--workers=1 --bind=0.0.0.0:8086"```.   Determine if there is options are options in this command for parallel computing within the server that runs python/gunicorn.  Here is an [article](https://medium.com/building-the-system/gunicorn-3-means-of-concurrency-efbb547674b7)
 
+The command ENV GUNICORN_CMD_ARGS=”–workers=1 –bind=0.0.0.0:8086” sets an environment variable named GUNICORN_CMD_ARGS with two options. The –workers=1 option specifies that only one worker process should be used, which means that parallel computing within the server is not being utilized. The –bind=0.0.0.0:8086 option specifies the IP address and port that Gunicorn should bind to.
 
 > Last week we discussed parallel computing on local machine.  There are many options.  Here is something to get parallel computing work with a tool called Ray.
 - Review this [article](https://www.anyscale.com/blog/writing-your-first-distributed-python-application-with-ray)...  Can you get parallel code on images to work more effectively?  I have not tried Ray.
 
 - Code example from ChatGPT using squares.  This might be more interesting if nums we generated to be a lot bigger.
+
+![image](https://user-images.githubusercontent.com/111478625/235525663-b5ced166-eb99-49f2-8fb6-55f2620d050f.png)
 
 ```python
 import ray

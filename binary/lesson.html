@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      2 min read
+      4 min read
     
 </span></p>
 
@@ -155,6 +155,11 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h3"><a href="#Binary-Conversions-Practice">Binary Conversions Practice </a></li>
 <li class="toc-entry toc-h3"><a href="#Binary-Search-Questions">Binary Search Questions </a></li>
 <li class="toc-entry toc-h3"><a href="#Extra-Credit:">Extra Credit: </a></li>
+<li class="toc-entry toc-h2"><a href="#My-extra-credit">My extra credit </a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#001-001-010-=-112">001 001 010 = 112 </a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-entry toc-h1"><a href="#Hacks-Scoring">Hacks Scoring </a></li>
@@ -196,21 +201,21 @@ window.onload = wrap_img;
 <a class="anchor" href="#Binary" aria-hidden="true"><span class="octicon octicon-link"></span></a>Binary<a class="anchor-link" href="#Binary"> </a>
 </h2>
 <ol>
-<li>Binary is a base ___ number system.</li>
-<li>0 represents <strong><strong> and 1 represents </strong></strong>.</li>
-<li>A <em>__</em> is the minimum unit of binary information stored in a computer system.</li>
+<li>Binary is a base 2 number system.</li>
+<li>0 represents off and 1 represents on.</li>
+<li>A bit is the minimum unit of binary information stored in a computer system.</li>
 </ol>
 <h2 id="Boolean-Expressions">
 <a class="anchor" href="#Boolean-Expressions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Boolean Expressions<a class="anchor-link" href="#Boolean-Expressions"> </a>
 </h2>
 <ol>
-<li>A <strong>_</strong> <strong>___</strong> is a logical statement that is either TRUE or FALSE and compares data.</li>
+<li>A boolean expression is a logical statement that is either TRUE or FALSE and compares data.</li>
 </ol>
 <h2 id="Truth-Tables">
 <a class="anchor" href="#Truth-Tables" aria-hidden="true"><span class="octicon octicon-link"></span></a>Truth Tables<a class="anchor-link" href="#Truth-Tables"> </a>
 </h2>
 <ol>
-<li>The logical operations shown in truth tables are <strong><em>, </em></strong>, <strong><em>, and </em></strong>.</li>
+<li>The logical operations shown in truth tables are not, and, or, and xor.</li>
 </ol>
 
 </div>
@@ -407,19 +412,19 @@ window.onload = wrap_img;
 <a class="anchor" href="#Binary-to-Decimal" aria-hidden="true"><span class="octicon octicon-link"></span></a>Binary to Decimal<a class="anchor-link" href="#Binary-to-Decimal"> </a>
 </h3>
 <ol>
-<li>We can count in binary by using powers of <em>__</em>.</li>
-<li>In binary, we read from <strong><strong> to </strong></strong>.</li>
-<li>0111 has a value of <em>__</em>.</li>
+<li>We can count in binary by using powers of 2.</li>
+<li>In binary, we read from right to left.</li>
+<li>0111 has a value of 7.</li>
 </ol>
 <h3 id="Binary-Search">
 <a class="anchor" href="#Binary-Search" aria-hidden="true"><span class="octicon octicon-link"></span></a>Binary Search<a class="anchor-link" href="#Binary-Search"> </a>
 </h3>
 <ol>
-<li>For a binary search, the list must be <strong>_</strong>. </li>
-<li>In a binary search, computers start at the <strong>_</strong>(front,middle,end)/</li>
-<li>The number of steps required in a binary search follows the equation: <strong>_</strong>.</li>
-<li>Binary searches also work with a list of <em>__</em>. We can sort them alphabetically.</li>
-<li>Binary searches can be represented in <strong>__</strong> diagrams.</li>
+<li>For a binary search, the list must be SORTED. </li>
+<li>In a binary search, computers start at the middle(front,middle,end)/</li>
+<li>The number of steps required in a binary search follows the equation: log(n).</li>
+<li>Binary searches also work with a list of strings. We can sort them alphabetically.</li>
+<li>Binary searches can be represented in tree diagrams.</li>
 </ol>
 
 </div>
@@ -465,10 +470,22 @@ window.onload = wrap_img;
 <a class="anchor" href="#Binary-Conversions-Practice" aria-hidden="true"><span class="octicon octicon-link"></span></a>Binary Conversions Practice<a class="anchor-link" href="#Binary-Conversions-Practice"> </a>
 </h3>
 <ol>
-<li>Convert the decimal number "17" into binary.</li>
-<li>Convert the binary number 1010 into decimal.</li>
-<li>Convert the decimal number "122" into hexadecimal.</li>
-<li>Convert the hexadecimal number "09" into binary.</li>
+<li>Convert the decimal number "17" into binary.<ul>
+<li>10001</li>
+</ul>
+</li>
+<li>Convert the binary number 1010 into decimal.<ul>
+<li>10</li>
+</ul>
+</li>
+<li>Convert the decimal number "122" into hexadecimal.<ul>
+<li>7A</li>
+</ul>
+</li>
+<li>Convert the hexadecimal number "09" into binary.<ul>
+<li>1001</li>
+</ul>
+</li>
 </ol>
 
 </div>
@@ -481,9 +498,28 @@ window.onload = wrap_img;
 <a class="anchor" href="#Binary-Search-Questions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Binary Search Questions<a class="anchor-link" href="#Binary-Search-Questions"> </a>
 </h3>
 <ol>
-<li>Make a binary search tree of different the list [1,2,4,15,25,30,31]</li>
-<li>Put this list of strings in a order that can be used for binary search ["Donut”,"Cake”,"Soda”,"Banana”,"Fruit”]</li>
-<li>Explain why Binary Search is more efficient than Sequential Search.</li>
+<li>
+<p>Make a binary search tree of different the list [1,2,4,15,25,30,31]</p>
+<p>15
+ /    \
+2      30
+/ \     / \
+1   4   25  31</p>
+</li>
+</ol>
+<ol>
+<li>Put this list of strings in a order that can be used for binary search ["Donut”,"Cake”,"Soda”,"Banana”,"Fruit”]<ul>
+<li>["Banana", "Cake", "Donut", "Fruit", "Soda"] (In alphabetical order)</li>
+</ul>
+</li>
+<li>Explain why Binary Search is more efficient than Sequential Search.<ul>
+<li>Binary search is more efficient than sequential search because it reduces the number of elements that need to be searched by half with each iteration. <ul>
+<li>In binary search, we start by comparing the target value with the middle element of the sorted list, and if they are not equal, we can eliminate one half of the list from consideration. We then repeat the process with the remaining half until we either find the target value or determine that it does not exist in the list. </li>
+<li>In contrast, sequential search requires checking every element of the list until the target value is found, which can be inefficient for large lists. Therefore, binary search is generally faster than sequential search for large datasets.</li>
+</ul>
+</li>
+</ul>
+</li>
 </ol>
 
 </div>
@@ -497,10 +533,26 @@ window.onload = wrap_img;
 </h3>
 <ul>
 <li>Translate the binary number, 1001010, into octal (base 8). <mark>SHOW YOUR WORK AND EXPLAIN YOUR THINKING.</mark>
-OR</li>
-<li>write the best rap line (determined during the lesson by group)</li>
+</li>
 </ul>
-
+<h2 id="My-extra-credit">
+<a class="anchor" href="#My-extra-credit" aria-hidden="true"><span class="octicon octicon-link"></span></a>My extra credit<a class="anchor-link" href="#My-extra-credit"> </a>
+</h2>
+<p>To convert a binary number to octal, we need to group the binary digits into sets of three starting from the rightmost digit, and then write down the corresponding octal digit for each set of three.</p>
+<p>Here are the steps to convert the binary number 1001010 to octal:</p>
+<p>Step 1: Group the binary digits into sets of three starting from the rightmost digit:</p>
+<p>1   0   0   1   0   1   0
+1   0   0   1   0   1   0
+Step 2: Add leading zeros to the leftmost set of digits, if necessary, to make it a set of three:</p>
+<p>| 0 | 1 | 0 | 0 | 1 | 0 | 1 | 0 |</p>
+<p>Step 3: Write down the corresponding octal digit for each set of three, starting from the leftmost set:</p>
+<p>0   1   0   0   1   0   1   0
+2   4   1   0   5   2   0<br>
+Therefore, the binary number 1001010 is equivalent to the octal number 241052 in base 8.</p>
+<p>The reason this works is because each octal digit can represent 8 different values (0-7), which is equivalent to 2^3. By grouping the binary digits into sets of three, we can match each set of three to a single octal digit.</p>
+<h3 id="001-001-010-=-112">
+<a class="anchor" href="#001-001-010-=-112" aria-hidden="true"><span class="octicon octicon-link"></span></a>001 001 010 = 112<a class="anchor-link" href="#001-001-010-=-112"> </a>
+</h3>
 </div>
 </div>
 </div>
